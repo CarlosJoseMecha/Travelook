@@ -1,12 +1,22 @@
+/* fonts */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
+/* reset */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: #24252a;
+/* clear */
+.clear{
+    clear: both;
 }
-
+/* site wrapper */
+.content{
+  margin: 0;
+  float: left;
+  height: auto;
+  width: 960px;
+  background-color: purple;
+  margin: 0 auto;
+  
+}
+/* nav */
 li,
 a,
 button {
@@ -18,11 +28,14 @@ button {
 }
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding: 30px 10%;
+  
 }
-
+nav{
+  
+}
 .logo {
   cursor: pointer;
 }
