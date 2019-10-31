@@ -2,6 +2,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
 /* reset */
 
+/* COLORES 
+#0099CC - azul
+#CA68A6 - morado
+*/
+
+
 /* clear */
 .clear{
     clear: both;
@@ -17,42 +23,92 @@
   
 }
 /* nav */
-li,
-a,
-button {
+li, a, button {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  color: #edf0f1;
+  color: #333;
   text-decoration: none;
 }
 header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 10%;
-  
+  margin: 20px 10%; 
+  background: rgba (50, 50, 50, .5);
 }
-nav{
-  
-}
+
+
 .logo {
   cursor: pointer;
+  width: 200px;
+  height: auto;
 }
 .nav__links {
   list-style: none;
 }
 .nav__links li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 .nav__links li a {
   transition: all 0.3s ease 0s;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #CA68A6;
+  margin-top: 10px;
 }
 .nav__links li a:hover {
-  color: #0088a9;
+  color:#0099CC;
 }
-button {
+.nav__links li a:focus {
+  color: #CA68A6;
+}
+
+menu .ul{
+  padding-top: 25px;
+  padding-left: 20px;
+}
+#menuNav{
+ 
+}
+/* BOTONES */
+.btn-outline {
+	background-color:#ffffff;
+	border-radius:28px;
+	border:1px solid #ca68a6;
+	display:inline-block;
+	cursor:pointer;
+	color:#ca68a6 !important;
+	font-family:Arial;
+	font-size:17px;
+  padding:10px 15px !important;
+  margin: 10px 20px;
+	text-decoration:none;
+}
+
+
+.btn-outline:hover {
+  background-color:#ca68a6;
+  color: #fff;
+}
+.btn-outline:active {
+	position:relative;
+  top:1px;
+  color: #ffffff !important;
+}
+.btn-outline li {
+   padding: 10px !important;
+   margin: 10px;
+ }
+ .nav__links .btn-outline li a {
+  color:red!important;
+}
+ .btn-outline:hover {
+  color:#fff !important;
+}
+
+/* button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
   border-radius: 50px;
@@ -61,5 +117,23 @@ button {
   transition: all 0.3s ease 0s;
 }
 button:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: #CA68A6;
+} */
+
+.site{
+  height: 100%;
+  width: 100%;
+}
+
+
+
+/* fondos */
+.bg-home{
+  background-color: rgba(0,0,0,0.8);
+  filter:brightness(0.4);
+  background-image: url("../assets/img/bg_1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
 }
