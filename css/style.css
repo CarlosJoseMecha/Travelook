@@ -90,7 +90,7 @@ menu .ul{
 
 .btn-outline:hover {
   background-color:#ca68a6;
-  color: #fff;
+  color: #fff!important;;
 }
 .btn-outline:active {
 	position:relative;
@@ -101,13 +101,14 @@ menu .ul{
    padding: 10px !important;
    margin: 10px;
  }
- .nav__links .btn-outline li a {
+.btn-outlineli:hover {
   color:red!important;
 }
- .btn-outline:hover {
-  color:#fff !important;
-}
 
+
+/* .nav__links li a:hover {
+  color:#0099CC;
+} */
 /* button {
   padding: 9px 25px;
   background-color: rgba(0, 136, 169, 1);
@@ -123,17 +124,83 @@ button:hover {
 .site{
   height: 100%;
   width: 100%;
+  background-color: transparent;
 }
 
 
 
+/* FORMULARIOS */
+/* form-registro */
+.form-box{
+  position: absolute;
+  width: 450px;
+  height: 300px;
+  background-color:rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  z-index: 99999;
+  padding: 60px;
+  margin: 80px;
+}
+
+
+input,textarea{
+  color: #373737;
+  background: white;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 1.2em;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.1) inset, 0 1px 0 rgba(255,255,255,.2);
+  -webkit-box-shadow:0 1px 2px rgba(0,0,0,.1) inset, 0 1px 0 rgba(255,255,255,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.1) inset, 0 1px 0 rgba(255,255,255,.2);
+}
+
+input[type="text"], [type="pass"]{
+  padding: 8px 6px;
+  height: 22px;
+  width: 100%;
+}
+
+input[type="text"]:focus, input[type="email"]:focus{
+  background:#f5fcfe;
+  text-indent: 0;
+  z-index: 1;
+  color: #373737;
+  transition-duration: 400ms;
+  transition-property:width,background;
+  transition-timing-funtion:ease; 
+  border-color:#ccc;
+  box-shadow: 0 0 5px rgba(4,129,177,.5);
+  opacity: 0.6;
+}
+
+input[type="submit"]{
+  background: #222;
+  border: none;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  text-transform: uppercase;
+  color: #eee;
+  cursor: pointer;
+  font-size:15px;
+  margin: 5px 0;
+  padding: 5px 22px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0,0,0 .3);
+
+}
+
 /* fondos */
 .bg-home{
-  background-color: rgba(0,0,0,0.8);
-  filter:brightness(0.4);
+
+  background-color: rgba(0,0,0,0.6);
+  filter:brightness(0.6);
   background-image: url("../assets/img/bg_1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
+  z-index: 99988;
 }
