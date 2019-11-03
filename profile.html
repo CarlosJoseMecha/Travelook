@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<title>HazTuMaleta</title>
+
+
+	<meta charset="utf-8">
+		
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+
+<body class="profile">
+    <header>
+    	<a href="index.html"><img src="assets/logos/logo_color.svg" alt="logo" class="logo"/></a>
+      	<!-- NAV -->
+      	<nav id="navSup" class="navSup">
+        	<ul class="menuSup">
+          		<li><a href="#">Inicio</a></li>
+          		<li><a href="#">Programados</a></li>
+          		<li><a href="#">Contacto</a></li>
+          		<li><a class="active" href="profile.html">Perfil</a></li>
+        	</ul>
+        	<button href="#" class="btn-acces">Cerrar sesión</button>
+      	</nav>
+    </header>
+
+	<div class="pSlider">
+		<div>
+			<img src="assets/img/profilePhoto.jpg" alt="Foto de perfil" class="profilePhoto"/>
+			<div class="userData">
+				
+				<h2 style="margin-bottom: 20px;">Carmina Rodriguez Álvarez <small> correoejemplo@gmail.com</small></h2>
+				
+				<div style="margin-bottom: 20px;">
+					<p><i class="material-icons">cake</i> 25 años <span> Julio 19, de 1994</span><span style="color:#33ccff"><i class="material-icons dataAlign">room</i> Madrid - Alcobendas</span></p>	
+					<p>Mujer <span> Moda Hippy</span></p>
+				</div>
+				
+				<p style="text-align: justify; font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tristique, ante a gravida dignissim, lectus diam pulvinar nulla, et scelerisque purus ex sit amet sem. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempor nisl nec condimentum eleifend. Pellentesque gravida dictum enim, id elementum odio porttitor eget.</p>
+				
+			</div>
+		</div>
+	</div>
+	<div class="editUser" >
+		<div class="editUserBox" style="width: 70%;">
+			<h3>¿Quieres modificar algún dato de tu perfil? Aquí puedes hacerlo</h3>
+			<form id="userData">
+				<label>Nombre:</label>
+		 		<input type="text" name="firstname">
+		  		
+		  		<label>Género:</label>
+		  		<select>
+		 			<option value="male">Hombre</option>
+		  			<option value="female">Mujer</option>
+		  			<option value="other">Otro</option>
+				</select>
+				<label>Fecha de nacimiento:</label>
+	 			<input type="text" name="firstname">
+	  			<label>Tu estilo:</label>
+	  			<input type="text" name="gender">
+	  			<input type="submit" value="Guardar cambios">
+	  			<form>
+			
+		</form>
+			</form>
+		</div>
+		<div class="editUserBox" style="width: 30%; margin-right: 0px;">
+			<h3>Cambiar contraseña</h3>
+			<form id="changePass">
+  			
+	 			
+				<label>Contraseña:</label>
+	  			<input type="text" name="gender">
+	  			<label>Repetir contraseña:</label>
+	  			<input type="text" name="gender">
+	  			
+	  			<input type="submit" value="Guardar">
+  			<form>
+			
+		</div>
+	</div>
+		
+
+</body>
+</html>

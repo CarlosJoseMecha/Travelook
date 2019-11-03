@@ -30,11 +30,16 @@ li, a, button {
   color: #333;
   text-decoration: none;
 }
+
+body {
+   font-family: "Lato", sans-serif;
+}
+
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 10%; 
+  padding: 20px 10%; 
   background: rgba (50, 50, 50, .5);
 }
 
@@ -79,7 +84,7 @@ menu .ul{
 	border:1px solid #ca68a6;
 	display:inline-block;
 	cursor:pointer;
-	color:#ca68a6 !important;
+	color:#ca68a6;
 	font-family:Arial;
 	font-size:17px;
   padding:10px 15px !important;
@@ -203,4 +208,126 @@ input[type="submit"]{
   background-size: cover;
   height: 600px;
   z-index: 99988;
+}
+
+
+/*Profile*/
+.profile{
+  background: #F7F7F7;
+  overflow: scroll;
+
+}
+
+.menuSup{
+  display: inline-flex;
+  text-transform: uppercase;
+
+}
+.menuSup li a{
+  /*añadir --> font-family: tipografía del mockup;*/
+  font-weight: bolder;
+  font-size: 1.2em;
+  color: #CA68A6;
+  border: none;
+  border-right: 1px solid #CA68A6;
+  padding: 5px 10px;
+
+}
+
+.menuSup li a:hover {
+  color:#0099CC;
+}
+.menuSup li a.active {
+  font-size: 1.4em;
+  color:#0099CC;
+}
+
+
+.btn-acces{
+  text-transform: uppercase;
+  /*añadir --> font-family: tipografía del mockup;*/
+  font-weight: bolder;
+  font-size: 1.2em;
+  color: #CA68A6;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  display: contents;
+}
+
+.pSlider{
+  background: rgb(0,153,204);
+  background: linear-gradient(43deg, rgba(0,153,204,1) 0%, rgba(202,104,166,1) 100%);
+  -webkit-box-shadow: inset 0px 9px 23px -5px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 0px 9px 23px -5px rgba(0,0,0,0.75);
+  box-shadow: inset 0px 9px 23px -5px rgba(0,0,0,0.75);
+  padding: 80px 10%;
+  height: 380px;
+}
+
+.profilePhoto{
+  border-radius: 50%;
+  width: 10em;
+}
+
+.userData{
+  position: absolute;
+  margin-top: -162px;
+  margin-left: 160px;
+  padding: 0px 40px;
+  width: 50%;
+  color: white;
+  font-size: 1em;
+  line-height: 1.2em;
+}
+
+.userData p{
+  font-weight: bolder;
+}
+
+.userData span, small{
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.material-icons{
+  font-size: 16px !important;
+}
+
+.dataAlign{
+  display: -webkit-box;
+
+}
+
+h2, h3{
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+}
+
+
+
+.editUser{
+  padding: 20px 10%;
+  float: left;
+  display: inline-flex;
+  margin-top:-50px;
+}
+.editUserBox{
+  background: white;
+  border-radius: 15px;
+  margin-right: 30px; 
+  padding: 20px;
+  line-height: 1.2em;
+
+}
+
+.editUserBox select{
+  margin-bottom: 20px;
+  display: block;
+
+}
+
+.editUserBox  input, select,{
+  margin-bottom: 20px;
 }
