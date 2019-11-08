@@ -1,106 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <!-- Reset, Normalize, Custom CSS -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
   <title>Travelook</title>
 </head>
 
 <body>
   <div class="site">
-    <header id="capaPadre">
-      <div id="logo">
-        <a href="home.html">
-          <img src="assets/logos/logo_alpha_1.svg" alt=logo "" class="logo" />
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm  navbar-light fixed-top" id="mainNavbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="assets/img/logos/logo_color.svg" alt="travelook-logo">
         </a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto  text-uppercase">
+            <li class="nav-item active">
+              <a href="#home-section" class="nav-link link txt-trav-primary">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about-section" class="nav-link txt-trav-primary">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#brand-section" class="nav-link txt-trav-primary">Marcas colaboradoras</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link txt-trav-primary">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link txt-trav-primary">Registro</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <!-- NAV -->
-      <nav id="menuNav" class="menu">
-        <ul class="nav__links">
-          <li>
-            <a href="#">Inicio</a>
-          </li>
-          <li>
-            <a href="#">Viajemos</a>
-          </li>
-          <li>
-            <a href="#">Contacto</a>
-          </li>
-          <li>
-            <a href="profile.html">Perfil</a>
-          </li>
-          <li>
-            <a class="btn-outline" href="#">Inicio Sesión</a>
-          </li>
-          <li>
-            <a class="btn-outline" href="#">Registrate</a>
-          </li>
-        </ul>
-      </nav>
-
-      <!--   <a href="#" class="cta">
-        <button>Iniciar Sesión</button>
-        <button>Registro</button>
-      </a> -->
-    </header>
-    <!-- CONTENIDO -->
-    <main>
-      <!-- FORMULARIO -->
-      <section>
-        <div class="container">
-          <div class="bg-home">
-            <div class="clear"></div>
-              <div class="form-box">
-                  <div class="titulo">
-                    <h3>
-                      Iniciar Sesión
-                    </h3>
-                  </div>
-                  <form action="thankiu.html" method="post" name="login">
-                    <fieldset disabled="disabled">
-                      <div>
-                        <input type="text" name="user" placeholder="Usuario">
-                      </div>
-                      <div>
-                        <input type="pass" name="pass" placeholder="Contraseña">
-                      </div>
-                      <div>
-                        <input type="submit" name="submit" value="ACCEDER">
-                      </div>
-                      <div>
-                          <input type="checkbox" name="vehicle3" value="Boat" checked>Recordarme<br>
-                      </div>
-                    </fieldset>
-      
+    </nav>
+    <!-- Navigation Fin -->
+    <!-- Home Section -->
+    <header id="home-section">
+      <div class="overlay">
+        <div class="home-inner container">
+          <div class="row">
+            <div class="col-lg-4">
+              <!-- Form -->
+              <!-- TO DO : añadir imagen maleta "logo" en la parte de arriba del formulario  -->
+              <div class="card text-center card-form bg-trav-light">
+                <div class="card-body">
+                  <h3 class="display-4">Registrate</h3>
+                  <p class="display-6">Rellena el formulario para registrarte</p>
+                  <form action="POST  ">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-control-lg" placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                      <input type="email" class="form-control form-control-lg" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-lg" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control form-control-lg" placeholder="Confirmar contraseña">
+                    </div>
+                    <input type="submit" value="Enviar" class="btn-block btn-trav-primary">
                   </form>
                 </div>
+              </div>
+              <!-- Form End -->
+            </div>
+            <div class="col-lg-8 d-none d-lg-block text-center txt-trav-white">
+              <!-- Home Text -->
+              <h1 class="display-4">mis cojones al viento</h1>
+              <div class="d-flex ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga repellendus necessitatibus veniam
+                officiis dolores omnis dolorum commodi saepe, porro temporibus id voluptatem sed maxime ab aut, possimus
+                delectus? Harum voluptate earum natus numquam, officia voluptates praesentium, perferendis unde
+                assumenda veritatis, beatae ad expedita pariatur aliquam labore nobis laudantium nesciunt!
+              </div>
+            </div>
           </div>
-         
         </div>
+      </div>
+    </header>
+    <!-- Home Section Fin -->
+    <!-- HEADER FIN -->
+    <!-- About Section -->
+    <section id="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-5">
+            <h2 class="display-4">esto es la seccion about</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut debitis, tempore, beatae quibusdam nihil
+              animi delectus non at in neque optio, repellat accusamus placeat a? Neque est asperiores sit distinctio
+              soluta qui quidem dicta labore accusamus placeat officiis minus consequuntur facere, eaque quisquam autem
+              deserunt. Sit dolor modi fuga perferendis.</p>
+            <a href="#" class="btn btn-trav-primary">Boton test</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section Fin -->
+    <!-- Brand Section -->
+    <section id="brand-section">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-5">
+            <h2 class="display-4">Algunos de nuestros colaboradores</h2>>
+            <div class="">
+              <img class=" image-brand" src="assets/brands/ecoalf.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/elcorte.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/levis.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/scalpers.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/northface.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/sprindfield.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/zara.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/uterque.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/adidas.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/bl.jpg" alt="ecoalf">
+              <img class="image-brand" src="assets/brands/ck.jpg" alt="ecoalf">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- Brand Section Fin -->
+    <!-- Contact Section -->
+    <section id="contact-section">
+
+    </section>
+    <!-- Contact Section Fin -->
+    <!-- Footer -->
+    <footer id="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-3 txt-trav-white">
+            <h3>Website Name</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, ab.</p>
+          </div>
+          <div class="col-3 footer-links txt-trav-white">
+            <h4>Usefull links</h3>
+              <ul>
+                <li>link1</li>
+                <li>link2</li>
+                <li>link3</li>
+                <li>link4</li>
+                <li>link5</li>
+              </ul>
+          </div>
+        </div>
+      </div>
   </div>
-  <!-- PRESENTACION APP Y EQUIPO -->
-  </section>
-  <h2>titulo</h2>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima eum, deserunt dicta dolorum in impedit dolor earum eos
-    laborum culpa?</p>
-  <!-- imgen ?? -->
-  <section>
-    <div>
-
-    </div>
-  </section>
-  <!-- MARCAS COLABORADORAS -->
-  </main>
-  <footer>
-
-
-    <p>Aui va el footer</p>
   </footer>
+  <!-- Footer Fin -->
   </div>
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- Optional JavaScript -->
+
+  <script>
+    // Navbar jQuery
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $("#mainNavbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    });
+    //Get the current year for the copyright 
+    $('#year').text(newDate().getFullYear());
+  </script>
 </body>
 
 </html>
