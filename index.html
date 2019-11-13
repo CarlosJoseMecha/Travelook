@@ -12,6 +12,8 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
 
   <title>Travelook</title>
 </head>
@@ -20,9 +22,9 @@
   <div class="site">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm  navbar-light fixed-top" id="mainNavbar">
-      <div class="container">
+      <div class="container-fluid">
         <a href="index.html" class="navbar-brand">
-          <img src="assets/img/logos/logo_color.svg" alt="travelook-logo">
+          <img src="assets/img/logos/white-01.png" alt="travelook-logo">
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -36,13 +38,16 @@
               <a href="#about-section" class="nav-link txt-trav-primary">About</a>
             </li>
             <li class="nav-item">
-              <a href="#brand-section" class="nav-link txt-trav-primary">Marcas colaboradoras</a>
+              <a href="#brand-section" class="nav-link txt-trav-primary">Conocenos</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary">Log In</a>
+              <a href="#brand-section" class="nav-link txt-trav-primary">Contacta</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary">Registro</a>
+              <a href="#" class="nav-link txt-trav-primary">Registrar</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link txt-trav-primary btn-outline-white">Iniciar Sesión</a>
             </li>
           </ul>
         </div>
@@ -51,53 +56,55 @@
     <!-- Navigation Fin -->
     <!-- Home Section -->
     <header id="home-section">
-      <div class="overlay">
-        <div class="home-inner container">
-          <div class="row">
-            <div class="col-lg-4">
-              <!-- Form -->
-              <!-- TO DO : añadir imagen maleta "logo" en la parte de arriba del formulario  -->
-              <div class="card text-center card-form bg-trav-light">
-                <div class="card-body">
-                  <h3 class="display-4">Registrate</h3>
-                  <p class="display-6">Rellena el formulario para registrarte</p>
-                  <form action="POST  ">
-                    <div class="form-group">
-                      <input type="text" class="form-control form-control-lg" placeholder="Usuario">
+      <div class="overlay-2">
+        <div class="overlay">
+          <div class="home-inner container">
+            <!-- icono -->
+            <div class="row">
+              <div class="col-12  logo-travelook">
+                <img src="assets/img/logos/simbolo.svg" alt="logo de una maleta">
+              </div>
+
+            </div>
+            <div class=" row">
+              <div class="col-12 logo-travelook">
+                <img src="assets/img/logos/white-01.png" alt="logo travelook" ">
+              </div>
+            </div>
+            <!-- icono end -->
+            <div class=" row">
+
+                <!-- form -->
+                <div class="col-6">
+                  <form action="#">
+                    <div class="form-group inner-addon right-addon">
+                      <i class="fas fa-search"></i>
+                      <input type="text" name="destino" id="destino" class="form-control input-travelook"
+                        placeholder="¿A dónde nos vamos?">
                     </div>
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-lg" placeholder="Email">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-lg" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-lg" placeholder="Confirmar contraseña">
-                    </div>
-                    <input type="submit" value="Enviar" class="btn-block btn-trav-primary">
                   </form>
                 </div>
-              </div>
-              <!-- Form End -->
-            </div>
-            <div class="col-lg-8 d-none d-lg-block text-center txt-trav-white">
-              <!-- Home Text -->
-              <h1 class="display-4">mis cojones al viento</h1>
-              <div class="d-flex ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni fuga repellendus necessitatibus veniam
-                officiis dolores omnis dolorum commodi saepe, porro temporibus id voluptatem sed maxime ab aut, possimus
-                delectus? Harum voluptate earum natus numquam, officia voluptates praesentium, perferendis unde
-                assumenda veritatis, beatae ad expedita pariatur aliquam labore nobis laudantium nesciunt!
+                <div class="col-6">
+                  <form action="#">
+                    <div class="form-group inner-addon  right-addon">
+                      <i class="far fa-calendar-alt"></i>
+                      <input type="date" name="destino" id="destino" class="form-control input-travelook">
+                    </div>
+                  </form>
+                </div>
+
+
+                <!-- form end -->
               </div>
             </div>
           </div>
         </div>
-      </div>
+
     </header>
     <!-- Home Section Fin -->
     <!-- HEADER FIN -->
     <!-- About Section -->
-    <section id="about-section">
+    <section id="about-section" class="bg-trav-grey-light">
       <div class="container">
         <div class="row">
           <div class="col text-center py-5">
@@ -112,6 +119,22 @@
       </div>
     </section>
     <!-- About Section Fin -->
+
+    <!-- Section Equipo -->
+    <section id="equipo-section" class="text-center py-5">
+      <div class="container">
+        <h2>Esta es la seccion equipo</h2>
+        <p>lorem10</p>
+      </div>
+    </section>
+    <!-- Section Equipo Fin -->
+    <!-- Section Contacto -->
+    <section id="contacto-section" class="bg-trav-grey-light text-center py-5">
+      <div class="container">
+        <h2>esta es la seccion contacto</h2>
+      </div>
+    </section>
+    <!-- Section Contacto Fin -->
     <!-- Brand Section -->
     <section id="brand-section">
       <div class="container">
@@ -137,13 +160,8 @@
       </div>
     </section>
     <!-- Brand Section Fin -->
-    <!-- Contact Section -->
-    <section id="contact-section">
-
-    </section>
-    <!-- Contact Section Fin -->
     <!-- Footer -->
-    <footer id="footer-section">
+    <footer id="footer-section" class="bg-purple">
       <div class="container">
         <div class="row">
           <div class="col-3 txt-trav-white">
