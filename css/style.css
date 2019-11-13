@@ -1,4 +1,7 @@
 /*Aqui comienza el CSS normal de la pagina.Esta dividido por pantallas y por secciones dentro de esas pantallas.*/
+
+/*                            (◕ ˬ ◕✿)                                      */
+
 /*******************EXTERNAL LINKS*********************/
 /* google fonts */
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
@@ -54,6 +57,8 @@ body {
 }
 
 /*---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------*/
+/******************************index.html***************************************/
 /*******************INDEX-HOME*********************/
 
 #home-section {
@@ -109,25 +114,39 @@ esto para centrar el logo en el formulario?
 
 /*******************INDEX-CONTACT********************/
 
-/******************************PROFILE***************************************/
+/******************************perfil.html***************************************/
+/******************************contacto.html***************************************/
+/******************************gracias.html***************************************/
+/******************************graciasContacto.html***************************************/
+/******************************modalRegistro***************************************/
+/******************************modalLogin***************************************/
+/******************************app.html***************************************/
+/******************************appTiempo.html***************************************/
+/******************************viajes.html***************************************/
 
-/*==============================================================*/
+
+
+/*==============================================================================================================================================================================================*/
 /*Aqui estan todas las clases personalizadas que no pertenecen a bootstrap, aplicar la clase al elemento para implementar.
 Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documento.*/
 /**************************TRAVELOOK***************************/
-/* COLORES 
+/**************************COLORES***************************/
+/*
 #0099cc - blue 
-#11baf3 - blue light
- - blue dark
+#17a2d0 - blue light
+#008cba- blue dark
+
 
 #ca68a6 - pink
-#ff9bda - pink light
- - pink dark
+#ce75ae - pink light
+#ca68a6- pink dark
  
- - purple
- - purple ligth
- - purple dark
+ #a25eb9 - purple
+ #aa6cbf- purple ligth
+ #9456a9- purple dark
 */
+
+
 /*******************TEXTO TRAVELOOK*********************/
 .txt-trav-white {
   color: white;
@@ -155,6 +174,42 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 /*******************BACKGROUND COLORS TRAVELOOK*********************/
 .bg-trav-light {
   background-color: #eee7d6;
+}
+
+.bg-blue {
+  background-color: #0099CC;
+}
+
+.bg-blue-light {
+  background-color: #17a2d0;
+}
+
+.bg-blue-dark {
+  background-color: #008cba;
+}
+
+.bg-pink {
+  background-color: #ca68a6;
+}
+
+.bg-pink-light {
+  background-color: #ce75ae;
+}
+
+.bg-pink-dark {
+  background-color: #ca68a6;
+}
+
+.bg-purple {
+  background-color: #a25eb9;
+}
+
+.bg-purple-light {
+  background-color: #aa6cbf;
+}
+
+.bg-purple-dark {
+  background-color: #9456a9;
 }
 
 /*******************BUTTONS TRAVELOOK*********************/
