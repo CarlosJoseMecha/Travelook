@@ -283,6 +283,10 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   color: #fff !important;
 }
 
+.boton-radius {
+  border-radius: 15px !important;
+}
+
 /*******************FORMULARIOS TRAVELOOK*********************/
 
 
