@@ -56,7 +56,7 @@ body {
 /*nota-mental: que la barra se vea mientras hace scroll, y que cuando pare vuelva a ser transparente, porque queda raro ahora mismo*/
 
 #mainNavbar.scrolled {
-  background: rgba(201, 104, 166, 1);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /*******************FOOTER*********************/
@@ -84,7 +84,7 @@ body {
 }
 
 #home-section .overlay {
-  /* TO DO: aqui hay que meter la imagen para el overlay , ahora mismo no se ve un cagao la letra blanca.*/
+
   background: rgba(0, 153, 204, 0.3);
   position: absolute;
   top: 0;
@@ -155,7 +155,8 @@ esto para centrar el logo en el formulario?
   background-color: #f3f3f3;
 }
 
-.txt-trav-small, span {
+.txt-trav-small,
+span {
   display: block;
 }
 
@@ -292,6 +293,7 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   font-weight: 300;
   color: #333 !important;
 }
+
 /* Mayusculas */
 .uppercase {
   text-transform: uppercase;
@@ -301,6 +303,7 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 header.underline:after {
   background: #333;
 }
+
 header.underline:after {
   background: rgba(144, 144, 144, 0.5);
   content: '';
@@ -413,7 +416,9 @@ header.underline:after {
   border-radius: 0;
 }
 
-input[type="text"], textarea, .input-travelook {
+input[type="text"],
+textarea,
+.input-travelook {
   outline: none;
   box-shadow: none !important;
 }
@@ -438,7 +443,8 @@ input[type="text"], textarea, .input-travelook {
 
 /* style icon */
 
-.inner-addon .fas, .inner-addon .far {
+.inner-addon .fas,
+.inner-addon .far {
   position: absolute;
   padding: 10px;
   pointer-events: none;
@@ -446,7 +452,8 @@ input[type="text"], textarea, .input-travelook {
 
 /* align icon */
 
-.right-addon .fas, .right-addon .far {
+.right-addon .fas,
+.right-addon .far {
   right: 0px;
 }
 
@@ -458,7 +465,8 @@ input[type="text"], textarea, .input-travelook {
 
 /* .............................................................. */
 
-.fas, .far {
+.fas,
+.far {
   color: #fff;
   font-weight: lighter;
 }
