@@ -3,7 +3,9 @@
 /*                            (◕ ˬ ◕✿)                                      */
 
 /*******************EXTERNAL LINKS*********************/
+
 /* google fonts */
+
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap");
 /*******************GLOBAL*********************/
 
@@ -13,15 +15,17 @@ html {
 
 body {
   background: #fff;
-
 }
 
 /*******************NAVBAR*********************/
+
 /*La navbar es global a todo el proyecto por lo que no esta incluida dentro de ninguna seccion.*/
+
 /* LOGO */
+
 .navbar-brand img {
   margin-left: 35%;
-  width: 320px;
+  width: 40%;
   height: auto;
 }
 
@@ -36,7 +40,6 @@ body {
 
 .nav-link {
   position: relative;
-
   padding: 5px 10px;
 }
 
@@ -48,23 +51,28 @@ body {
   top: 2px;
 }
 
-
 /* jQuerry scroll  */
+
 /*nota-mental: que la barra se vea mientras hace scroll, y que cuando pare vuelva a ser transparente, porque queda raro ahora mismo*/
+
 #mainNavbar.scrolled {
   background: rgba(201, 104, 166, 1);
-
 }
 
 /*******************FOOTER*********************/
+
 /* El footer es global a todo el proyecto por lo que no esta incluido en ninguna seccion */
+
 #footer-section {
   min-height: 250px;
 }
 
 /*---------------------------------------------------------------------------------------*/
+
 /*---------------------------------------------------------------------------------------*/
+
 /******************************index.html***************************************/
+
 /*******************INDEX-HOME*********************/
 
 #home-section {
@@ -78,7 +86,6 @@ body {
 #home-section .overlay {
   /* TO DO: aqui hay que meter la imagen para el overlay , ahora mismo no se ve un cagao la letra blanca.*/
   background: rgba(0, 153, 204, 0.3);
-
   position: absolute;
   top: 0;
   left: 0;
@@ -102,6 +109,7 @@ body {
 }
 
 /* Form */
+
 .card-form {
   opacity: 0.8;
   z-index: 10;
@@ -118,46 +126,88 @@ esto para centrar el logo en el formulario?
   margin-left: 170px;
 }
 */
+
 /*******************INDEX-ABOUT**********************/
+
 #about-section {
-  min-height: 540px;
+  min-height: auto;
+  padding: 5% 0 5% 0;
+  -webkit-align-content: center;
+  align-content: center;
 }
 
 /*******************INDEX-EQUIPO**********************/
+
 #equipo-section {
-  min-height: 540px;
+  /* min-height: 540px; */
+  min-height: auto;
+  padding: 20% 0 20% 0;
+  -webkit-align-content: center;
+  align-content: center;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: #f3f3f3;
+}
+
+.card-team {
+  background-color: #f3f3f3;
+}
+
+.txt-trav-small, span {
+  display: block;
+}
+
+.circle-picture {
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 /*******************INDEX-CONTACT********************/
-#contacto-section {
-  min-height: 500px;
 
+#contacto-section {
+  min-height: auto;
+  padding: 5% 0 5% 0;
+  -webkit-align-content: center;
+  align-content: center;
 }
 
 /*******************INDEX-BRAND**********************/
+
 #brand-section {
-  min-height: 500px;
+  min-height: auto;
+  -webkit-align-content: center;
+  align-content: center;
 }
 
-
-
 /******************************perfil.html***************************************/
+
 /******************************contacto.html***************************************/
+
 /******************************gracias.html***************************************/
+
 /******************************graciasContacto.html***************************************/
+
 /******************************modalRegistro***************************************/
+
 /******************************modalLogin***************************************/
+
 /******************************app.html***************************************/
+
 /******************************appTiempo.html***************************************/
+
 /******************************viajes.html***************************************/
 
-
-
 /*==============================================================================================================================================================================================*/
+
 /*Aqui estan todas las clases personalizadas que no pertenecen a bootstrap, aplicar la clase al elemento para implementar.
 Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documento.*/
+
 /**************************TRAVELOOK***************************/
+
 /**************************COLORES***************************/
+
 /*
 #f3f3f3 - grey
 
@@ -175,8 +225,8 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
  #764587- purple dark
 */
 
-
 /*******************TEXTO TRAVELOOK*********************/
+
 .txt-trav-white {
   color: white;
 }
@@ -193,7 +243,6 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   font-size: 18px;
   color: #fff !important;
   font-weight: 300;
-
 }
 
 .txt-trav-small {
@@ -201,7 +250,6 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   font-size: 14px;
   color: #fff !important;
   font-weight: 300;
-
 }
 
 .txt-trav-big {
@@ -211,8 +259,59 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   color: #fff !important;
 }
 
+/* texto oscuro --------*/
+
+.txt-trav-dark {
+  color: #333;
+}
+
+.txt-trav-primary-dark {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #333 !important;
+  font-weight: 300;
+}
+
+.txt-trav-secondary-dark {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  color: #333 !important;
+  font-weight: 300;
+}
+
+.txt-trav-small-dark {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: #333 !important;
+  font-weight: 300;
+}
+
+.txt-trav-big-dark {
+  font-family: 'Lato', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+  color: #333 !important;
+}
+/* Mayusculas */
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* elementos decorativos tipograficos */
+header.underline:after {
+  background: #333;
+}
+header.underline:after {
+  background: rgba(144, 144, 144, 0.5);
+  content: '';
+  display: inline-block;
+  height: 1px;
+  margin-top: 1.5em;
+  width: 6em;
+}
 
 /*******************BACKGROUND COLORS TRAVELOOK*********************/
+
 .bg-trav-grey-light {
   background-color: #f3f3f3;
 }
@@ -258,6 +357,7 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 }
 
 /*******************BUTTONS TRAVELOOK*********************/
+
 .btn-trav-primary {
   background-color: #0099CC;
   outline: none;
@@ -265,11 +365,27 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
   border-radius: 5px;
   padding: 7px;
   margin-top: 10px;
-
 }
 
 .btn-trav-primary:hover {
   background-color: #11baf3;
+}
+
+/* ----- */
+
+.btn-trav-purple {
+  background-color: #a25eb9;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.btn-trav-purple:hover {
+  background-color: #bb89cc;
+  color: #333;
 }
 
 .btn-outline-white {
@@ -285,19 +401,15 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 
 /*******************FORMULARIOS TRAVELOOK*********************/
 
-
 .input-travelook {
   background-color: transparent !important;
   outline: none !important;
   border: none;
   border-bottom: 2px solid #fff;
   border-radius: 0;
-
 }
 
-input[type="text"],
-textarea,
-.input-travelook {
+input[type="text"], textarea, .input-travelook {
   outline: none;
   box-shadow: none !important;
 }
@@ -311,49 +423,52 @@ textarea,
 }
 
 /*********************ICONOS FONT AWESOME**************************/
+
 /* .............................................................. */
+
 /* no tocar, esto es un fix para que los iconitos salgan dentro del input */
+
 .inner-addon {
   position: relative;
 }
 
 /* style icon */
-.inner-addon .fas,
-.inner-addon .far {
+
+.inner-addon .fas, .inner-addon .far {
   position: absolute;
   padding: 10px;
   pointer-events: none;
 }
 
 /* align icon */
-.right-addon .fas,
-.right-addon .far {
+
+.right-addon .fas, .right-addon .far {
   right: 0px;
 }
 
 /* add padding  */
+
 .right-addon input {
   padding-right: 30px;
 }
 
 /* .............................................................. */
-.fas,
-.far {
+
+.fas, .far {
   color: #fff;
   font-weight: lighter;
 }
 
 /**********************LOGOS*************************/
+
 .logo-travelook {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   width: 180px;
   height: auto;
-
 }
 
-
-
 /***********************************************/
+
 /*==============================================================*/
