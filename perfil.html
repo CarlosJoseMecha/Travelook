@@ -1,96 +1,88 @@
 <!-- Tamar -->
-<!DOCTYPE html>
-<html lang="ES">
+<!doctype html>
+<html lang="en">
 
 <head>
-	<title>HazTuMaleta</title>
-
-
+	<!-- Required meta tags -->
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Travelook</title>
 </head>
 
-
-<body class="profile">
-	<header>
-		<a href="index.html"><img src="assets/logos/logo_color.svg" alt="logo" class="logo" /></a>
-		<!-- NAV -->
-		<nav id="navSup" class="navSup">
-			<ul class="menuSup">
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#">Programados</a></li>
-				<li><a href="#">Contacto</a></li>
-				<li><a class="active" href="profile.html">Perfil</a></li>
-			</ul>
-			<button href="#" class="btn-acces">Cerrar sesión</button>
-		</nav>
-	</header>
-
-	<div class="pSlider">
-		<div>
-			<img src="assets/img/profilePhoto.jpg" alt="Foto de perfil" class="profilePhoto" />
-			<div class="userData">
-
-				<h2 style="margin-bottom: 20px;">Carmina Rodriguez Álvarez <small> correoejemplo@gmail.com</small></h2>
-
-				<div style="margin-bottom: 20px;">
-					<p><i class="material-icons">cake</i> 25 años <span> Julio 19, de 1994</span><span style="color:#33ccff"><i
-								class="material-icons dataAlign">room</i> Madrid - Alcobendas</span></p>
-					<p>Mujer <span> Moda Hippy</span></p>
+<body>
+	<div class="site">
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-sm  navbar-light fixed-top" id="mainNavbar">
+			<div class="container-fluid">
+				<a href="index.html" class="navbar-brand">
+					<img src="assets/img/logos/white-01.png" alt="travelook-logo">
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav ml-auto  text-uppercase">
+						<li class="nav-item active">
+							<a href="#home-section" class="nav-link link txt-trav-primary">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about-section" class="nav-link txt-trav-primary">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#equipo-section" class="nav-link txt-trav-primary">Conocenos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link txt-trav-primary">Registrar</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link txt-trav-primary btn-outline-white round-5 ">Iniciar Sesión</a>
+						</li>
+					</ul>
 				</div>
-
-				<p style="text-align: justify; font-weight: normal;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Quisque tristique, ante a gravida dignissim, lectus diam pulvinar nulla, et scelerisque purus ex sit amet sem.
-					Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque tempor
-					nisl nec condimentum eleifend. Pellentesque gravida dictum enim, id elementum odio porttitor eget.</p>
-
 			</div>
-		</div>
-	</div>
-	<div class="editUser">
-		<div class="editUserBox" style="width: 70%;">
-			<h3>¿Quieres modificar algún dato de tu perfil? Aquí puedes hacerlo</h3>
-			<form id="userData">
-				<label>Nombre:</label>
-				<input type="text" name="firstname">
+		</nav>
+		<!-- Navigation Fin -->
+		<!-- Empezar a codificar aqui -->
+		<!-- Terminar aqui -->
+		<!-- Footer (Carlos)-->
 
-				<label>Género:</label>
-				<select>
-					<option value="male">Hombre</option>
-					<option value="female">Mujer</option>
-					<option value="other">Otro</option>
-				</select>
-				<label>Fecha de nacimiento:</label>
-				<input type="text" name="firstname">
-				<label>Tu estilo:</label>
-				<input type="text" name="gender">
-				<input type="submit" value="Guardar cambios">
-				<form>
-
-				</form>
-			</form>
-		</div>
-		<div class="editUserBox" style="width: 30%; margin-right: 0px;">
-			<h3>Cambiar contraseña</h3>
-			<form id="changePass">
-
-
-				<label>Contraseña:</label>
-				<input type="text" name="gender">
-				<label>Repetir contraseña:</label>
-				<input type="text" name="gender">
-
-				<input type="submit" value="Guardar">
-				<form>
-
-		</div>
+		<!-- Footer Fin -->
 	</div>
 
 
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<!-- Optional JavaScript -->
+
+	<script>
+		// Navbar jQuery
+		$(function () {
+			$(document).scroll(function () {
+				var $nav = $("#mainNavbar");
+				$nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+			});
+		});
+		//Get the current year for the copyright 
+		$('#year').text(newDate().getFullYear());
+	</script>
 </body>
 
 </html>

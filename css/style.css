@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #ccc;
 }
 
 /*******************NAVBAR*********************/
@@ -67,6 +67,12 @@ body {
   min-height: 250px;
 }
 
+ul .footer-lista {
+
+
+  list-style-type: none !important;
+}
+
 /*---------------------------------------------------------------------------------------*/
 
 /*---------------------------------------------------------------------------------------*/
@@ -99,13 +105,15 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   background-repeat: no-repeat;
   opacity: 100%;
+  background-size: cover;
+  /*TO DO : que este overlay llegue como mucho a un 60% del ancho de la pantalla, pero sin que quede raro*/
 }
 
 #home-section .home-inner {
-  padding-top: 205px;
+  padding-top: 10%;
 }
 
 /* Form */
@@ -126,6 +134,18 @@ esto para centrar el logo en el formulario?
   margin-left: 170px;
 }
 */
+/* LOGO-HOME */
+.logo-container {
+  /* display: flex; */
+  margin: 0 auto;
+}
+
+.logo-travelook {
+  width: 100%;
+  margin-top: -10%;
+
+
+}
 
 /*******************INDEX-ABOUT**********************/
 
@@ -147,8 +167,14 @@ esto para centrar el logo en el formulario?
 }
 
 .card {
-  border-radius: 5px;
+
   background-color: #f3f3f3;
+  transition: all 0.3s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transform: scale(1.1);
 }
 
 .card-team {
@@ -177,6 +203,7 @@ span {
 /*******************INDEX-BRAND**********************/
 
 #brand-section {
+  background-color: #fff;
   min-height: auto;
   -webkit-align-content: center;
   align-content: center;
@@ -368,15 +395,22 @@ header.underline:after {
   border-radius: 5px;
   padding: 7px;
   margin-top: 10px;
+
 }
 
 .btn-trav-primary:hover {
   background-color: #11baf3;
 }
 
+.btn-trav-primary:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
 /* ----- */
 
 .btn-trav-purple {
+  position: relative;
   background-color: #a25eb9;
   outline: none;
   border: none;
@@ -387,23 +421,46 @@ header.underline:after {
 }
 
 .btn-trav-purple:hover {
-  background-color: #bb89cc;
-  color: #333;
+  background-color: #11baf3;
+  color: #fff;
 }
 
+.btn-trav-purple:focus {
+  outline: none;
+}
+
+.btn-trav-purple:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+/* ----- */
+
 .btn-outline-white {
-  outline: 1px solid #fff;
+  border: 1px solid #fff;
   padding: 5px;
+
 }
 
 .btn-outline-white:hover {
   background-color: #a25eb9;
   outline: none;
   color: #fff !important;
+
 }
 
-.boton-radius {
-  border-radius: 15px !important;
+.btn-outline-white:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+/* ---HOVER-EFFECT-- */
+.hover:hover {
+  top: 2px;
+}
+
+.hover:active {
+  top: 4px;
 }
 
 /*******************FORMULARIOS TRAVELOOK*********************/
@@ -473,12 +530,19 @@ textarea,
 
 /**********************LOGOS*************************/
 
-.logo-travelook {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  width: 180px;
-  height: auto;
+
+/********************UTILIDADES***************************/
+/* border radius */
+.round-5 {
+  border-radius: 5px;
+}
+
+.round-10 {
+  border-radius: 10px;
+}
+
+.round-15 {
+  border-radius: 15px;
 }
 
 /***********************************************/
