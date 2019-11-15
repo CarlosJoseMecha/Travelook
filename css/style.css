@@ -67,10 +67,9 @@ body {
   min-height: 250px;
 }
 
-ul .footer-lista {
-
-
-  list-style-type: none !important;
+/*******************CONTAINER*********************/
+.main-container {
+  height: 100vh;
 }
 
 /*---------------------------------------------------------------------------------------*/
@@ -489,6 +488,11 @@ textarea,
 }
 
 /*********************ICONOS FONT AWESOME**************************/
+.icon {
+
+  font-size: 2em;
+  color: white;
+}
 
 /* .............................................................. */
 
@@ -530,6 +534,10 @@ textarea,
 
 /**********************LOGOS*************************/
 
+.logo-footer {
+  width: 15em;
+  height: auto;
+}
 
 /********************UTILIDADES***************************/
 /* border radius */
@@ -543,6 +551,19 @@ textarea,
 
 .round-15 {
   border-radius: 15px;
+}
+
+/* link styling */
+.link-style {
+  text-decoration: none;
+}
+
+.link-style:hover,
+.link-style:active,
+.link-style:link,
+.link-style:visited {
+  text-decoration: none;
+  color: #fff;
 }
 
 /***********************************************/
