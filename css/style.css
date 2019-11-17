@@ -149,15 +149,13 @@ esto para centrar el logo en el formulario?
 
 /*******INDEX DATE PICKER *********************/
 .pick-sl{
-  background:#a25eb9;
+  background:#ccc;
   color: #fff;
 }
 div.datedropper .picker ul.pick li span{
   color: #fff!important;
 }
-.pick li span{
-  background: #a25eb9;
-}
+
 
 div.datedropper {
   --dd-color1:#17a2d0!important;
@@ -169,6 +167,11 @@ div.datedropper {
 div.datedropper .picker+div a {
   opacity: 0!important;
 }
+div.datedropper .picker-jumped-years>div {
+  color:#17a2d0!important;
+}
+
+
 /*******************INDEX-ABOUT**********************/
 
 #about-section {
@@ -486,7 +489,7 @@ header.underline:after {
 }
 
 /*******************FORMULARIOS TRAVELOOK*********************/
-/* 
+
 .input-travelook {
   background-color: transparent !important;
   outline: none !important;
@@ -509,7 +512,7 @@ textarea,
 .input-travelook::placeholder {
   color: #fff;
 }
- */
+
 /*********************ICONOS FONT AWESOME**************************/
 .icon {
 
