@@ -146,6 +146,32 @@ esto para centrar el logo en el formulario?
 
 }
 
+
+/*******INDEX DATE PICKER *********************/
+.pick-sl{
+  background:#ccc;
+  color: #fff;
+}
+div.datedropper .picker ul.pick li span{
+  color: #fff!important;
+}
+
+
+div.datedropper {
+  --dd-color1:#17a2d0!important;
+  --dd-color2: white!important;
+  --dd-color3: #fff!important;
+  --dd-color4: white!important;
+}
+
+div.datedropper .picker+div a {
+  opacity: 0!important;
+}
+div.datedropper .picker-jumped-years>div {
+  color:#17a2d0!important;
+}
+
+
 /*******************INDEX-ABOUT**********************/
 
 #about-section {
@@ -165,13 +191,13 @@ esto para centrar el logo en el formulario?
   align-content: center;
 }
 
-.card {
+.card-animation{
 
   background-color: #f3f3f3;
   transition: all 0.3s ease-in;
 }
 
-.card:hover {
+.card-animation:hover {
   transform: translateY(-5px);
   transform: scale(1.1);
 }
@@ -226,6 +252,36 @@ span {
 
 /******************************viajes.html***************************************/
 
+#viajes-section .gradient-flow {
+
+  background: rgba(0, 153, 204, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+.gradient-flow {
+/* 	margin: 0; */
+/* 	width: 100%; */
+	height:100%;
+	font-family: "Exo", sans-serif;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 800% 800%;
+	animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 /*==============================================================================================================================================================================================*/
 
 /*Aqui estan todas las clases personalizadas que no pertenecen a bootstrap, aplicar la clase al elemento para implementar.
