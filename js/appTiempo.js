@@ -25,3 +25,11 @@ function traer() {
     var celsiusRedondeados = Math.round(celsiusConvertir * 100) / 100;
     return celsiusRedondeados;
   }
+
+  //Array ciudades cuado pincho que me busque esa ciudad.
+/* 
+traer los dos valores .latirtud.Array
+
+var latitud 
+var longitud
+var ciudad (latitud, longirud) */
