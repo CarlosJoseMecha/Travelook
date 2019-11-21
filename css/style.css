@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background: #ccc;
+  /* background: #ccc; */
 }
 
 /*******************NAVBAR*********************/
@@ -34,7 +34,7 @@ body {
 }
 
 .navbar {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.0);
   transition: .5s;
 }
 
