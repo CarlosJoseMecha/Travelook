@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  /* background: #ccc; */
+  font-size: 14px;
 }
 
 /*******************NAVBAR*********************/
@@ -122,29 +122,13 @@ body {
   z-index: 10;
 }
 
-/*
-esto para centrar el logo en el formulario?
-.center-logo {
-  left: 50px;
-  margin-left: 190;
-   margin-bottom: -130px;
-  z-index: 999999;
-  position: relative;
-  margin-left: 170px;
-}
-*/
 /* LOGO-HOME */
 .logo-container {
   /* display: flex; */
   margin: 0 auto;
 }
 
-.logo-travelook {
-  width: 100%;
-  margin-top: -10%;
 
-
-}
 
 
 /*******INDEX DATE PICKER *********************/
@@ -243,6 +227,14 @@ span {
 /******************************gracias.html***************************************/
 
 /******************************graciasContacto.html***************************************/
+#section-graciasContacto {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
 
 /******************************modalRegistro***************************************/
 
@@ -323,28 +315,28 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 
 .txt-trav-primary {
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 1.1em;
   color: #fff !important;
   font-weight: 300;
 }
 
 .txt-trav-secondary {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 1.2em;
   color: #fff !important;
   font-weight: 300;
 }
 
 .txt-trav-small {
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   color: #fff !important;
   font-weight: 300;
 }
 
 .txt-trav-big {
   font-family: 'Lato', sans-serif;
-  font-size: 21px;
+  font-size: 1.5em;
   font-weight: 300;
   color: #fff !important;
 }
@@ -357,28 +349,28 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 
 .txt-trav-primary-dark {
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 1.1em;
   color: #333 !important;
   font-weight: 300;
 }
 
 .txt-trav-secondary-dark {
   font-family: "Lato", sans-serif;
-  font-size: 18px;
+  font-size: 1.2em;
   color: #333 !important;
   font-weight: 300;
 }
 
 .txt-trav-small-dark {
   font-family: 'Lato', sans-serif;
-  font-size: 14px;
+  font-size: 1em;
   color: #333 !important;
   font-weight: 300;
 }
 
 .txt-trav-big-dark {
   font-family: 'Lato', sans-serif;
-  font-size: 21px;
+  font-size: 1.5em;
   font-weight: 300;
   color: #333 !important;
 }
@@ -402,7 +394,7 @@ header.underline:after {
   width: 6em;
 }
 
-/*******************BACKGROUND COLORS TRAVELOOK*********************/
+/*******************BACKGROUND/FONDOS  TRAVELOOK*********************/
 
 .bg-trav-grey-light {
   background-color: #f3f3f3;
@@ -446,6 +438,10 @@ header.underline:after {
 
 .bg-purple-dark {
   background-color: #764587;
+}
+
+.bg-travelook {
+  background: url(../assets/img/backgrounds/background.svg);
 }
 
 /*******************BUTTONS TRAVELOOK*********************/
@@ -596,6 +592,18 @@ textarea,
 }
 
 /**********************LOGOS*************************/
+.logo-travelook {
+  width: 100%;
+  margin-top: -10%;
+
+}
+
+.logo-travelook-small {
+  width: 30%;
+
+
+
+}
 
 .logo-footer {
   width: 15em;
@@ -633,6 +641,11 @@ textarea,
 .px-10 {
   padding-left: 5em;
   padding-right: 5em;
+}
+
+/* Margin */
+.mt-10p {
+  margin-top: 10%;
 }
 
 /***********************************************/
