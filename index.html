@@ -15,6 +15,9 @@
   <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
 
   <title>Travelook</title>
+  <!-- JS -->
+  <script defer src="js/formValidation.js"></script>
+
 </head>
 
 <body>
@@ -43,10 +46,12 @@
               <a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary">Registrar</a>
+              <a href="#" class="nav-link txt-trav-primary" data-toggle="modal"
+                data-target="#registroModal">Registrar</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary btn-outline-white round-5 ">Iniciar Sesión</a>
+              <a href="#" class="nav-link txt-trav-primary btn-outline-white round-5" data-toggle="modal"
+                data-target="#iniciarSesionModal">Iniciar Sesión</a>
             </li>
           </ul>
         </div>
@@ -104,16 +109,13 @@
                   </div>
                 </div>
               </div>
-
-
-
               <!-- form end -->
             </div>
           </div>
         </div>
       </div>
-
     </header>
+
     <!-- Home Section Fin -->
     <!-- HEADER FIN -->
     <!-- About Section -->
@@ -137,7 +139,6 @@
       </div>
     </section>
     <!-- About Section Fin -->
-
     <!-- Section Equipo -->
     <section id="equipo-section" class="text-center py-5">
       <div class="container">
@@ -354,12 +355,91 @@
           <!-- col - 3 of 3  end-->
         </div>
       </div>
-  </div>
-  </footer>
-  <!-- Footer Fin -->
+    </footer>
+    <!-- Footer Fin -->
   </div>
   <!-- Site fin -->
-
+  <!-- Modal Registro -->
+  <div class="modal fade" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+        </div>
+        <div class="modal-body">
+          <!-- form -->
+          <form id="registerForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="firstName" name="First Name" placeholder="Nombre"
+                onfocus="validateFirstName()">
+              <span class="helper-text"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="lastName" name="Last Name" placeholder="Apellidos">
+              <span class="helper-text"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="password" name="Password" placeholder="Contraseña">
+              <span class="helper-text"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="confirmPassword" name="Confirm Password"
+                placeholder="Confirmar contraseña">
+              <span class="helper-text"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="email" name="Email" placeholder="Email">
+              <span class="helper-text"></span>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordar</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <!-- form end -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal fin -->
+  <!-- Modal Iniciar Sesion -->
+  <div class="modal fade" id="iniciarSesionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal fin -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

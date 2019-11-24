@@ -665,5 +665,13 @@ textarea,
 }
 
 /***********************************************/
+/* Validacion formularios */
+.valid {
+  color: #4caf50 !important;
+}
+
+.invalid {
+  color: #f44336 !important;
+}
 
 /*==============================================================*/
