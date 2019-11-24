@@ -1,5 +1,5 @@
 /****** Form Validation ******/
-
+//TODO: los dos inputs de contraseña tienen un marco azul cuando se hace focus que no deberian tener.
 //inputs
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
@@ -11,6 +11,13 @@ const form = document.getElementById('registerForm');
 //Validation colors
 const green = '#4caf50';
 const red = '#f44336';
+
+//Prevencion de comportamiento default
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+});
+
 
 //Validaciones
 
@@ -32,16 +39,33 @@ function validateLastName() {
 };
 //Validar password
 function validatePassword() {
-  //comprobamos si esta vacio
-  if (checkIfOnlyLetters(password)) return;
-  //comprobamos longitud del password 
-  if (!meetLength(password, 6, 20)) return;
-  //comoprobamos con nuestros criterios
-  //1.  a
-  //2. a 1
-  //3. A a 1
-  //4. A a 1 @
+  //comprobar que esta vacio
+  if (checkIfEmpty(password)) return;
+  //comprobacion de longitud, podemos ajustarlo como queramos, longitud min  y longitud max
+  if (!meetLength(password, 3, 20)) return;
+  //code para expresiones regulares de comprobacion
+  // 1- a
+  // 2- a 1
+  // 3- A a 1
+  // 4- A a 1 @
   if (!containsCharacters(password, 1)) return;
+  return true;
+};
+
+function validateConfirmPassword() {
+  //comprueba si esta vacio
+  if (checkIfEmpty(confirmPassword)) return;
+  if (password.className !== 'form-control form-input-travelook valid') {
+    setInvalid(confirmPassword, 'La contraseña debe ser valida');
+    return;
+  }
+  //if they match
+  if (password.value !== confirmPassword.value) {
+    setInvalid(confirmPassword, 'La contraseña debe coincidir');
+    return;
+  } else {
+    setValid(confirmPassword);
+  }
   return true;
 };
 //Validar email
@@ -54,7 +78,7 @@ function validateEmail() {
 
 //Utilidades***************************
 //checkIfEmpty
-function checkIfEmpty() {
+function checkIfEmpty(field) {
   if (isEmpty(field.value.trim())) {
     //decimos que es invalido
     setInvalid(field, `${field.name} no puede estar vacío`);
@@ -67,19 +91,19 @@ function checkIfEmpty() {
 };
 //isEmpty
 function isEmpty(value) {
-  if (value === ' ') return true;
+  if (value === '') return true;
   return false;
 };
 
 //setInvalid
 function setInvalid(field, message) {
-  field.className = 'invalid'
-  document.getElementById('helper-text') = message;
-  field.classList.add(red);
+  field.className = 'form-control form-input-travelook invalid';
+  field.nextElementSibling.innerHTML = message;
+  field.nextElementSibling.style.color = red;
 };
 //setValid
 function setValid(field, message) {
-  field.className = 'valid';
+  field.className = 'form-control form-input-travelook valid';
   field.nextElementSibling.innerHTML = '';
 };
 
@@ -131,5 +155,16 @@ function containsCharacters(field, code) {
       return matchWithRegEx(regEx, field, 'Introduzca un email valido')
     default:
       return false;
+  }
+};
+
+//comprobacion del regEx
+function matchWithRegEx(regEx, field, message) {
+  if (field.value.match(regEx)) {
+    setValid(field);
+    return true;
+  } else {
+    setInvalid(field, message);
+    return false;
   }
 }

@@ -547,6 +547,15 @@ header.underline:after {
   border-radius: 0;
 }
 
+.form-input-travelook {
+  background-color: transparent !important;
+  outline: none !important;
+  border: none;
+  border-bottom: 2px solid #ca68a6;
+  border-radius: 0;
+  width: 90%;
+}
+
 input[type="text"],
 textarea,
 .input-travelook {
@@ -667,11 +676,21 @@ textarea,
 /***********************************************/
 /* Validacion formularios */
 .valid {
-  color: #4caf50 !important;
+  background-color: transparent !important;
+  outline: none !important;
+  border: none;
+  border-bottom: 2px solid #4caf50;
+  border-radius: 0;
 }
 
 .invalid {
-  color: #f44336 !important;
+  background-color: transparent !important;
+  outline: none !important;
+  border: none;
+  border-bottom: 2px solid #f44336;
+  border-radius: 0;
 }
+
+
 
 /*==============================================================*/

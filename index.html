@@ -369,27 +369,30 @@
         </div>
         <div class="modal-body">
           <!-- form -->
-          <form id="registerForm">
+          <form id="registerForm" method="GET">
             <div class="form-group">
-              <input type="text" class="form-control" id="firstName" name="First Name" placeholder="Nombre"
-                onfocus="validateFirstName()">
+              <input type="text" class="form-control form-input-travelook" id="firstName" name="Nombre"
+                placeholder="Nombre" onfocusout="validateFirstName()">
               <span class="helper-text"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="lastName" name="Last Name" placeholder="Apellidos">
+              <input type="text" class="form-control form-input-travelook" id="lastName" name="Apellidos"
+                placeholder="Apellidos" onfocusout="validateLastName()">
               <span class="helper-text"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="password" name="Password" placeholder="Contraseña">
+              <input type="password" class="form-control form-input-travelook" id="password" name="Contraseña"
+                placeholder="Contraseña" onfocusout="validatePassword()">
               <span class="helper-text"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="confirmPassword" name="Confirm Password"
-                placeholder="Confirmar contraseña">
+              <input type="password" class="form-control form-input-travelook" id="confirmPassword"
+                name="Confirmar Contraseña" placeholder="Confirmar contraseña" onfocusout="validateConfirmPassword()">
               <span class="helper-text"></span>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="email" name="Email" placeholder="Email">
+              <input type="text" class="form-control form-input-travelook" id="email" name="Email" placeholder="Email"
+                onfocusout="validateEmail()">
               <span class="helper-text"></span>
             </div>
             <div class="form-group form-check">
@@ -460,8 +463,6 @@
         $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
       });
     });
-    //Get the current year for the copyright 
-    $('#year').text(newDate().getFullYear());
   </script>
 </body>
 
