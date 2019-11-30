@@ -6,14 +6,23 @@ const lastName = document.getElementById('lastName');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirmPassword');
 const email = document.getElementById('email');
+const loginEmail = document.getElementById('loginEmail');
+const loginPassword = document.getElementById('loginPassword');
+
 //formulario
 const form = document.getElementById('registerForm');
+const formLogin = document.getElementById('loginForm');
 //Validation colors
 const green = '#4caf50';
 const red = '#f44336';
 
 //Prevencion de comportamiento default
 form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+});
+//Prevencion de comportamiento default
+loginForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
 });
@@ -48,7 +57,7 @@ function validatePassword() {
   // 2- a 1
   // 3- A a 1
   // 4- A a 1 @
-  if (!containsCharacters(password, 1)) return;
+  if (!containsCharacters(password, 3)) return;
   return true;
 };
 
@@ -75,8 +84,29 @@ function validateEmail() {
   if (!containsCharacters(email, 5)) return;
   return true;
 }
-
-//Utilidades***************************
+//  Login ------------------------------------------------------- 
+//Validar email login
+function validateLoginEmail() {
+  //comprobamos si esta vacio
+  if (checkIfEmpty(loginEmail)) return;
+  if (!containsCharacters(loginEmail, 5)) return;
+  return true;
+}
+//Validar login password
+function validateLoginPassword() {
+  //comprobar que esta vacio
+  if (checkIfEmpty(loginPassword)) return;
+  //comprobacion de longitud, podemos ajustarlo como queramos, longitud min  y longitud max
+  if (!meetLength(loginPassword, 3, 20)) return;
+  //code para expresiones regulares de comprobacion
+  // 1- a
+  // 2- a 1
+  // 3- A a 1
+  // 4- A a 1 @
+  if (!containsCharacters(loginPassword, 3)) return;
+  return true;
+};
+//Utilidades--------------------------------------------
 //checkIfEmpty
 function checkIfEmpty(field) {
   if (isEmpty(field.value.trim())) {

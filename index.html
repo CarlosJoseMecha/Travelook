@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <!-- Required meta tags -->
@@ -23,9 +23,9 @@
 <body>
   <div class="site">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm fixed-top" id="mainNavbar">
+    <nav class="navbar navbar-expand-md fixed-top" id="mainNavbar">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand">
+        <a href="index.html" class="navbar-brand d-none d-md-block">
           <img src="assets/img/logos/logo-white.png" alt="travelook-logo">
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -65,9 +65,9 @@
           <div class="home-inner container">
             <!-- icono -->
             <div class="row">
-              <div class="col-12 logo-container d-flex justify-content-center">
+              <div class="col-12  logo-container  justify-content-center">
                 <a href="index.html"><img src="assets/img/logos/Logo_simple.svg" alt="logo de una maleta"
-                    class="logo-travelook"></a>
+                    class="logo-travelook-main"></a>
               </div>
               <div class="col-12 logo-container  d-flex justify-content-center mb-5">
                 <a href="index.html"><img src="assets/img/logos/white-01.png" alt="logo travelook"
@@ -148,7 +148,7 @@
         <!-- cards equipo -->
         <!-- member 1 -->
         <div class="row">
-          <div class="col-2">
+          <div class=" col-md-2">
             <div class="card bg-trav-grey-light ">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -162,7 +162,7 @@
 
           <!-- member2 -->
 
-          <div class="col-2">
+          <div class="col-md-2">
             <div class="card bg-trav-grey-light">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -176,7 +176,7 @@
 
           <!-- member3 -->
 
-          <div class="col-2">
+          <div class="col-md-2">
             <div class="card bg-trav-grey-light">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -190,7 +190,7 @@
 
           <!-- member4 -->
 
-          <div class="col-2">
+          <div class="col-md-2">
             <div class="card bg-trav-grey-light">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -204,7 +204,7 @@
 
           <!-- member5 -->
 
-          <div class="col-2">
+          <div class="col-md-2">
             <div class="card bg-trav-grey-light">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -218,7 +218,7 @@
 
           <!-- member6 -->
 
-          <div class="col-2">
+          <div class="col-md-2">
             <div class="card bg-trav-grey-light">
               <div class="p-3">
                 <img src="assets/img/avatar/Avatar 1.jpg" class="card-img-top img-fluid  card-team circle-picture"
@@ -282,7 +282,7 @@
       <div class="container-fluid ">
         <div class="row  align-items-center">
           <!-- col - 1 of 3 -->
-          <div class="col-4 d-flex justify-content-center ">
+          <div class="col-md-4 d-none  d-md-block justify-content-center ">
             <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
               <li><a href="index.html" class="link-style">Inicio</a></li>
               <li><a href="#about-section" class="link-style">About</a></li>
@@ -294,7 +294,7 @@
           </div>
           <!-- col - 1 of 3 end -->
           <!-- col - 2 of 3  -->
-          <div class="col-4">
+          <div class="col-md-4">
             <div class="row text-center align-items-center">
               <div class="col-12">
                 <a href="index.html">
@@ -311,7 +311,7 @@
           </div>
           <!-- col - 2 of 3  end-->
           <!-- col - 3 of 3  -->
-          <div class="col-4 ">
+          <div class="col-md-4 ">
             <div class="row">
               <div class="col-12">
                 <div class="row  justify-content-center">
@@ -360,89 +360,101 @@
   </div>
   <!-- Site fin -->
   <!-- Modal Registro -->
-  <div class="modal fade" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
+  <div class="modal fade bg-trav-flow" id="registroModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+    </button>
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content bg-trav-transparent">
+        <div class="container text-center p-5">
+          <div class="row">
+            <div class="col-12">
+              <img src="assets/img/logos/Logo_simple.svg" alt="" class="form-logo">
+            </div>
+            <!-- form -->
+            <div class="col-12">
+              <form method="POST" id="registerForm">
+                <div class="form-group">
+                  <input type="text" class="form-control form-input-travelook" name="Nombre" id="firstName"
+                    autocomplete="off" placeholder="Nombre" onfocusout="validateFirstName()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-input-travelook" name="Apellido" id="lastName"
+                    placeholder="Apellidos" onfocusout="validateLastName()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="password"
+                    placeholder="Contraseña" onfocusout="validatePassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Confirmar contraseña"
+                    id="confirmPassword" placeholder="Repetir contraseña" onfocusout="validateConfirmPassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-input-travelook" name="Email" id="email"
+                    placeholder="Email" onfocusout="validateEmail()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <button type="submit" class="btn btn-block btn-trav-pink mt-5">Aceptar y Registrar</button>
+                <span class="mt-2 txt-trav-medium">o</span>
+                <button type="submit" class="btn btn-block btn-facebook mt-3">Continuar con facebook</button>
+                <p class="d-inline-block mt-3 txt-trav-secondary">¿Ya estas registrado? <a href="#"
+                    class="d-inline-block link-form-style">Iniciar
+                    Sesión</a>
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-          <!-- form -->
-          <form id="registerForm" method="GET">
-            <div class="form-group">
-              <input type="text" class="form-control form-input-travelook" id="firstName" name="Nombre"
-                placeholder="Nombre" onfocusout="validateFirstName()">
-              <span class="helper-text"></span>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control form-input-travelook" id="lastName" name="Apellidos"
-                placeholder="Apellidos" onfocusout="validateLastName()">
-              <span class="helper-text"></span>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control form-input-travelook" id="password" name="Contraseña"
-                placeholder="Contraseña" onfocusout="validatePassword()">
-              <span class="helper-text"></span>
-            </div>
-            <div class="form-group">
-              <input type="password" class="form-control form-input-travelook" id="confirmPassword"
-                name="Confirmar Contraseña" placeholder="Confirmar contraseña" onfocusout="validateConfirmPassword()">
-              <span class="helper-text"></span>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control form-input-travelook" id="email" name="Email" placeholder="Email"
-                onfocusout="validateEmail()">
-              <span class="helper-text"></span>
-            </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Recordar</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-          <!-- form end -->
-        </div>
+
       </div>
     </div>
   </div>
-  <!-- Modal fin -->
+  <!-- Modal  registro fin -->
   <!-- Modal Iniciar Sesion -->
-  <div class="modal fade" id="iniciarSesionModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Iniciar sesion</h5>
-        </div>
-        <div class="modal-body">
-          <form>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                else.</small>
+  <div class="modal fade bg-trav-flow" id="iniciarSesionModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true"><i class="fas fa-times"></i></span>
+    </button>
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content bg-trav-transparent">
+        <div class="container text-center p-5">
+          <div class="row">
+            <div class="col-12">
+              <img src="assets/img/logos/Logo_simple.svg" alt="" class="form-logo">
             </div>
-            <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <!-- form -->
+            <div class="col-12">
+              <form method="POST" id="loginForm">
+                <div class="form-group">
+                  <input type="loginEmail" class="form-control form-input-travelook" name="Email" id="loginEmail"
+                    autocomplete="off" placeholder="Email" onfocusout="validateLoginEmail()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="loginPassword"
+                    placeholder="Contraseña" onfocusout="validateLoginPassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <button type="submit" class="btn btn-block btn-trav-pink mt-5">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-block btn-facebook mt-3">Iniciar sesión con facebook</button>
+                <p class="d-inline-block mt-3 txt-trav-secondary">¿Aún no estas registrado? <a href="#"
+                    class="d-inline-block link-form-style">Registrate</a>
+                </p>
+              </form>
             </div>
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Modal fin -->
+  <!-- Modal iniciar sesion fin -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

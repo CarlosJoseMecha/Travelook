@@ -15,6 +15,7 @@ html {
 
 body {
   font-size: 14px;
+   !important
 }
 
 /*******************NAVBAR*********************/
@@ -24,23 +25,23 @@ body {
 /* LOGO */
 
 .navbar-brand img {
-  margin-left: 35%;
-  width: 40%;
-  height: auto;
+  margin-left: 35% !important;
+  width: 40% !important;
+  height: auto !important;
 }
 
 .navbar-nav {
-  margin-right: 10%;
+  margin-right: 10% important;
 }
 
 .navbar {
-  background: rgba(0, 0, 0, 0.0);
-  transition: .5s;
+  background: rgba(0, 0, 0, 0.0) !important;
+  transition: .5s important;
 }
 
 .nav-link {
-  position: relative;
-  padding: 5px 10px;
+  position: relative !important;
+  padding: 5px 10px important;
 }
 
 .nav-link:hover {
@@ -48,7 +49,11 @@ body {
 }
 
 .nav-link:active {
-  top: 2px;
+  top: 2px !important;
+}
+
+.navbar-toggler {
+  color: #fff !important;
 }
 
 /* jQuerry scroll  */
@@ -56,7 +61,7 @@ body {
 /*nota-mental: que la barra se vea mientras hace scroll, y que cuando pare vuelva a ser transparente, porque queda raro ahora mismo*/
 
 #mainNavbar.scrolled {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7) !important;
 }
 
 /*******************FOOTER*********************/
@@ -138,23 +143,23 @@ body {
 }
 
 div.datedropper .picker ul.pick li span {
-  color: #fff !important;
+  color: #fff;
 }
 
 
 div.datedropper {
-  --dd-color1: #17a2d0 !important;
-  --dd-color2: white !important;
-  --dd-color3: #fff !important;
-  --dd-color4: white !important;
+  --dd-color1: #17a2d0;
+  --dd-color2: white;
+  --dd-color3: #fff;
+  --dd-color4: white;
 }
 
 div.datedropper .picker+div a {
-  opacity: 0 !important;
+  opacity: 0;
 }
 
 div.datedropper .picker-jumped-years>div {
-  color: #17a2d0 !important;
+  color: #17a2d0;
 }
 
 
@@ -237,6 +242,23 @@ span {
 
 
 /******************************modalRegistro***************************************/
+.form-logo {
+  margin-top: -30%;
+  margin-bottom: 1rem;
+  height: 8rem;
+}
+
+/* boton para cerrar modal */
+.close {
+  position: relative;
+  margin-top: 1%;
+  margin-right: 3%;
+
+}
+
+.close:focus {
+  outline: 0;
+}
 
 /******************************modalLogin***************************************/
 
@@ -310,255 +332,333 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 /*******************TEXTO TRAVELOOK*********************/
 
 .txt-trav-white {
-  color: white !important;
+  color: white;
 }
 
 
 
 .txt-trav-primary {
-  font-family: "Lato", sans-serif !important;
-  font-size: 1.1em !important;
-  color: #fff !important;
-  font-weight: 300 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 300;
 }
 
 .txt-trav-secondary {
-  font-family: "Lato", sans-serif !important;
-  font-size: 1.2em !important;
-  color: #fff !important;
-  font-weight: 300 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 300;
 }
 
 .txt-trav-small {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1em !important;
-  color: #fff !important;
-  font-weight: 300 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 300;
 }
 
 .txt-trav-medium {
-  font-family: 'Lato', sans-serif !important;
+  font-family: 'Lato', sans-serif;
   font-size: 1.5em;
-  font-weight: 300 !important;
-  color: #fff !important;
+  font-weight: 300;
+  color: #fff;
 }
 
 .txt-trav-big {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 2em !important;
-  font-weight: 300 !important;
-  color: #fff !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: #fff;
 }
 
 /* texto oscuro --------*/
 
 .txt-trav-dark {
-  color: #333 !important;
+  color: #333;
 }
 
 .txt-trav-primary-dark {
-  font-family: "Lato", sans-serif !important;
-  font-size: 1.1em !important;
-  color: #333 !important;
-  font-weight: 300 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.1em;
+  color: #333;
+  font-weight: 300;
 }
 
 .txt-trav-secondary-dark {
-  font-family: "Lato", sans-serif !important;
-  font-size: 1.2em !important;
-  color: #333 !important;
-  font-weight: 300 !important;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 300;
 }
 
 .txt-trav-small-dark {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1em !important;
-  color: #333 !important;
-  font-weight: 300 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #333;
+  font-weight: 300;
 }
 
 .txt-trav-medium-dark {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 1.5em !important;
-  font-weight: 300 !important;
-  color: #333 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  color: #333;
 }
 
 .txt-trav-big-dark {
-  font-family: 'Lato', sans-serif !important;
-  font-size: 2em !important;
-  font-weight: 300 !important;
-  color: #333 !important;
+  font-family: 'Lato', sans-serif;
+  font-size: 2em;
+  font-weight: 300;
+  color: #333;
 }
 
 /* Mayusculas */
 .uppercase {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
 }
 
 /* elementos decorativos tipograficos */
 header.underline:after {
-  background: #333 !important;
+  background: #333;
 }
 
 header.underline:after {
-  background: rgba(144, 144, 144, 0.5) !important;
+  background: rgba(144, 144, 144, 0.5);
   content: '';
-  display: inline-block !important;
-  height: 1px !important;
-  margin-top: 1.5em !important;
-  width: 6em !important;
+  display: inline-block;
+  height: 1px;
+  margin-top: 1.5em;
+  width: 6em;
 }
 
 /*******************BACKGROUND/FONDOS  TRAVELOOK*********************/
 
 .bg-trav-grey-light {
-  background-color: #f3f3f3 !important;
+  background-color: #f3f3f3;
 }
 
 .bg-trav-light {
-  background-color: #eee7d6 !important;
+  background-color: #eee7d6;
 }
 
 .bg-blue {
-  background-color: #0099CC !important;
+  background-color: #0099CC;
 }
 
 .bg-blue-light {
-  background-color: #17a2d0 !important;
+  background-color: #17a2d0;
 }
 
 .bg-blue-dark {
-  background-color: #008cba !important;
+  background-color: #008cba;
 }
 
 .bg-pink {
-  background-color: #ca68a6 !important;
+  background-color: #ca68a6;
 }
 
 .bg-pink-light {
-  background-color: #ce75ae !important;
+  background-color: #ce75ae;
 }
 
 .bg-pink-dark {
-  background-color: #ca68a6 !important;
+  background-color: #ca68a6;
 }
 
 .bg-purple {
-  background-color: #a25eb9 !important;
+  background-color: #a25eb9;
 }
 
 .bg-purple-light {
-  background-color: #bb89cc !important;
+  background-color: #bb89cc;
 }
 
 .bg-purple-dark {
-  background-color: #764587 !important;
+  background-color: #764587;
 }
 
 .bg-travelook {
-  background: url(../assets/img/backgrounds/background.svg) !important;
+  background: url(../assets/img/backgrounds/background.svg);
+}
+
+/*----------------------------------------------*/
+.bg-trav-flow {
+  margin: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.modal-content {
+  position: absolute;
+}
+
+/*--------------------------------------------------*/
+.bg-trav-transparent {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /*******************BUTTONS TRAVELOOK*********************/
 
 .btn-trav-primary {
-  background-color: #0099CC !important;
+  background-color: #0099CC;
   outline: none;
-  border: none !important;
-  border-radius: 5px !important;
-  padding: 7px !important;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
   margin-top: 10px;
 
 }
 
 .btn-trav-primary:hover {
-  background-color: #11baf3 !important;
+  background-color: #11baf3;
 }
 
 .btn-trav-primary:focus {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
 }
 
 /* ----- */
 
 .btn-trav-purple {
   position: relative;
-  background-color: #a25eb9 !important;
-  outline: none !important;
-  border: none !important;
-  border-radius: 5px !important;
-  padding: 7px !important;
-  margin-top: 10px !important;
-  color: #fff !important;
+  background-color: #a25eb9;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 10px;
+  color: #fff;
 }
 
 .btn-trav-purple:hover {
   background-color: #11baf3;
-  color: #fff !important;
+  color: #fff;
 }
 
 .btn-trav-purple:focus {
-  outline: none !important;
+  outline: none;
 }
 
 .btn-trav-purple:focus {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* ----- */
+.btn-trav-pink {
+  position: relative;
+  background-color: #ce75ae;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.btn-trav-pink:hover {
+  background-color: #11baf3;
+  color: #fff;
+}
+
+.btn-trav-pink:focus {
+  outline: none;
+}
+
+.btn-trav-pink:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /* ----- */
 
 .btn-outline-white {
-  border: 1px solid #fff !important;
-  padding: 5px !important;
+  border: 1px solid #fff;
+  padding: 5px;
 
 }
 
 .btn-outline-white:hover {
-  background-color: #a25eb9 !important;
-  outline: none !important;
-  color: #fff !important;
+  background-color: #a25eb9;
+  outline: none;
+  color: #fff;
 
 }
 
 .btn-outline-white:focus {
-  outline: none !important;
-  box-shadow: none !important;
+  outline: none;
+  box-shadow: none;
 }
 
 /* ---HOVER-EFFECT-- */
 .hover:hover {
-  top: 2px !important;
+  top: 2px;
 }
 
 .hover:active {
-  top: 4px !important;
+  top: 4px;
+}
+
+/* ------------------ */
+.btn-facebook {
+  background-color: #3B5998;
+  color: #fff;
+}
+
+.btn-facebook:hover {
+  background-color: #11baf3;
+  color: #fff;
 }
 
 /*******************FORMULARIOS TRAVELOOK*********************/
 
 .input-travelook {
-  background-color: transparent !important;
-  outline: none !important;
-  border: none !important;
-  border-bottom: 2px solid #fff !important;
-  border-radius: 0 !important;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
 }
 
 .form-input-travelook {
-  background-color: transparent !important;
-  outline: none !important;
-  border: none !important;
-  border-bottom: 2px solid #ca68a6 !important;
-  border-radius: 0 !important;
-  width: 90% !important;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ca68a6;
+  border-radius: 0;
+  caret-color: white;
+  width: 100%;
+  height: 100%;
+  color: #fff !important;
+
 }
 
 input[type="text"],
 textarea,
-.input-travelook {
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -567,15 +667,33 @@ textarea,
   border-color: #bb89cc !important;
 }
 
+.form-input-travelook:focus {
+  border-color: #bb89cc !important;
+  background-color: transparent;
+}
+
 .input-travelook::placeholder {
   color: #fff !important;
 }
 
+.form-input-travelook::placeholder {
+  color: #fff !important;
+}
+
+#helper-text {
+  text-align: start !important;
+}
+
+/* ---------------------------------*/
+
+
+/* ---------------------------------*/
+
 /*********************ICONOS FONT AWESOME**************************/
 .icon {
 
-  font-size: 2em !important;
-  color: white !important;
+  font-size: 2em;
+  color: white;
 }
 
 /* .............................................................. */
@@ -583,112 +701,134 @@ textarea,
 /* no tocar, esto es un fix para que los iconitos salgan dentro del input */
 
 .inner-addon {
-  position: relative !important;
+  position: relative;
 }
 
 /* style icon */
 
 .inner-addon .fas,
 .inner-addon .far {
-  position: absolute !important;
-  padding: 10px !important;
-  pointer-events: none !important;
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
 }
 
 /* align icon */
 
 .right-addon .fas,
 .right-addon .far {
-  right: 0px !important;
+  right: 0px;
 }
 
 /* add padding  */
 
 .right-addon input {
-  padding-right: 30px !important;
+  padding-right: 30px;
 }
 
 /* .............................................................. */
 
 .fas,
 .far {
-  color: #fff !important;
-  font-weight: lighter !important;
+  color: #fff;
+  font-weight: lighter;
 }
 
 /**********************LOGOS*************************/
-.logo-travelook {
+.logo-travelook-main {
   width: 100%;
-  margin-top: -10% !important;
+  height: 9em;
+}
+
+.logo-travelook {
+  width: 25em;
+  margin-top: -10%;
 
 }
 
 .logo-travelook-small {
-  width: 30% !important;
+  width: 30%;
 
 
 
 }
 
 .logo-footer {
-  width: 15em !important;
-  height: auto !important;
+  width: 15em;
+  height: auto;
 }
 
 /********************UTILIDADES***************************/
 /* border radius */
 .round-5 {
-  border-radius: 5px !important;
+  border-radius: 5px;
 }
 
 .round-10 {
-  border-radius: 10px !important;
+  border-radius: 10px;
 }
 
 .round-15 {
-  border-radius: 15px !important;
+  border-radius: 15px;
 }
 
 /* link styling */
 .link-style {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .link-style:hover,
 .link-style:active,
 .link-style:link,
 .link-style:visited {
-  text-decoration: none !important;
-  color: #fff !important;
+  text-decoration: none;
+  color: #fff;
 }
+
+/* form link styling */
+.link-form-style {
+  color: #bb89cc !important;
+  font-weight: 600 !important;
+}
+
+.link-form-style:hover,
+.link-form-style:active,
+.link-form-style:link {
+  text-decoration: none;
+  color: #17a2d0 !important;
+  text-decoration: underline !important;
+}
+
 
 /* Padding */
 .px-10 {
-  padding-left: 5em !important;
-  padding-right: 5em !important;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 /* Margin */
 .mt-10p {
-  margin-top: 10% !important;
+  margin-top: 10%;
 }
 
 /***********************************************/
 /* Validacion formularios */
 .valid {
-  background-color: transparent !important;
-  outline: none !important;
+  background-color: transparent;
+  outline: none;
   border: none;
   border-bottom: 2px solid #4caf50;
   border-radius: 0;
+  text-align: start !important;
 }
 
 .invalid {
-  background-color: transparent !important;
-  outline: none !important;
+  background-color: transparent;
+  outline: none;
   border: none;
   border-bottom: 2px solid #f44336;
   border-radius: 0;
+  text-align: start !important;
 }
 
 
