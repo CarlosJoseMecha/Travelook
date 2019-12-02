@@ -1,6 +1,5 @@
-<!-- Tamar -->
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
 	<!-- Required meta tags -->
@@ -12,12 +11,50 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 	<title>Travelook</title>
+
+	<!-- ProfileOnly CSS -->
+	<style type="text/css">
+		.profile{
+		  background: rgb(0,153,204);
+		  background: linear-gradient(43deg, rgba(0,153,204,1) 0%, rgba(202,104,166,1) 100%);
+		  overflow: scroll;
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
+		}
+
+		form.is-readonly button.btn-save, form.is-readonly button.btn-delete  {
+		  display: none;
+		}
+
+		form.is-editing button.btn-edit{
+		  display: none;
+		}
+
+		form.is-readonly input[disabled], form.is-readonly textarea[disabled], form.is-readonly select[disabled] {
+		  cursor: text;
+		  background-color: #fff;
+		  border-color: transparent;
+		  outline-color: transparent;
+		  box-shadow: none;
+		}
+
+		form {border-bottom: 1px solid rgba(0,0,0,.125);}
+
+		form i{opacity: 0.2;}
+
+  		form i:hover{
+    		opacity: 1;
+    		color : #ca68a6;
+  		}	
+	</style>
 </head>
 
 <body>
-	<div class="site">
+	<div class="profile">
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-sm fixed-top" id="mainNavbar">
 			<div class="container-fluid">
@@ -52,8 +89,90 @@
 			</div>
 		</nav>
 		<!-- Navigation Fin -->
-		<!-- Empezar a codificar aqui -->
-		<!-- Terminar aqui -->
+
+		<!-- Profile Content -->
+		<div class="container">
+			<div>
+				<div class="card-deck m-5">
+
+					<div class="card col-lg-4 col-sm-12 text-center pl-0 pr-0">
+					    <img src="assets/img/avatar/profilePhoto.jpg" class="card-img-top mb-3" alt="Persona con cara de tigre">
+						<h5 class="card-title">María</h5>
+						<h5 class="card-subtitle text-muted mb-4">mariaruiz@gmail.com</h5>
+						<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small></p>
+					</div>
+
+					<div class="card col-lg-8 col-sm-12">
+					    <div class="card-body">
+					    	<h5 class="card-title">Datos de Cuenta</h5>
+
+					    	<form class="is-readonly">
+							    <label for="firstName">Nombre</label>
+							    <input type="text"  id="firstName" placeholder="Nombre" value="" disabled>
+							      
+							    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+		  					</form>
+
+		  					<form class="is-readonly">
+							    <label for="email">Correo Electrónico</label>
+							    <input type="mail"  id="email" placeholder="Correo Electrónico" value="" disabled>
+							      
+							    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+		  					</form>
+
+		  					<form class="is-readonly">
+							    <label for="gender">Género</label>
+							    <select  id="gender" disabled>
+					      			<option value="female" selected>Mujer</option>
+					      			<option value="male">Hombre</option>
+					      			<option value="other">Otros</option>
+								</select>
+							      
+							    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+		  					</form>
+
+		  					<form class="is-readonly">
+							    <label for="style">Estilo</label>
+							    <select  id="style" disabled>
+					      			<option value="formal" >Formal</option>
+					      			<option value="informal" selected>Informal</option>
+					      			<option value="sport">Deportivo</option>
+								</select>
+							      
+							    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+		  					</form>
+						</div>
+
+					    <div class="card-body">
+					    	<h5 class="card-title">Seguridad</h5>
+
+					    	<form class="is-readonly">
+							    <label for="password">Contraseña actual</label>
+							    <input type="password"  id="password" value="3trAv3ln3mA$Am" disabled>
+							      
+							    <button type="button" class="btn btn-default btn-show js-show"><i  class="material-icons" data-toggle="tooltip" title="Ver contraseña">remove_red_eye</i></button>
+		  					</form>
+		  					<br>
+							<button type="button" class="btn btn-light">Cambiar contraseña</button>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Profile Content -->
+		
 		<!-- Footer -->
 		<footer id="footer-section" class="bg-purple d-flex align-items-center">
 			<div class="container-fluid ">
@@ -132,11 +251,9 @@
 					<!-- col - 3 of 3  end-->
 				</div>
 			</div>
+		</footer>
+		<!-- Footer Fin -->
 	</div>
-	</footer>
-	<!-- Footer Fin -->
-	</div>
-
 
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -161,6 +278,8 @@
 		//Get the current year for the copyright 
 		$('#year').text(newDate().getFullYear());
 	</script>
+
+	<script type="text/javascript" src="js/profile.js"></script>
 </body>
 
 </html>
