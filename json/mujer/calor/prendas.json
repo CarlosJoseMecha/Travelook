@@ -1,0 +1,49 @@
+{
+    "mujerCalor": [{
+            "name": "/json/mujer/calor/img/1.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/2.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/3.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/4.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/5.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/6.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/7.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/8.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/9.jpg",
+            "tipo": "mujerCalor"
+        },
+        {
+            "name": "/json/mujer/calor/img/10.jpg",
+            "tipo": "mujerCalor"
+        },
+
+        {
+            "name": "/json/mujer/calor/img/11.jpg",
+            "tipo": "mujerCalor"
+        }
+
+    ]
+}

@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-   !important
+  !important
 }
 
 /*******************NAVBAR*********************/
@@ -73,6 +73,7 @@ body {
 }
 
 /*******************CONTAINER*********************/
+
 .main-container {
   height: 100vh;
 }
@@ -94,7 +95,6 @@ body {
 }
 
 #home-section .overlay {
-
   background: rgba(0, 153, 204, 0.3);
   position: absolute;
   top: 0;
@@ -128,15 +128,14 @@ body {
 }
 
 /* LOGO-HOME */
+
 .logo-container {
   /* display: flex; */
   margin: 0 auto;
 }
 
-
-
-
 /*******INDEX DATE PICKER *********************/
+
 .pick-sl {
   background: #ccc;
   color: #fff;
@@ -145,7 +144,6 @@ body {
 div.datedropper .picker ul.pick li span {
   color: #fff;
 }
-
 
 div.datedropper {
   --dd-color1: #17a2d0;
@@ -161,7 +159,6 @@ div.datedropper .picker+div a {
 div.datedropper .picker-jumped-years>div {
   color: #17a2d0;
 }
-
 
 /*******************INDEX-ABOUT**********************/
 
@@ -183,7 +180,6 @@ div.datedropper .picker-jumped-years>div {
 }
 
 .card-animation {
-
   background-color: #f3f3f3;
   transition: all 0.3s ease-in;
 }
@@ -197,8 +193,7 @@ div.datedropper .picker-jumped-years>div {
   background-color: #f3f3f3;
 }
 
-.txt-trav-small,
-span {
+.txt-trav-small, span {
   display: block;
 }
 
@@ -232,16 +227,15 @@ span {
 /******************************gracias.html***************************************/
 
 /******************************graciasContacto.html***************************************/
+
 #section-graciasContacto {
   height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
-
-
-
 /******************************modalRegistro***************************************/
+
 .form-logo {
   margin-top: -30%;
   margin-bottom: 1rem;
@@ -249,11 +243,11 @@ span {
 }
 
 /* boton para cerrar modal */
+
 .close {
   position: relative;
   margin-top: 1%;
   margin-right: 3%;
-
 }
 
 .close:focus {
@@ -269,7 +263,6 @@ span {
 /******************************viajes.html***************************************/
 
 #viajes-section .gradient-flow {
-
   background: rgba(0, 153, 204, 0.3);
   position: absolute;
   top: 0;
@@ -293,11 +286,9 @@ span {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -334,8 +325,6 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 .txt-trav-white {
   color: white;
 }
-
-
 
 .txt-trav-primary {
   font-family: "Lato", sans-serif;
@@ -414,11 +403,13 @@ Todo esta comentado en ingles, usar CTRL+ F para buscar lo que sea en el documen
 }
 
 /* Mayusculas */
+
 .uppercase {
   text-transform: uppercase;
 }
 
 /* elementos decorativos tipograficos */
+
 header.underline:after {
   background: #333;
 }
@@ -483,6 +474,7 @@ header.underline:after {
 }
 
 /*----------------------------------------------*/
+
 .bg-trav-flow {
   margin: 0;
   background-size: cover;
@@ -498,11 +490,9 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -513,6 +503,7 @@ header.underline:after {
 }
 
 /*--------------------------------------------------*/
+
 .bg-trav-transparent {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -526,7 +517,6 @@ header.underline:after {
   border-radius: 5px;
   padding: 7px;
   margin-top: 10px;
-
 }
 
 .btn-trav-primary:hover {
@@ -565,8 +555,8 @@ header.underline:after {
   box-shadow: none;
 }
 
-
 /* ----- */
+
 .btn-trav-pink {
   position: relative;
   background-color: #ce75ae;
@@ -597,14 +587,12 @@ header.underline:after {
 .btn-outline-white {
   border: 1px solid #fff;
   padding: 5px;
-
 }
 
 .btn-outline-white:hover {
   background-color: #a25eb9;
   outline: none;
   color: #fff;
-
 }
 
 .btn-outline-white:focus {
@@ -613,6 +601,7 @@ header.underline:after {
 }
 
 /* ---HOVER-EFFECT-- */
+
 .hover:hover {
   top: 2px;
 }
@@ -622,6 +611,7 @@ header.underline:after {
 }
 
 /* ------------------ */
+
 .btn-facebook {
   background-color: #3B5998;
   color: #fff;
@@ -652,13 +642,9 @@ header.underline:after {
   width: 100%;
   height: 100%;
   color: #fff !important;
-
 }
 
-input[type="text"],
-textarea,
-.input-travelook,
-.form-input-travelook {
+input[type="text"], textarea, .input-travelook, .form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -686,12 +672,11 @@ textarea,
 
 /* ---------------------------------*/
 
-
 /* ---------------------------------*/
 
 /*********************ICONOS FONT AWESOME**************************/
-.icon {
 
+.icon {
   font-size: 2em;
   color: white;
 }
@@ -706,8 +691,7 @@ textarea,
 
 /* style icon */
 
-.inner-addon .fas,
-.inner-addon .far {
+.inner-addon .fas, .inner-addon .far {
   position: absolute;
   padding: 10px;
   pointer-events: none;
@@ -715,8 +699,7 @@ textarea,
 
 /* align icon */
 
-.right-addon .fas,
-.right-addon .far {
+.right-addon .fas, .right-addon .far {
   right: 0px;
 }
 
@@ -728,13 +711,13 @@ textarea,
 
 /* .............................................................. */
 
-.fas,
-.far {
+.fas, .far {
   color: #fff;
   font-weight: lighter;
 }
 
 /**********************LOGOS*************************/
+
 .logo-travelook-main {
   width: 100%;
   height: 9em;
@@ -743,14 +726,10 @@ textarea,
 .logo-travelook {
   width: 25em;
   margin-top: -10%;
-
 }
 
 .logo-travelook-small {
   width: 30%;
-
-
-
 }
 
 .logo-footer {
@@ -759,7 +738,9 @@ textarea,
 }
 
 /********************UTILIDADES***************************/
+
 /* border radius */
+
 .round-5 {
   border-radius: 5px;
 }
@@ -773,46 +754,50 @@ textarea,
 }
 
 /* link styling */
+
 .link-style {
   text-decoration: none;
 }
 
-.link-style:hover,
-.link-style:active,
-.link-style:link,
-.link-style:visited {
+.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
   text-decoration: none;
   color: #fff;
 }
 
 /* form link styling */
+
 .link-form-style {
   color: #bb89cc !important;
   font-weight: 600 !important;
 }
 
-.link-form-style:hover,
-.link-form-style:active,
-.link-form-style:link {
+.link-form-style:hover, .link-form-style:active, .link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;
 }
 
-
 /* Padding */
+
 .px-10 {
   padding-left: 5em;
   padding-right: 5em;
 }
 
 /* Margin */
+
 .mt-10p {
   margin-top: 10%;
 }
 
+.mt-15p {
+  margin-top: 15%;
+}
+
 /***********************************************/
+
 /* Validacion formularios */
+
 .valid {
   background-color: transparent;
   outline: none;
@@ -830,7 +815,5 @@ textarea,
   border-radius: 0;
   text-align: start !important;
 }
-
-
 
 /*==============================================================*/
