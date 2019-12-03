@@ -20,12 +20,12 @@ var contenido = document.querySelector('#contenido');
  */
 
 let ciudadDestino = document.querySelector('#destinoViaje');
-
+// ${ciudadDestino}
 
 function traer() {
 
 
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${ciudadDestino},ES&APPID=dcad6bd0f350bf23372a42cce21f47da`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${ciudadDestino},ES&units=metric&APPID=dcad6bd0f350bf23372a42cce21f47da`)
 
     /*   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
@@ -60,6 +60,12 @@ function convertirFarenACelsius(farenheit) {
 }
 
 
+function convertirKelvinACelsius(kelvins) {
+  let celsiusConvertir = (kelvins - 273, 15);
+  var celsiusRedondeados = Math.round(celsiusConvertir * 100) / 100;
+  return celsiusRedondeados;
+
+}
 
 
 

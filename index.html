@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
+  <!-- Material IO -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <title>Travelook</title>
   <!-- JS -->
@@ -74,43 +76,39 @@
                     class="logo-travelook"></a>
               </div>
             </div>
+
+
+            <!-- form -->
             <div class="row">
+              <div class="col-12">
+                <form action="appTiempo.html" method="GET">
 
-            </div>
-            <!-- icono end -->
-            <div class="row">
+                  <div class="form-row">
+                    <div class="form-group col-6">
 
-              <!-- form -->
-              <div class="row">
-                <div class="col-12">
-                  <form action="appTiempo.html" method="GET">
-
-                    <div class="form-row">
-                      <div class="form-group col-6">
-                        <i class="far fa-search"></i>
-                        <input type="text" name="destino" id="destinoViaje" class="form-control input-travelook"
-                          placeholder="¿A dónde nos vamos?">
-                      </div>
-                      <div class="form-group col-6">
-                        <i class="far fa-calendar-alt"></i>
-                        <input type="date" name="fecha" id="fecha" class="form-control input-travelook">
-                        <!--  <input type="date" class="form-control input-travelook" style="color:#fff;" id="fecha"> -->
-                      </div>
-
+                      <input type="text" name="destino" id="destinoViaje" class="form-control input-travelook"
+                        placeholder="¿A dónde nos vamos?">
                     </div>
-                    <div class="row">
-                      <div class="col d-flex justify-content-center">
-                        <!--    <a href="/appTiempo.html" class="btn btn-trav-purple mt-5 px-10" id="ciudadDestino">Buscar</a> -->
-                        <button type="submit" class="btn btn-trav-purple mt-5 px-10">Buscar</button>
-                      </div>
+                    <div class="form-group col-6">
+                      <i class="far fa-calendar-alt"></i>
+                      <input type="date" name="fecha" id="fecha" class="form-control input-travelook">
+                      <!--  <input type="date" class="form-control input-travelook" style="color:#fff;" id="fecha"> -->
                     </div>
-                  </form>
-                </div>
-                <!-- form end -->
+
+                  </div>
+                  <div class="row">
+                    <div class="col d-flex justify-content-center">
+                      <!--    <a href="/appTiempo.html" class="btn btn-trav-purple mt-5 px-10" id="ciudadDestino">Buscar</a> -->
+                      <button type="submit" class="btn btn-trav-purple mt-5 px-10">Buscar</button>
+                    </div>
+                  </div>
+                </form>
               </div>
+              <!-- form end -->
             </div>
           </div>
         </div>
+      </div>
     </header>
 
     <!-- Home Section Fin -->
