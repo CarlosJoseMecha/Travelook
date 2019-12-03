@@ -1,5 +1,5 @@
 
-var contenido = document.querySelector('#contenido');
+//var contenido = document.querySelector('#contenido');
 
 /* function traer() {
   fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/71446b88e6eef2aa7de9e6488649d968/40.3160097,-3.8765372,1479294000?exclude=currently,flags,hourly&') //Traemos el archivo con fetch
@@ -19,13 +19,25 @@ var contenido = document.querySelector('#contenido');
   traer();
  */
 
-let ciudadDestino = document.querySelector('#destinoViaje');
+
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+var destinoId = getParameterByName('destino');
+var fechaId = getParameterByName('fecha');
+
+//let ciudadDestino = document.querySelector('#destinoViaje');
 // ${ciudadDestino}
 
 function traer() {
 
 
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${ciudadDestino},ES&units=metric&APPID=dcad6bd0f350bf23372a42cce21f47da`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
 
     /*   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt

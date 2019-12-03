@@ -651,6 +651,7 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
 
 .input-travelook:focus {
   border-color: #bb89cc !important;
+  background-color: transparent;
 }
 
 .form-input-travelook:focus {
@@ -691,7 +692,7 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
 
 /* style icon */
 
-.inner-addon .fas, .inner-addon .far {
+.inner-addon .fas, .inner-addon .far, .inner-addon .material-icons {
   position: absolute;
   padding: 10px;
   pointer-events: none;
