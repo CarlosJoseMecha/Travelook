@@ -37,7 +37,7 @@ var fechaId = getParameterByName('fecha');
 function traer() {
 
 
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
 
     /*   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
