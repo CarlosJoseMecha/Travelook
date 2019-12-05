@@ -55,7 +55,34 @@
         <!-- Empezar a codificar aqui -->
         <div class="container-fluid" style="height: auto; background-color: cadetblue;">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-6 offset-3 pt-5">
+                    <!-- formulario datos -->
+                    <form action="#" method="GET">
+                        <div class="form-group">
+                            <div class="pt-5">
+                                <input type="text" name="temperatura" id="temperatura" placeholder="temperatura palo">
+                            </div>
+                            <div>
+                                <select name="sexo" id="sexo">
+                                    <option value="mujer">Mujer</option>
+                                    <option value="hombre">hombre</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-flex justify-content-center">
+                                <!--    <a href="/appTiempo.html" class="btn btn-trav-purple mt-5 px-10" id="ciudadDestino">Buscar</a> -->
+                                <button type="submit" class="btn btn-trav-purple mt-5 px-10">Buscar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+
+                <div class="col-6 offset-3 pt-5">
+
+                    <!-- mostrador maletas -->
                     <div>
                         <img id="mostradorMaletas" src="/json/hombre/calor/img/1.jpg" alt="">
                     </div>
