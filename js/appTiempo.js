@@ -37,27 +37,27 @@ var fechaId = getParameterByName('fecha');
 function traer() {
 
 
-  //fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
 
-  //****** */   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
-  //.then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
-  //.then(data => {
-
-
-  //contenido.innerHTML = `${data}` // Así nos traemos de manera literal una variable HTML
-  //var viaje = JSON.parse(`${data}`);
-  //****console.log(viaje);
-  //*******var daily = viaje.data[0]//me creo esta variable para reutilizarla de manera + eficiente al acceder a datos
-  //let destino = (viaje.name);
-  //let temMax = (viaje.main.temp);
-  //let temGEN = (viaje.sys.country);
-  //let SEM = (viaje.weather[0].main);
+    //****** */   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
+    .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
+    .then(data => {
 
 
-  //contenido.innerHTML = destino + " " + temMax + " " + temGEN + " " + SEM;
-  //var celsiusPintar = convertirFarenACelsius(viaje.temMax); //estoy llamando a la funcion y recibiendo el resultado
-  //contenido.innerHTML = celsiusPintar.toLocaleString();
-  //})
+      contenido.innerHTML = `${data}` // Así nos traemos de manera literal una variable HTML
+      var viaje = JSON.parse(`${data}`);
+      //****console.log(viaje);
+      //*******var daily = viaje.data[0]//me creo esta variable para reutilizarla de manera + eficiente al acceder a datos
+      let destino = (viaje.name);
+      let temMax = (viaje.main.temp);
+      let temGEN = (viaje.sys.country);
+      let SEM = (viaje.weather[0].main);
+
+
+      contenido.innerHTML = destino + " " + temMax + " " + temGEN + " " + SEM;
+      var celsiusPintar = convertirFarenACelsius(viaje.temMax); //estoy llamando a la funcion y recibiendo el resultado
+      contenido.innerHTML = celsiusPintar.toLocaleString();
+    })
 }
 traer();
 
