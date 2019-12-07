@@ -1,25 +1,5 @@
 
-//var contenido = document.querySelector('#contenido');
-
-/* function traer() {
-  fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/71446b88e6eef2aa7de9e6488649d968/40.3160097,-3.8765372,1479294000?exclude=currently,flags,hourly&') //Traemos el archivo con fetch
-    .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
-    .then(data => {
-      //console.log(data)
-      //contenido.innerHTML =`${data}` // Así nos traemos de manera literal una variable HTML
-      var viaje= JSON.parse(`${data}`);
-      console.log(viaje);
-      var daily =viaje.daily.data[0];//me creo esta variable para reutilizarla de manera + eficiente al acceder a datos
-      contenido.innerHTML = (daily.apparentTemperatureHigh);
-      var celsiusPintar = convertirFarenACelsius(daily.apparentTemperatureHigh); //estoy llamando a la funcion y recibiendo el resultado
-      contenido.innerHTML = celsiusPintar.toLocaleString();
-    })
-  }
-
-  traer();
- */
-
-
+z
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
