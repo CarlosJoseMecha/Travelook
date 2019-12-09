@@ -1,19 +1,64 @@
 /*! MEDIA QUERIES */
 
 /* Extra small devices (portrait phones, less than 576px)*/
-@media (max-width: 575.98px) {}
+@media (max-width: 575.98px) {
+  .btn-outline-white {
+    border: none;
+    padding: 5px;
+  }
 
-// Small devices (landscape phones, less than 768px)
+  .btn-outline-white:hover {
+    background-color: transparent;
+    outline: none;
+    color: #ca68a6 !important;
+  }
+
+  .btn-outline-white:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
-  ...
+  .btn-outline-white {
+    border: none;
+    padding: 5px;
+  }
+
+  .btn-outline-white:hover {
+    background-color: transparent;
+    outline: none;
+    color: #ca68a6 !important;
+  }
+
+  .btn-outline-white:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
-// Medium devices (tablets, less than 992px)
+
+/* Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) {
-  ...
+  .btn-outline-white {
+    border: none;
+    padding: 5px;
+  }
+
+  .btn-outline-white:hover {
+    background-color: transparent;
+    outline: none;
+    color: #ca68a6 !important;
+  }
+
+  .btn-outline-white:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
-// Large devices (desktops, less than 1200px)
+/*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
   ...
 }
