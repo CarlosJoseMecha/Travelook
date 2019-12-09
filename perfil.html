@@ -4,10 +4,6 @@
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<link rel="icon" type="image/png" href="assets/img/favicons/fv64.png">
-	<link rel="icon" type="image/png" href="assets/img/favicons/fv48.png">
-	<link rel="icon" type="image/png" href="assets/img/favicons/fv32.png">
-	<link rel="icon" type="image/png" href="assets/img/favicons/fv24.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- Bootstrap CSS -->
@@ -15,200 +11,214 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Icons -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
 
 	<title>Travelook</title>
 
 	<!-- ProfileOnly CSS -->
 	<style type="text/css">
-		.profile {
-			background: rgb(0, 153, 204);
-			background: linear-gradient(43deg, rgba(0, 153, 204, 1) 0%, rgba(202, 104, 166, 1) 100%);
-			overflow: scroll;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-attachment: fixed;
+		/* Reservar el esapcio del Sticky Menu */
+		.fixed-top{position: sticky;}
+
+		.profile{
+		  background: rgb(0,153,204);
+		  background: linear-gradient(43deg, rgba(0,153,204,1) 0%, rgba(202,104,166,1) 100%);
+		  background-size: cover;
+		  background-repeat: no-repeat;
+		  background-attachment: fixed;
 		}
 
-		form.is-readonly button.btn-save,
-		form.is-readonly button.btn-delete {
-			display: none;
+		form.is-readonly button.btn-save, form.is-readonly button.btn-delete  {
+		  display: none;
 		}
 
-		form.is-editing button.btn-edit {
-			display: none;
+		form.is-editing button.btn-edit{
+		  display: none;
 		}
 
-		form.is-readonly input[disabled],
-		form.is-readonly textarea[disabled],
-		form.is-readonly select[disabled] {
-			cursor: text;
-			background-color: #fff;
-			border-color: transparent;
-			outline-color: transparent;
-			box-shadow: none;
+		form.is-readonly input[disabled], form.is-readonly textarea[disabled], form.is-readonly select[disabled] {
+		  cursor: text;
+		  background-color: #fff;
+		  border-color: transparent;
+		  outline-color: transparent;
+		  box-shadow: none;
 		}
 
-		form {
-			border-bottom: 1px solid rgba(0, 0, 0, .125);
-		}
+		form {border-bottom: 1px solid rgba(0,0,0,.04);}
 
-		form i {
-			opacity: 0.2;
-		}
+		form i{opacity: 0.2;}
 
-		form i:hover {
-			opacity: 1;
-			color: #ca68a6;
-		}
+  		form i:hover{
+    		opacity: 1;
+    		color : #ca68a6;
+  		}
+  		form.is-editing input, form.is-editing select  {
+    		outline: none !important;
+    		box-shadow: none !important;
+    		height: 37px;
+    		border: none;
+    		border-bottom: 1px solid #c769a6;
+		}	
+		
+
+		@media only screen and (min-width: 993px) {
+			footer {
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				background-color: red;
+				color: white;
+				text-align: center;
+			}
+			.full-height{
+				height: 100vh;
+			}
+		}		
 	</style>
 </head>
 
 <body>
-	<div class="profile">
+	<div class="profile full-height">
 		<!-- Navigation -->
-		<nav class="navbar navbar-expand-lg custom-toggler fixed-top" id="mainNavbar">
-	      <div class="container-fluid">
-	        <a href="index.html" class="navbar-brand d-none d-lg-block ">
-	          <img src="assets/img/logos/logo-white.png" alt="travelook-logo">
-	        </a>
-	        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-	          <span class="navbar-toggler-icon"></span>
-	        </button>
-	        <div class="collapse navbar-collapse" id="navbarCollapse">
-	          <ul class="navbar-nav ml-auto  text-uppercase">
-	            <li class="nav-item active">
-	              <a href="index.html" class="nav-link link txt-trav-primary">Inicio</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="#about-section" class="nav-link txt-trav-primary">About</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="#equipo-section" class="nav-link txt-trav-primary">Conocenos</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="viajes.html" class="nav-link txt-trav-primary">Mis viajes</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="perfil.html" class="nav-link txt-trav-primary">Perfil</a>
-	            </li>
-	            <li class="nav-item">
-	              <a href="index.html" class="nav-link txt-trav-primary btn-outline-white round-5">Cerrar Sesión</a>
-	            </li>
-	          </ul>
-	        </div>
-	      </div>
-	    </nav>
+		<nav class="navbar navbar-expand-sm fixed-top" id="mainNavbar">
+			<div class="container-fluid">
+				<a href="index.html" class="navbar-brand">
+					<img src="assets/img/logos/logo-white.png" alt="travelook-logo">
+				</a>
+				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarCollapse">
+					<ul class="navbar-nav ml-auto  text-uppercase">
+						<li class="nav-item active">
+							<a href="index.html" class="nav-link link txt-trav-primary">Inicio</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about-section" class="nav-link txt-trav-primary">About</a>
+						</li>
+						<li class="nav-item">
+							<a href="#equipo-section" class="nav-link txt-trav-primary">Conocenos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link txt-trav-primary">Registrar</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link txt-trav-primary btn-outline-white round-5 ">Iniciar Sesión</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 		<!-- Navigation Fin -->
 
 		<!-- Profile Content -->
-		<div class="container mt-10p ">
+		<div class="container">
 			<div>
-				<div class=" card-deck m-5">
+				<div class="card-deck m-5">
 
-					<div class="card col-lg-4 col-sm-12 text-center pl-0 pr-0">
-						<img src="assets/img/avatar/profilePhoto.jpg" class="card-img-top mb-3" alt="Persona con cara de tigre">
+					<div class="card col-lg-4 col-md-12 text-center pl-0 pr-0">
+					    <img src="assets/img/avatar/profilePhoto.jpg" class="card-img-top mb-3" alt="Persona con cara de tigre">
 						<h5 class="card-title">María</h5>
 						<h5 class="card-subtitle text-muted mb-4">mariaruiz@gmail.com</h5>
-						<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small>
-						</p>
+						<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small></p>
 					</div>
 
-					<div class="card col-lg-8 col-sm-12">
-						<div class="card-body">
-							<h5 class="card-title">Datos de Cuenta</h5>
+					<div class="card col-lg-8 col-md-12">
+					    <div class="card-body">
+					    	<h5 class="card-title">Datos de Cuenta</h5>
 
-							<form class="is-readonly">
-								<label for="firstName">Nombre</label>
-								<input type="text" id="firstName" placeholder="Nombre" value="" disabled>
+					    	<form class="is-readonly">
+					    		<div class="row">
+								    <label for="firstName" class="col-lg-4 col-form-label">Nombre</label>
+								    <input class="col-lg-5 col-md-12" type="text"  id="firstName" placeholder="Nombre" value="" disabled>
+								      
+								    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+			
+									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+								</div>
+		  					</form>
 
-								<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons"
-										data-toggle="tooltip" title="Editar">edit</i></button>
+		  					<form class="is-readonly">
+		  						<div class="row">
+							    	<label for="email" class="col-lg-4 col-form-label">Correo Electrónico</label>
+							    	<input class="col-lg-5 col-md-12" type="mail"  id="email" placeholder="Correo Electrónico" value="" disabled>
+							      
+							    	<button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+								</div>
+		  					</form>
 
-								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons"
-										data-toggle="tooltip" title="Guardar">save</i></button>
-								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons"
-										data-toggle="tooltip" title="Descartar">delete</i></button>
-							</form>
+		  					<form class="is-readonly">
+							    <div class="row">
+							    	<label for="gender" class="col-lg-4 col-form-label">Género</label>
+							    	<select class="col-lg-5 col-md-12" id="gender" disabled>
+					      				<option value="female" selected>Mujer</option>
+					      				<option value="male">Hombre</option>
+					      				<option value="other">Otros</option>
+									</select>
+							      
+							    	<button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+		
+									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+								</div>
+		  					</form>
 
-							<form class="is-readonly">
-								<label for="email">Correo Electrónico</label>
-								<input type="mail" id="email" placeholder="Correo Electrónico" value="" disabled>
-
-								<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons"
-										data-toggle="tooltip" title="Editar">edit</i></button>
-
-								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons"
-										data-toggle="tooltip" title="Guardar">save</i></button>
-								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons"
-										data-toggle="tooltip" title="Descartar">delete</i></button>
-							</form>
-
-							<form class="is-readonly">
-								<label for="gender">Género</label>
-								<select id="gender" disabled>
-									<option value="female" selected>Mujer</option>
-									<option value="male">Hombre</option>
-									<option value="other">Otros</option>
-								</select>
-
-								<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons"
-										data-toggle="tooltip" title="Editar">edit</i></button>
-
-								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons"
-										data-toggle="tooltip" title="Guardar">save</i></button>
-								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons"
-										data-toggle="tooltip" title="Descartar">delete</i></button>
-							</form>
-
-							<form class="is-readonly">
-								<label for="style">Estilo</label>
-								<select id="style" disabled>
-									<option value="formal">Formal</option>
-									<option value="informal" selected>Informal</option>
-									<option value="sport">Deportivo</option>
-								</select>
-
-								<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons"
-										data-toggle="tooltip" title="Editar">edit</i></button>
-
-								<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons"
-										data-toggle="tooltip" title="Guardar">save</i></button>
-								<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons"
-										data-toggle="tooltip" title="Descartar">delete</i></button>
-							</form>
+		  					<form class="is-readonly">
+		  						<div class="row">
+								    <label for="style" class="col-lg-4 col-form-label">Estilo</label>
+								    <select class="col-lg-5 col-md-12" id="style" disabled>
+						      			<option value="formal" >Formal</option>
+						      			<option value="informal" selected>Informal</option>
+						      			<option value="sport">Deportivo</option>
+									</select>
+								      
+								    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+			
+									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
+									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
+								</div>
+		  					</form>
 						</div>
 
-						<div class="card-body">
-							<h5 class="card-title">Seguridad</h5>
+					    <div class="card-body">
+					    	<h5 class="card-title">Seguridad</h5>
 
-							<form class="is-readonly">
-								<label for="password">Contraseña actual</label>
-								<input type="password" id="password" value="3trAv3ln3mA$Am" disabled>
-
-								<button type="button" class="btn btn-default btn-show js-show"><i class="material-icons"
-										data-toggle="tooltip" title="Ver contraseña">remove_red_eye</i></button>
-							</form>
-							<br>
+					    	<form class="is-readonly">
+					    		<div class="row">
+								    <label for="password" class="col-lg-4 col-form-label">Contraseña actual</label>
+								    <input class="col-lg-5 col-md-12" type="password"  id="password" value="3trAv3ln3mA$Am" disabled>
+								      
+								    <button type="button" class="btn btn-default btn-show js-show"><i  class="material-icons" data-toggle="tooltip" title="Ver contraseña">remove_red_eye</i></button>
+								</div>
+		  					</form>
+		  					<br>
 							<button type="button" class="btn btn-light">Cambiar contraseña</button>
-						</div>
+					    </div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- End Profile Content -->
-
+		
 		<!-- Footer -->
 		<footer id="footer-section" class="bg-purple d-flex align-items-center">
-			<div class="container-fluid ">
-				<div class="row  align-items-center">
-					<!-- col - 1 of 3 -->
-					<div class="col-4 d-flex justify-content-center ">
+		      <div class="container-fluid ">
+		        <div class="row  align-items-center">
+			          <!-- col - 1 of 3 -->
+					<div class="col-md-4 d-none  d-md-block justify-content-center ">
 						<ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
-							<li><a href="indexLogued.html" class="link-style">Inicio</a></li>
+							<li><a href="index.html" class="link-style">Inicio</a></li>
 							<li><a href="#about-section" class="link-style">About</a></li>
 							<li><a href="#equipo-section" class="link-style">Conocenos</a></li>
 							<li><a href="contacto.html" class="link-style">Contacta</a></li>
@@ -218,24 +228,24 @@
 					</div>
 					<!-- col - 1 of 3 end -->
 					<!-- col - 2 of 3  -->
-					<div class="col-4">
+					<div class="col-md-4">
 						<div class="row text-center align-items-center">
 							<div class="col-12">
-								<a href="indexLogued.html">
+								<a href="index.html">
 									<img src="assets/img/logos/white-01.png" alt="logo travelook" class="logo-footer">
 								</a>
 							</div>
 							<div class="col-12">
 								<p class="d-block txt-trav-white font-weight-lighter">Copyright &copy; <span id="year" class="d-inline">
-										2018
-									</span>Travelook
+								2018
+								</span>Travelook
 								</p>
 							</div>
 						</div>
 					</div>
 					<!-- col - 2 of 3  end-->
 					<!-- col - 3 of 3  -->
-					<div class="col-4 ">
+					<div class="col-md-4 ">
 						<div class="row">
 							<div class="col-12">
 								<div class="row  justify-content-center">
@@ -243,22 +253,19 @@
 										<ul class="list-unstyled d-flex justify-content-center">
 											<li class="px-2">
 												<a href="https://www.facebook.com/" target="_blank">
-													<i class="fab fa-facebook-square icon"></i>
-												</a>
+											<i class="fab fa-facebook-square icon"></i></a>
 											</li>
 											<li class="px-2">
 												<a href="https://instagram.com" target="_blank">
-													<i class="fab fa-instagram icon"></i></a>
+											<i class="fab fa-instagram icon"></i></a>
 											</li>
 											<li class="px-2">
 												<a href="https://twitter.com" target="_blank">
-													<i class="fab fa-twitter icon"></i>
-												</a>
+											<i class="fab fa-twitter icon"></i></a>
 											</li>
 											<li class="px-2">
 												<a href="https://linkedin.com" target="_blank">
-													<i class="fab fa-linkedin-in icon"></i>
-												</a>
+											<i class="fab fa-linkedin-in icon"></i></a>
 											</li>
 										</ul>
 									</div>
@@ -276,10 +283,10 @@
 							</div>
 						</div>
 					</div>
-					<!-- col - 3 of 3  end-->
-				</div>
-			</div>
-		</footer>
+			        <!-- col - 3 of 3  end-->
+			        </div>
+		      </div>
+	    </footer>
 		<!-- Footer Fin -->
 	</div>
 
