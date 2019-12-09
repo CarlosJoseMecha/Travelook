@@ -84,38 +84,41 @@
 <body>
 	<div class="profile full-height">
 		<!-- Navigation -->
-		<nav class="navbar navbar-expand-sm fixed-top" id="mainNavbar">
-			<div class="container-fluid">
-				<a href="index.html" class="navbar-brand">
-					<img src="assets/img/logos/logo-white.png" alt="travelook-logo">
-				</a>
-				<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarCollapse">
-					<ul class="navbar-nav ml-auto  text-uppercase">
-						<li class="nav-item active">
-							<a href="index.html" class="nav-link link txt-trav-primary">Inicio</a>
-						</li>
-						<li class="nav-item">
-							<a href="#about-section" class="nav-link txt-trav-primary">About</a>
-						</li>
-						<li class="nav-item">
-							<a href="#equipo-section" class="nav-link txt-trav-primary">Conocenos</a>
-						</li>
-						<li class="nav-item">
-							<a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link txt-trav-primary">Registrar</a>
-						</li>
-						<li class="nav-item">
-							<a href="#" class="nav-link txt-trav-primary btn-outline-white round-5 ">Iniciar Sesión</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<nav class="navbar navbar-expand-lg custom-toggler fixed-top" id="mainNavbar">
+	      <div class="container-fluid">
+	        <a href="indexLoaded.html" class="navbar-brand d-none d-lg-block ">
+	          <img src="assets/img/logos/logo-white.png" alt="travelook-logo">
+	        </a>
+	        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+	          <span class="navbar-toggler-icon"></span>
+	        </button>
+	        <div class="collapse navbar-collapse" id="navbarCollapse">
+	          <ul class="navbar-nav ml-auto  text-uppercase">
+	            <li class="nav-item active">
+	              <a href="indexLoaded.html" class="nav-link link txt-trav-primary">Inicio</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="#about-section" class="nav-link txt-trav-primary">About</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="#equipo-section" class="nav-link txt-trav-primary">Conocenos</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="viajes.html" class="nav-link txt-trav-primary">Mis viajes</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="perfil.html" class="nav-link txt-trav-primary">Perfil</a>
+	            </li>
+	            <li class="nav-item">
+	              <a href="indexLoaded.html" class="nav-link txt-trav-primary btn-outline-white round-5">Cerrar Sesión</a>
+	            </li>
+	          </ul>
+	        </div>
+	      </div>
+	    </nav>
 		<!-- Navigation Fin -->
 
 		<!-- Profile Content -->
@@ -142,9 +145,6 @@
 								    <input class="col-lg-5 col-md-12" type="text"  id="firstName" placeholder="Nombre" value="" disabled>
 								      
 								    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
-								    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
-  Tooltip on right
-</button>
 			
 									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
 									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
@@ -223,7 +223,7 @@
 			          <!-- col - 1 of 3 -->
 					<div class="col-md-4 d-none  d-md-block justify-content-center ">
 						<ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
-							<li><a href="index.html" class="link-style">Inicio</a></li>
+							<li><a href="indexLoaded.html" class="link-style">Inicio</a></li>
 							<li><a href="#about-section" class="link-style">About</a></li>
 							<li><a href="#equipo-section" class="link-style">Conocenos</a></li>
 							<li><a href="contacto.html" class="link-style">Contacta</a></li>
@@ -236,7 +236,7 @@
 					<div class="col-md-4">
 						<div class="row text-center align-items-center">
 							<div class="col-12">
-								<a href="index.html">
+								<a href="indexLoaded.html">
 									<img src="assets/img/logos/white-01.png" alt="logo travelook" class="logo-footer">
 								</a>
 							</div>
@@ -317,11 +317,6 @@
 		});
 		//Get the current year for the copyright 
 		$('#year').text(newDate().getFullYear());
-
-		
-		$(function () {
-  			$('[data-toggle="tooltip"]').tooltip()
-		})
 	</script>
 
 	<script type="text/javascript" src="js/profile.js"></script>
