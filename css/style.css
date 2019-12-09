@@ -200,6 +200,7 @@ div.datedropper .picker-jumped-years>div {
 .circle-picture {
   border-radius: 50%;
   margin: 0 auto;
+  border: 3px purple solid;
 }
 
 /*******************INDEX-CONTACT********************/
