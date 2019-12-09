@@ -1,0 +1,25 @@
+Parche:
+
+-TO DO: URGENTE Encontrar fallo en el menu hamburguesa del navbar. Cuando la navbar colapsa, no se ve.
+-Quitado script font awesome.
+-Añadido script material io.
+-Parcheadas animaciones cards de la seccion equipo.
+-Parcheado section brands para que desaparezca completamente en media query xs 
+-Parcheado formulario de busqueda para que sea responsive.
+-Parcheado iconos del formulario de busqueda para que se queden dentro de este.
+-Terminado de implementar footer responsive en todas las paginas.
+-Parcheado un fallo en el boton iniciar sesion. El texto no se ponia blanco al hacer hover.
+-Parcheado fallo en el que no se mostraban los botones de cerrar de los modales de Registro e inicio sesion.
+-Removidos los logos de la maleta de los formularios, daban muchos problemas en el responsive, y ahora mismo menos es mas. Queda mas limpio asi. 
+-Removidos archivos modales.html, ya no son necesarios. 
+
+-Movido archivo textos de Jennifer a carpeta documentacion, movido algunos de los logos que no se utilizan(propuestas) a la carpeta documentacion.
+
+-Local Storage v.1: 
+Ya guarda datos introducidos por el formulario de registro.
+Para utilizarlo, la primera vez abrir la consola y escribir : init();
+Esto creara el usuario de administracion con Email : admin@dev.com Password: Admin1234
+Con ese usuario ya se puede probar que funciona el login.
+Para ver los datos guardados en el local sotrage, en la consola del navegador, moverse a la pestaña Application. A la izquierda aparecera el local Storage, desplegar y asi se pueden ver los datos que hay en el local sotrage. 
+Aun le falta arreglar algunos errores, esta en proceso. Falta añadir animacion de cargado,
+de momento tiene un delay de 3s hasta que "loguea".
