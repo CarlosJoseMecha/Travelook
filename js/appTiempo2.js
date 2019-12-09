@@ -1,5 +1,5 @@
 
-z
+
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -17,7 +17,7 @@ var fechaId = getParameterByName('fecha');
 function traer() {
   // Estoy comprobando que haya un destino introducido, y si lo hay ...fetch
   if (destinoId == "" || destinoId == null) {
-    alert('introduce un destino avlido');
+    alert('introduce un destino aalido');
   } else {
 
     fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)

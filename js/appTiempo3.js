@@ -151,6 +151,13 @@ var temperaturaString = comprobarTemperatura(temperaturaDia1);
 
 
 
+
+
+
+
+
+
+
 //Botón lleva  a una nueva url de maleta destino con el parametro de clima
 document.getElementById("doItMaleta").addEventListener("click", function () {
   window.location.href = `http://127.0.0.1:5500/appLook.html?temperatura=${temperaturaString}`;
@@ -168,6 +175,9 @@ document.getElementById("doItMaleta").addEventListener("click", function () {
 
 
 //display none del boton hasta que termina la llamada y luego si le damos display
+
+
+
 
 
 

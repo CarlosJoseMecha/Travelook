@@ -14,17 +14,61 @@ console.log(nombre);
 
 /* ${temperatura} */
 ///---------------------------------------------
-//let temperatura = document.querySelector('#temperatura');
 
-let url_tipomaleta = `http://127.0.0.1:5500/appLook.html?temperatura=22&sexo=hombre`;
+
+
+
+
+let gender;
+//cogemos datos del local storage
+function obtenerLocalStorage() {
+    if (localStorage.getItem('gender')) {
+        gender = localStorage.getItem('gender');
+        console.log(gender);
+    } else {
+        console.log("no hay nada almacenado");
+    }
+}
+obtenerLocalStorage();
+
+
+//cogemos clima de la url
+
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+
+let temperaturaURL = getParameterByName('temperatura');
+console.log(temperaturaURL);
+
+
+/* let url_tipomaleta = `http://127.0.0.1:5500/appLook.html?temperatura=${temperatura}window.location.href`;
 let url = new URL(url_tipomaleta);
 let temperatura = url.searchParams.get('temperatura');
-let genero = url.searchParams.get('sexo');
-let clima = "frio";
 
 
-console.log(temperatura);
-console.log(genero);
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Funcion que cambia el json
@@ -91,7 +135,7 @@ xhttp.onreadystatechange = function () {//cuando el servidor este listo
 -Archivo Text, ph, xml, json, etc... 
 -true/ false: metodo de envio / es true = asincrono/*/
 
-xhttp.open("GET", `/json/${genero}/${clima}/prendas.json`, true);
+xhttp.open("GET", `/json/${gender}/${temperaturaURL}/prendas.json`, true);
 xhttp.send();
 
 
