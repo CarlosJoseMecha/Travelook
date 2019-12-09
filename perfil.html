@@ -120,15 +120,17 @@
 
 		<!-- Profile Content -->
 		<div class="container">
-			<div>
-				<div class="card-deck m-5">
+			<div class="m-5">
+				<div class="card-deck">
 
 					<div class="card col-lg-4 col-md-12 text-center pl-0 pr-0">
 					    <img src="assets/img/avatar/profilePhoto.jpg" class="card-img-top mb-3" alt="Persona con cara de tigre">
-						<h5 class="card-title">María</h5>
-						<h5 class="card-subtitle text-muted mb-4">mariaruiz@gmail.com</h5>
-						<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small></p>
-					</div>
+						<div class="m-3">
+							<h5 class="card-title">María</h5>
+							<h5 class="card-subtitle text-muted mb-4">mariaruiz@gmail.com</h5>
+							<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small></p>
+						</div>
+						</div>
 
 					<div class="card col-lg-8 col-md-12">
 					    <div class="card-body">
@@ -140,6 +142,9 @@
 								    <input class="col-lg-5 col-md-12" type="text"  id="firstName" placeholder="Nombre" value="" disabled>
 								      
 								    <button type="button" class="btn btn-default btn-edit js-edit"><i  class="material-icons" data-toggle="tooltip" title="Editar">edit</i></button>
+								    <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">
+  Tooltip on right
+</button>
 			
 									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons" data-toggle="tooltip" title="Guardar">save</i></button>
 									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons" data-toggle="tooltip" title="Descartar">delete</i></button>
@@ -312,6 +317,11 @@
 		});
 		//Get the current year for the copyright 
 		$('#year').text(newDate().getFullYear());
+
+		
+		$(function () {
+  			$('[data-toggle="tooltip"]').tooltip()
+		})
 	</script>
 
 	<script type="text/javascript" src="js/profile.js"></script>
