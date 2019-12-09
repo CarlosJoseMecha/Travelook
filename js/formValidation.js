@@ -1,13 +1,11 @@
-/****** Form Validation ******/
-//TODO: los dos inputs de contraseña tienen un marco azul cuando se hace focus que no deberian tener.
+//! ****** Form Validation ******/
 //inputs
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
+const gender = document.getElementById('gender');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirmPassword');
 const email = document.getElementById('email');
-const loginEmail = document.getElementById('loginEmail');
-const loginPassword = document.getElementById('loginPassword');
 
 //formulario
 const form = document.getElementById('registerForm');
@@ -17,10 +15,9 @@ const green = '#4caf50';
 const red = '#f44336';
 
 //Prevencion de comportamiento default
-form.addEventListener('submit', function (event) {
-  event.preventDefault();
-
-});
+// form.addEventListener('submit', function (event) {
+//   event.preventDefault();
+// });
 //Prevencion de comportamiento default
 loginForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -106,8 +103,8 @@ function validateLoginPassword() {
   if (!containsCharacters(loginPassword, 3)) return;
   return true;
 };
-//Utilidades--------------------------------------------
-//checkIfEmpty
+//?-------------------------------------Utilidades--------------------------------------------
+//*checkIfEmpty
 function checkIfEmpty(field) {
   if (isEmpty(field.value.trim())) {
     //decimos que es invalido
@@ -119,25 +116,25 @@ function checkIfEmpty(field) {
     return false;
   }
 };
-//isEmpty
+//*isEmpty
 function isEmpty(value) {
   if (value === '') return true;
   return false;
 };
 
-//setInvalid
+//*setInvalid
 function setInvalid(field, message) {
   field.className = 'form-control form-input-travelook invalid';
   field.nextElementSibling.innerHTML = message;
   field.nextElementSibling.style.color = red;
 };
-//setValid
+//*setValid
 function setValid(field, message) {
   field.className = 'form-control form-input-travelook valid';
   field.nextElementSibling.innerHTML = '';
 };
 
-//checkIfOnlyLetters
+//*checkIfOnlyLetters
 function checkIfOnlyLetters(field) {
   if (/^[a-zA-Z ]+$/.test(field.value)) {
     return true;
@@ -146,7 +143,7 @@ function checkIfOnlyLetters(field) {
     setInvalid(field, `${field.name} solo puede contener letras`);
   }
 };
-//meetLength
+//*meetLength
 function meetLength(field, minLength, maxLength) {
   if (field.value.length >= minLength && field.value.length < maxLength) {
     setValid(field);
@@ -159,7 +156,7 @@ function meetLength(field, minLength, maxLength) {
     return false;
   }
 }
-//containsCharacters
+//*containsCharacters
 function containsCharacters(field, code) {
   let regEx;
   switch (code) {
@@ -188,7 +185,7 @@ function containsCharacters(field, code) {
   }
 };
 
-//comprobacion del regEx
+//*comprobacion del regEx
 function matchWithRegEx(regEx, field, message) {
   if (field.value.match(regEx)) {
     setValid(field);
@@ -198,3 +195,91 @@ function matchWithRegEx(regEx, field, message) {
     return false;
   }
 }
+
+//! ********************* LOCAL STORAGE ************************
+//*para iniciar por primera vez el localStorage, usar: init()
+function init() {
+  location.reload();
+  localStorage.setItem('data', JSON.stringify([{
+    email: "admin@dev.com",
+    password: "Admin1234"
+  }]));
+  console.log('Local storage iniciado!');
+  console.log('Para acceder como administrador usar: Email: admin@dev.com Password: Admin1234');
+};
+//? ********** RECOGIDA DE DATOS *************
+
+const btnSubmit = document.getElementById('btnSubmit');
+
+//recogida de datos y variable para visualizar los datos del local storage
+const localData = JSON.parse(localStorage.getItem('data')); //! Esta variable contiene todos los datos que tiene el local storage
+const data = localData;
+
+
+//pulsamos boton Aceptar y Registrar
+btnSubmit.addEventListener('click', function () {
+  //guardamos en variables los valores de los input
+  let nameData = firstName.value;
+  let lastNameData = lastName.value;
+  let genderData = gender.value;
+  let passwordData = password.value;
+  let emailData = email.value;
+  //guardamos en una varibale el objeto nuevo que vamos a pushear al array data
+  let newData = {
+    name: nameData,
+    lastName: lastNameData,
+    gender: genderData,
+    password: passwordData,
+    email: emailData
+  }
+  //pusheamos a data el nuevo objeto
+  data.push(newData);
+  //metemos los datos en el local storage
+  localStorage.setItem('data', JSON.stringify(data));
+
+});
+
+
+//? ********* COMPROBACION DE DATOS ************
+const loginEmail = document.getElementById('loginEmail');
+const loginPassword = document.getElementById('loginPassword');
+
+const btnLogin = document.getElementById('btnLogin');
+
+//recorremos todo localData y comprobamos los datos
+btnLogin.addEventListener('click', function () {
+  let loginData = loginEmail.value;
+  let loginPasswordData = loginPassword.value;
+
+  for (let i = 0; i < localData.length; i++) {
+    if (loginData === localData[i].email && loginPasswordData === localData[i].password) {
+      console.log('funciona');
+      setTimeout(function () {
+        window.location.href = "indexLogued.html";
+      }, 3000)
+      return;
+    } else {
+      console.log('error');
+
+    }
+  }
+});
+
+
+
+//otra manera de hacerlo por si acaso
+// for (let i = 0; i < localData.length; i++) {
+//   let user = localData[i];
+//   let userData = Object.values(user);
+//   console.log(userData);
+//   for (let j = 0; j < userData.length; j++) {
+//     console.log(userData[j]);
+//     if (loginData === userData[4] && loginPasswordData === userData[3]) {
+//       console.log('funciona');
+//       return
+//     } else {
+//       console.log('error');
+//       return
+//     }
+//   }
+// }

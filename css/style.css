@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-  !important
+   !important
 }
 
 /*******************NAVBAR*********************/
@@ -25,9 +25,10 @@ body {
 /* LOGO */
 
 .navbar-brand img {
-  margin-left: 35% !important;
+  /* margin-left: 35% !important;
   width: 40% !important;
-  height: auto !important;
+  height: auto !important; */
+  width: 10em;
 }
 
 .navbar-nav {
@@ -193,7 +194,8 @@ div.datedropper .picker-jumped-years>div {
   background-color: #f3f3f3;
 }
 
-.txt-trav-small, span {
+.txt-trav-small,
+span {
   display: block;
 }
 
@@ -409,9 +411,11 @@ iframe {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -613,9 +617,11 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -715,7 +721,7 @@ header.underline:after {
 .btn-outline-white:hover {
   background-color: #a25eb9;
   outline: none;
-  color: #fff;
+  color: #fff !important;
 }
 
 .btn-outline-white:focus {
@@ -767,7 +773,10 @@ header.underline:after {
   color: #fff !important;
 }
 
-input[type="text"], textarea, .input-travelook, .form-input-travelook {
+input[type="text"],
+textarea,
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -794,14 +803,26 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   text-align: start !important;
 }
 
-/* ---------------------------------*/
+.input-travelook::-webkit-datetime-edit {
+  color: #fff !important;
+}
 
 /* ---------------------------------*/
 
-/*********************ICONOS FONT AWESOME**************************/
+/* ---------------------------------*/
+/********************* ICONOS **************************/
+.close-icon {
+  color: #fff;
+  font-size: 15em;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 95%;
+}
+
+/********************* ICONOS FORMULARIO BUSQUEDA **************************/
 
 .icon {
-  font-size: 2em;
   color: white;
 }
 
@@ -809,36 +830,26 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
 
 /* no tocar, esto es un fix para que los iconitos salgan dentro del input */
 
+/* position icon */
 .inner-addon {
-  position: relative;
-}
-
-/* style icon */
-
-.inner-addon .fas, .inner-addon .far, .inner-addon .material-icons {
   position: absolute;
-  padding: 10px;
+  padding: 0.3em;
   pointer-events: none;
 }
 
 /* align icon */
 
-.right-addon .fas, .right-addon .far {
+.right-addon {
   right: 0px;
 }
 
 /* add padding  */
 
-.right-addon input {
+/* .right-addon input {
   padding-right: 30px;
-}
+} */
 
 /* .............................................................. */
-
-.fas, .far {
-  color: #fff;
-  font-weight: lighter;
-}
 
 /**********************LOGOS*************************/
 
@@ -883,7 +894,10 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   text-decoration: none;
 }
 
-.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
+.link-style:hover,
+.link-style:active,
+.link-style:link,
+.link-style:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -895,7 +909,9 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   font-weight: 600 !important;
 }
 
-.link-form-style:hover, .link-form-style:active, .link-form-style:link {
+.link-form-style:hover,
+.link-form-style:active,
+.link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;
