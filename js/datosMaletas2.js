@@ -16,17 +16,15 @@ console.log(nombre);
 ///---------------------------------------------
 //let temperatura = document.querySelector('#temperatura');
 
-let url_tipomaleta = `http://127.0.0.1:5500//appJSON_prueba.html?&temperatura=20&select=mujer#`;
+let url_tipomaleta = `http://127.0.0.1:5500/appJSON_prueba.html?temperatura=22&sexo=hombre`;
 let url = new URL(url_tipomaleta);
 let temperatura = url.searchParams.get('temperatura');
-let sexo = url.searchParams.get('sexo');
-let clima // calor-frio
+let genero = url.searchParams.get('sexo');
+let clima = "frio";
+
 
 console.log(temperatura);
-
-
-
-
+console.log(genero);
 
 
 //Funcion que cambia el json
@@ -52,31 +50,26 @@ var mujerFrio = [];
 
 
 ///json/hombre/calor/img/1.jpg"
-let genero = "mujer";
-let temperatura2 = "frio";
 
 
-
-
+var response;
 var xhttp = new XMLHttpRequest(); //Pedimos una nueva request 
 
 xhttp.onreadystatechange = function () {//cuando el servidor este listo
     if (this.readyState == 4 && this.status == 200) {//si el servidor es el estado 4 y estatus 200 , si todo es ok
         //Transformamos
-        var response = JSON.parse(xhttp.response); // Response es el JSON, luego lo parseo a objeto para que JS lo entienda, y lo meto en variable
-        console.log(response);
+        response = JSON.parse(xhttp.response); // Response es el JSON, luego lo parseo a objeto para que JS lo entienda, y lo meto en variable
 
-        for (i = 0; i < response.lenght; i++); {
+
+        /*for (i = 0; i < response.lenght; i++); {
             var posicion = 0;
             var output = '';
-            output = `${response[i].name}`
-        }
-        console.log(output);
+            output = `${response[i]}`;
+        }*/
 
         ///Pintamos  el primer modelo
-        document.getElementById('mostradorMaletas').src = output;
+        document.getElementById('mostradorMaletas').src = response[0].name;
     }
-
 
 
 
@@ -92,13 +85,13 @@ xhttp.onreadystatechange = function () {//cuando el servidor este listo
     });
 
 };
+
 /*  El metodo open: estpecifica la solicitud , y especificamos si 
 -Por GET o POST
 -Archivo Text, ph, xml, json, etc... 
 -true/ false: metodo de envio / es true = asincrono/*/
 
-
-xhttp.open("GET", `/json/${genero}/${temperatura2}/prendas.json`, true);
+xhttp.open("GET", `/json/${genero}/${clima}/prendas.json`, true);
 xhttp.send();
 
 
@@ -106,18 +99,8 @@ xhttp.send();
 
 
 
-
-
-
-
-
-
-
-
-
-
 //Funcion para traer cualquier JSON
-function traer() {
+/* function traer() {
 
     fetch(`/json/${genero}/${temperatura2}/prendas.json`)
         .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
@@ -136,6 +119,6 @@ function traer() {
 }
 
 traer();
-
+ */
 
 

@@ -1,74 +1,72 @@
-{
-    "hombreFrio": [{
-            "name": "/json/hombre/frio/img/1.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/2.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/3.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/4.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/5.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/6.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/7.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/8.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/9.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/10.jpg",
-            "tipo": "hombreFrio"
-        },
+ [{
+         "name": "/json/hombre/frio/img/1.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/2.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/3.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/4.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/5.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/6.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/7.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/8.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/9.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/10.jpg",
+         "tipo": "hombreFrio"
+     },
 
-        {
-            "name": "/json/hombre/frio/img/11.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/12.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/13.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/14.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/15.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/17.jpg",
-            "tipo": "hombreFrio"
-        },
-        {
-            "name": "/json/hombre/frio/img/10.jpg",
-            "tipo": "hombreCalor"
-        }
+     {
+         "name": "/json/hombre/frio/img/11.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/12.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/13.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/14.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/15.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/17.jpg",
+         "tipo": "hombreFrio"
+     },
+     {
+         "name": "/json/hombre/frio/img/10.jpg",
+         "tipo": "hombreCalor"
+     }
 
 
-    ]
-}
+ ]

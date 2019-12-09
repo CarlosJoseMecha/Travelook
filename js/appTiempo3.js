@@ -69,6 +69,12 @@ let fechaEnTexto = (fechaToStringES(fechaId));
 //icon: para mostrar icono?=
 //url para mostrar iconos http://openweathermap.org/img/wn/10d@2x.png
 
+let item;
+let temperaturas;
+let fechas;
+let descripcion;
+let icono;
+let temperaturaDia1;
 
 
 
@@ -97,16 +103,19 @@ function traer() {
     let misDatos = '';
 
     for (key in viaje.list) {
-      let item = viaje.list[key];
-      let temperaturas = item.main.temp;
-      let fechas = item.dt_txt;
-      let descripcion = item.weather[0].description;
-      let icono = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+      item = viaje.list[key];
+      temperaturas = item.main.temp;
+      fechas = item.dt_txt;
+      descripcion = item.weather[0].description;
+      icono = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+      temperaturaDia1 = viaje.list[0].main.temp;
 
       //http://openweathermap.org/img/wn/10d@2x.png
       //misDatos += fechaToStringES(item.dt_txt) + '<br>';
       misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
       contenido2.innerHTML = misDatos;
+
+
 
     }
     /*     contenido2.innerHTML = viaje.list[0].dt_txt;
@@ -125,6 +134,42 @@ function traer() {
 
 }
 traer();
+
+
+
+//Comprobacion de temperatura para mostrar maleta
+function comprobarTemperatura(temperaturaGrados) {
+  if (temperaturaGrados >= 10) {
+    return "calor";
+  } else {
+    return "frio"
+  }
+}
+
+var temperaturaString = comprobarTemperatura(temperaturaDia1);
+
+
+
+
+//Botón lleva  a una nueva url de maleta destino con el parametro de clima
+document.getElementById("doItMaleta").addEventListener("click", function () {
+  window.location.href = `http://127.0.0.1:5500/appJSON_prueba.html?temperatura=${temperaturaString}`;
+});
+
+
+
+
+
+
+
+
+
+
+
+
+//display none del boton hasta que termina la llamada y luego si le damos display
+
+
 
 
 /*   let temMax = (viaje.main.temp);
