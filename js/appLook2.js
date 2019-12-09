@@ -16,7 +16,7 @@ console.log(nombre);
 ///---------------------------------------------
 //let temperatura = document.querySelector('#temperatura');
 
-let url_tipomaleta = `http://127.0.0.1:5500/appJSON_prueba.html?temperatura=22&sexo=hombre`;
+let url_tipomaleta = `http://127.0.0.1:5500/appLook.html?temperatura=22&sexo=hombre`;
 let url = new URL(url_tipomaleta);
 let temperatura = url.searchParams.get('temperatura');
 let genero = url.searchParams.get('sexo');
