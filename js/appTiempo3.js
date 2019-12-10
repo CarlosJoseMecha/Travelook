@@ -11,6 +11,7 @@ function getParameterByName(name) {
 
 var destinoId = getParameterByName('destino');
 var fechaId = getParameterByName('fecha');
+console.log(fechaId);
 
 //let ciudadDestino = document.querySelector('#destinoViaje');
 // ${ciudadDestino}
@@ -101,6 +102,9 @@ function traer() {
 
     //bucle recorrer la propiedad list del objeto
     let misDatos = '';
+    var myList = []
+    var primerDiaAcomprobar = fechaId;
+
 
     for (key in viaje.list) {
       item = viaje.list[key];
@@ -110,31 +114,68 @@ function traer() {
       icono = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
       temperaturaDia1 = viaje.list[0].main.temp;
 
-      //http://openweathermap.org/img/wn/10d@2x.png
-      //misDatos += fechaToStringES(item.dt_txt) + '<br>';
-      misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
+      //-----------------------------------------------------
+
+      contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaEnTexto}<br> y esté será tu pronóstico del tiempo :<hr>`;
+
+
       contenido2.innerHTML = misDatos;
+
+
+      //-----------------------------------------------------
+      misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
+      contenido2.innerHTML = misDatos + primerDiaAcomprobar;
+
+      var myList = []
+      var primerDiaAcomprobar = new Date(fechaId);
+
+      console.log(item.dt_txt);
+      if (fechas[key] = primerDiaAcomprobar) {
+
+      }
 
 
 
     }
-    /*     contenido2.innerHTML = viaje.list[0].dt_txt;
-        let destino = (viaje.city.name);
-     */
 
-    contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaEnTexto}<br> y esté será tu pronóstico del tiempo :<hr>`;
-    contenido2.innerHTML = misDatos;
+
+
     //let fecha1 = viaje.list[0].dt_txt;
 
     //bucle para encontrar  la fecha del parametro dentro de las fechas del objeto.
 
-
-
   }
+
+
 
 }
 traer();
 
+
+
+
+
+
+
+
+
+function tiempoDiaroAmostrar(temperaturas) {
+  return temperaturas = true;
+  console.log('HOLA');
+  tiempoDiaroAmostrar();
+}
+
+//**--------------------------*/
+
+
+
+//LOCAL TIME
+//FECHAS EN UTC -- SE PUEDEN COMPARAR CON NUMEROS
+//addDays SUMA UN DIA MAS Y AS 
+
+
+
+//-------------------------------
 
 
 //Comprobacion de temperatura para mostrar maleta
@@ -147,14 +188,6 @@ function comprobarTemperatura(temperaturaGrados) {
 }
 
 var temperaturaString = comprobarTemperatura(temperaturaDia1);
-
-
-
-
-
-
-
-
 
 
 
