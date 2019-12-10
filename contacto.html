@@ -12,16 +12,19 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
-
+  <!-- Media Query -->
+  <link rel="stylesheet" href="css/mediaqueries.css">
+  <!-- Material IO -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <title>Travelook</title>
 </head>
 
 <body>
   <div class="site">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm  navbar-light fixed-top" id="mainNavbar">
+    <nav class="navbar navbar-expand-lg custom-toggler fixed-top" id="mainNavbar">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand">
+        <a href="index.html" class="navbar-brand d-none d-lg-block ">
           <img src="assets/img/logos/logo-white.png" alt="travelook-logo">
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -30,7 +33,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto  text-uppercase">
             <li class="nav-item active">
-              <a href="#home-section" class="nav-link link txt-trav-primary">Inicio</a>
+              <a href="index.html" class="nav-link link txt-trav-primary">Inicio</a>
             </li>
             <li class="nav-item">
               <a href="#about-section" class="nav-link txt-trav-primary">About</a>
@@ -42,10 +45,12 @@
               <a href="#contacto-section" class="nav-link txt-trav-primary">Contacta</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary">Registrar</a>
+              <a href="#" class="nav-link txt-trav-primary" data-toggle="modal"
+                data-target="#registroModal">Registrar</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link txt-trav-primary btn-outline-white round-5 ">Iniciar Sesión</a>
+              <a href="#" class="nav-link txt-trav-primary btn-outline-white round-5" data-toggle="modal"
+                data-target="#iniciarSesionModal">Iniciar Sesión</a>
             </li>
           </ul>
         </div>
@@ -53,91 +58,75 @@
     </nav>
     <!-- Navigation Fin -->
     <!-- Empezar a codificar aqui -->
-    <div class="main-container Contact">
-
-      <div class="container-fluid">
-
-        <div class="row">
-
-          <img class="img-fluid" id="bgContact" alt="Responsive image" src="assets/img/images/image-contact.jpg">
-
-          <div id="marginBody"></div>
-          <!--IFRAME--->
-
-          <div class="col-lg-4 offset-lg-2 ">
-
-            <h4 id="contact">Contacta con nosotros</h4>
-
-
-
-            <iframe class="center-block mt-5" id="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.8000731827256!2d-3.6648379851040325!3d40.45756176107999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422ed4d15aa293%3A0x6a829c9218a1cb6a!2sCalle%20Pedro%20Salinas%2C%2011%2C%2028033%20Madrid!5e0!3m2!1ses!2ses!4v1573833244795!5m2!1ses!2ses"
-              frameborder="0" style="border:0;">
-            </iframe>
-
-
-            <!--DIRECCIÓN--->
-
-            <div class="row mt-3">
-              <address id="contactAddress" class="text-center">
+    <section id="sectionContacto">
+      <div class="overlay">
+        <div class="container container-contacto mt-5">
+          <div class="row h-100 align-items-center ">
+            <!-- col 1 de 2 -->
+            <div class="col-12 col-xl-6 ">
+              <h4 id="contact" class="txt-trav-white text-center">Contacta con nosotros</h4>
+              <iframe class="center-block mt-5" id="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.8000731827256!2d-3.6648379851040325!3d40.45756176107999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422ed4d15aa293%3A0x6a829c9218a1cb6a!2sCalle%20Pedro%20Salinas%2C%2011%2C%2028033%20Madrid!5e0!3m2!1ses!2ses!4v1573833244795!5m2!1ses!2ses"
+                frameborder="0" style="border:0;">
+              </iframe>
+              <address id="contactAddress" class="text-center txt-trav-white">
                 <strong>Travelook</strong><br>
                 Dirección: Calle Pedro Salinas,11 28043 Madrid <br>
                 Tel. 91234567891<br>
                 <a class="link-style" href="contacto@travelook.es=#">contacto@travelook.es</a>
               </address>
             </div>
-          </div>
-
-
-          <!---FORMULARIO-->
-
-          <div class="col-lg-4 offset-lg-1 mt-5 col-md-6 offset-md-3 col-sm-6 offset-sm-3">
-            <form class="form-vertical" id="Cform" method="post" action="#">
-
-              <div class="col-lg-4 offset-lg-4 mt-5 col-md-4 offset-md-4 col-sm-5 offset-sm-4">
-
-                <img class="img-responsive center-block" id="logoContact" src="assets/img/logos/simbolo.svg"> </div>
-
-              <br>
-              <div class="form-group-lg form-group-sm">
-                <div class="col-lg-12 col-md-12">
-                  <input class="input-travelook" id="nombre" name="nombre" type="text" placeholder="Nombre"> </div>
+            <!-- col 2 de 2 -->
+            <div class="col-12 col-xl-6">
+              <div class="container text-center p-5 ">
+                <div class="row">
+                  <!-- form -->
+                  <div class="col">
+                    <div class="form-card p-5 round-10 bg-trav-transparent">
+                      <form method="POST">
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input-travelook" name="Nombre"
+                            placeholder="Nombre">
+                          <span id="helper-text" class=""></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input-travelook" name="Apellido"
+                            placeholder="Apellido">
+                          <span id="helper-text" class=""></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control form-input-travelook" name="Telefono"
+                            placeholder="Teléfono">
+                          <span id="helper-text" class=""></span>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" class="form-control form-input-travelook" name="Email"
+                            placeholder="Email">
+                          <span id="helper-text" class=""></span>
+                        </div>
+                        <div class="form-group">
+                          <textarea class="form-control" rows="7" placeholder="¿Como podemos ayudarte?"></textarea>
+                          <span id="helper-text" class=""></span>
+                        </div>
+                        <button type="submit" class="btn btn-block btn-trav-pink ">Enviar</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div class="form-group-lg form-group-sm">
-                <div class="col-lg-12 col-md-12  col-sm-12 col-xs-12">
-                  <input class="input-travelook" id="telefono" name="telefono" type="text" placeholder="Teléfono"></div>
-              </div>
-
-              <div class="form-group-lg form-group-sm">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <input class="input-travelook" id="email" name="email" type="text" placeholder="Email"></div>
-              </div>
-
-              <div class="form-group-lg form-group-sm">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <textarea class="form-control" id="mensaje" name="mensaje" placeholder="¿Cómo podemos ayudarte?"
-                    rows="4"></textarea></div>
-              </div>
-
-              <div class="form-group-lg form-group-sm">
-                <div class="col-lg-12 col-md-12 col-sm-12 ">
-                  <button type="submit" class="btn btn-trav-primary btn-lg btn-sm btn-block" onclick="return
-                               validation()">Enviar</button> </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </section>
 
     <!-- Terminar aqui -->
     <!-- Footer -->
-    <footer id="footer-section" class="bg-purple d-flex align-items-center">
+    <footer id="footer-section" class="bg-purple d-flex align-items-center sticky-bottom">
       <div class="container-fluid ">
         <div class="row  align-items-center">
           <!-- col - 1 of 3 -->
-          <div class="col-md-4 d-none  d-md-block justify-content-center ">
+          <div class="col-md-4 d-none d-md-block justify-content-center ">
             <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
               <li><a href="index.html" class="link-style">Inicio</a></li>
               <li><a href="#about-section" class="link-style">About</a></li>
@@ -213,7 +202,104 @@
     </footer>
     <!-- Footer Fin -->
   </div>
+  <!-- Site fin -->
+  <!-- Modal Registro -->
+  <div class="modal fade bg-trav-flow" id="registroModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content bg-trav-transparent">
+        <span aria-hidden="true" class="close" data-dismiss="modal"><i
+            class="material-icons close-icon">clear</i></span>
+
+        <div class="container text-center p-5 ">
+          <div class="row">
+            <!-- form -->
+            <div class="col-12">
+              <form method="GET" id="registerForm">
+                <div class="form-group">
+                  <input type="text" class="form-control form-input-travelook" name="Nombre" id="firstName"
+                    autocomplete="off" placeholder="Nombre" onfocusout="validateFirstName()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control form-input-travelook" name="Apellido" id="lastName"
+                    placeholder="Apellidos" onfocusout="validateLastName()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <select class="form-control form-input-travelook" id="gender" required>
+                    <option selected>Género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                  </select></div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="password"
+                    placeholder="Contraseña" onfocusout="validatePassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Confirmar contraseña"
+                    id="confirmPassword" placeholder="Repetir contraseña" onfocusout="validateConfirmPassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control form-input-travelook" name="Email" id="email"
+                    placeholder="Email" onfocusout="validateEmail()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <button type="submit" class="btn btn-block btn-trav-pink mt-5" id="btnSubmit">Aceptar y
+                  Registrar</button>
+                <span class="mt-2 txt-trav-medium">o</span>
+                <button type="submit" class="btn btn-block btn-facebook mt-3">Continuar con facebook</button>
+                <p class="d-inline-block mt-3 txt-trav-secondary">¿Ya estas registrado? <a href="#"
+                    class="d-inline-block link-form-style">Iniciar
+                    Sesión</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal  registro fin -->
+  <!-- Modal Iniciar Sesion -->
+  <div class="modal fade bg-trav-flow" id="iniciarSesionModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content bg-trav-transparent">
+        <span aria-hidden="true" class="close" data-dismiss="modal"><i
+            class="material-icons close-icon">clear</i></span>
+        <div class="container text-center p-5">
+          <div class="row">
+            <!-- form -->
+            <div class="col-12">
+              <form method="" id="loginForm">
+                <div class="form-group">
+                  <input type="email" class="form-control form-input-travelook" name="Email" id="loginEmail"
+                    autocomplete="off" placeholder="Email" onfocusout="validateLoginEmail()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="loginPassword"
+                    placeholder="Contraseña" onfocusout="validateLoginPassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <button type="submit" class="btn btn-block btn-trav-pink mt-5" id="btnLogin">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-block btn-facebook mt-3" id="btnFacebook">Iniciar sesión con
+                  facebook</button>
+                <p class="d-inline-block mt-3 txt-trav-secondary">¿Aún no estas registrado? <a href="#"
+                    class="d-inline-block link-form-style">Registrate</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal iniciar sesion fin -->
 
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

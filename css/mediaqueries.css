@@ -17,7 +17,17 @@
     outline: none;
     box-shadow: none;
   }
+
+  #sectionContacto {
+    height: 100%;
+    width: 100%;
+    background: url(../assets/img/images/image-1.jpg);
+    background-size: cover;
+    overflow: hidden;
+  }
 }
+
+
 
 /* Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) {
@@ -36,6 +46,8 @@
     outline: none;
     box-shadow: none;
   }
+
+
 }
 
 
@@ -56,9 +68,9 @@
     outline: none;
     box-shadow: none;
   }
+
+
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {
-  ...
-}
+@media (max-width: 1199.98px) {}
