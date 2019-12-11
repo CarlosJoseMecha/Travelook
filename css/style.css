@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-   !important
+  !important
 }
 
 /*******************NAVBAR*********************/
@@ -135,6 +135,15 @@ body {
   margin: 0 auto;
 }
 
+/* input destino */
+
+input[type="text"], textarea, .input-travelook, .form-input-travelook {
+  outline: none !important;
+  box-shadow: none !important;
+  color: #fff!important;
+  background-color: transparent !important;
+}
+
 /*******INDEX DATE PICKER *********************/
 
 /* .pick-sl {
@@ -194,8 +203,7 @@ div.datedropper .picker-jumped-years>div {
   background-color: #f3f3f3;
 }
 
-.txt-trav-small,
-span {
+.txt-trav-small, span {
   display: block;
 }
 
@@ -319,11 +327,8 @@ margin-top: 5%;  }
   }
 } */
 
-
 #sectionContacto {
-
   background: url(../assets/img/images/image-1.jpg);
-
   background-size: cover;
   overflow: hidden;
 }
@@ -337,7 +342,6 @@ margin-top: 5%;  }
   height: 100%;
   overflow: hidden;
   background-size: cover;
-
 }
 
 #sectionContacto iframe {
@@ -380,16 +384,18 @@ margin-top: 5%;  }
 }
 
 /******************************DateError****************************************/
+
 #section-graciasContacto {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  }
+}
 
-#ball{ 
+#ball {
   width: 20%;
-  height: auto;}
-  
+  height: auto;
+}
+
 /******************************modalLogin***************************************/
 
 /******************************app.html***************************************/
@@ -456,11 +462,9 @@ margin-top: 5%;  }
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -662,11 +666,9 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -681,8 +683,6 @@ header.underline:after {
 .bg-trav-transparent {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
-
 
 /*******************BUTTONS TRAVELOOK*********************/
 
@@ -820,10 +820,7 @@ header.underline:after {
   color: #fff !important;
 }
 
-input[type="text"],
-textarea,
-.input-travelook,
-.form-input-travelook {
+input[type="text"], textarea, .input-travelook, .form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -857,7 +854,9 @@ textarea,
 /* ---------------------------------*/
 
 /* ---------------------------------*/
+
 /********************* ICONOS **************************/
+
 .close-icon {
   color: #fff;
   font-size: 15em;
@@ -878,6 +877,7 @@ textarea,
 /* no tocar, esto es un fix para que los iconitos salgan dentro del input */
 
 /* position icon */
+
 .inner-addon {
   position: absolute;
   padding: 0.3em;
@@ -941,10 +941,7 @@ textarea,
   text-decoration: none;
 }
 
-.link-style:hover,
-.link-style:active,
-.link-style:link,
-.link-style:visited {
+.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -956,9 +953,7 @@ textarea,
   font-weight: 600 !important;
 }
 
-.link-form-style:hover,
-.link-form-style:active,
-.link-form-style:link {
+.link-form-style:hover, .link-form-style:active, .link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;
