@@ -194,7 +194,7 @@ function matchWithRegEx(regEx, field, message) {
     setInvalid(field, message);
     return false;
   }
-}
+};
 
 //! ********************* LOCAL STORAGE ************************
 //*para iniciar por primera vez el localStorage, usar: init()
@@ -264,22 +264,3 @@ btnLogin.addEventListener('click', function () {
     }
   }
 });
-
-
-
-//otra manera de hacerlo por si acaso
-// for (let i = 0; i < localData.length; i++) {
-//   let user = localData[i];
-//   let userData = Object.values(user);
-//   console.log(userData);
-//   for (let j = 0; j < userData.length; j++) {
-//     console.log(userData[j]);
-//     if (loginData === userData[4] && loginPasswordData === userData[3]) {
-//       console.log('funciona');
-//       return
-//     } else {
-//       console.log('error');
-//       return
-//     }
-//   }
-// }

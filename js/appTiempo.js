@@ -1,25 +1,3 @@
-
-//var contenido = document.querySelector('#contenido');
-
-/* function traer() {
-  fetch('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/71446b88e6eef2aa7de9e6488649d968/40.3160097,-3.8765372,1479294000?exclude=currently,flags,hourly&') //Traemos el archivo con fetch
-    .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
-    .then(data => {
-      //console.log(data)
-      //contenido.innerHTML =`${data}` // Así nos traemos de manera literal una variable HTML
-      var viaje= JSON.parse(`${data}`);
-      console.log(viaje);
-      var daily =viaje.daily.data[0];//me creo esta variable para reutilizarla de manera + eficiente al acceder a datos
-      contenido.innerHTML = (daily.apparentTemperatureHigh);
-      var celsiusPintar = convertirFarenACelsius(daily.apparentTemperatureHigh); //estoy llamando a la funcion y recibiendo el resultado
-      contenido.innerHTML = celsiusPintar.toLocaleString();
-    })
-  }
-
-  traer();
- */
-
-
 function getParameterByName(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
   var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -27,69 +5,155 @@ function getParameterByName(name) {
   return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-
-var destinoId = getParameterByName('destino');
-var fechaId = getParameterByName('fecha');
+let destinoId = getParameterByName('destino');
+let fechaId = getParameterByName('fecha');
 
 //let ciudadDestino = document.querySelector('#destinoViaje');
 // ${ciudadDestino}
 
-function traer() {
+// "2019-12-10 18:00:00" ---fecha de la api
+let fechaActual = new Date(fechaId);
+//let fechaViaje = new Date(2019, 11, 25 + 3); // Sat Dec 07 2019 09:34:05 GMT+0100  si no especifica hora sale 00 por defcto     +15 dias de la Api?
+//console.log(fechaActual + fechaViaje);
 
 
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoId},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
 
-    //****** */   fetch('https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/weather?q=Mostoles,ES&APPID=dcad6bd0f350bf23372a42cce21f47da') */ //Traemos el archivo con fetch
+//COMPROBACION DE QUE LA VARIABLE SEA FECHA
+function esFecha(fecha) {
+  return (fecha instanceof Date); // Si es fecha devolverá TRUE
+}
+
+
+function getNombreMes(fecha) {
+  let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+  return meses[fechaActual.getMonth()];
+}
+
+
+function fechaToStringES(fecha) {
+  let fechaObj = new Date(fecha);
+  return `${fechaObj.getDate()}  de  ${getNombreMes(fechaObj)} de ${fechaObj.getFullYear()}`;
+}
+
+
+
+
+
+
+
+
+
+//1 obtnego parametro de la url y veo que no sea nulo --traer()
+//2 obtengo los datos de la api -- obternerDatos()
+//3 trato los datos que recibo y pinto en html los resultados -- trataTardatos()
+//4 paso la logica para saber si hace frio o calor --> comprobar temperatura (), logicaFrioCalor()
+
+
+
+let temperaturaDia1;
+
+function tratarDatosObtenidos(viaje) {
+
+  let algunDatoHaCumplidoMiCondicion = false;
+  let misDatos = '';
+  //Convertimos al tipo Date la fecha recogida de la url
+  var diaAcomprobar = new Date(fechaId);
+  //Recorremos el listado obtenido del JSON para quedarnos solo con los objetos que queremos, en este caso la
+  // muestra será un elemento por día
+  for (let key in viaje.list) {
+    //Obtengo el elemento del listado a iterar en esta vuelta del bucle
+    let item = viaje.list[key];
+    //Convertimos a tipo date la fecha que queremos comprobar.establecemos a 0 las horas minutos y segundos para comparar las fechas
+    let fechaAComprobarEnObjeto = new Date(item.dt_txt).setHours(0, 0, 0, 0);
+    let diaAcomprobarSinHora = diaAcomprobar.setHours(0, 0, 0, 0);
+    //Comparamos si las fechas con coincidentes
+    if (diaAcomprobarSinHora === fechaAComprobarEnObjeto) {
+      let temperaturas = item.main.temp;
+      let fechas = item.dt_txt;
+      let descripcion = item.weather[0].description;
+      let icono = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
+
+      contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaToStringES(fechaId)}<br> y esté será tu pronóstico del tiempo :<hr>`;
+
+      misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
+      contenido2.innerHTML = misDatos;
+      //Como ya tengo un elemento del día que buscaba, añado un día a la fecha a comprobar un día
+      diaAcomprobar.setDate(diaAcomprobar.getDate() + 1);
+
+      if (!algunDatoHaCumplidoMiCondicion) {
+        temperaturaDia1 = temperaturas;
+      }
+      algunDatoHaCumplidoMiCondicion = true;
+    }
+  }
+  if (!algunDatoHaCumplidoMiCondicion) {
+    alert('No se han obtenido datos para las fechas solicitadas. Por favor intentelo con otras fechas');
+  } else {
+    logicaFrioCalor();
+  }
+}
+
+
+
+
+
+function obtenerDatos(destinoParam) {
+
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoParam},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
     .then(data => {
-
-
-      contenido.innerHTML = `${data}` // Así nos traemos de manera literal una variable HTML
-      var viaje = JSON.parse(`${data}`);
-      //****console.log(viaje);
-      //*******var daily = viaje.data[0]//me creo esta variable para reutilizarla de manera + eficiente al acceder a datos
-      let destino = (viaje.name);
-      let temMax = (viaje.main.temp);
-      let temGEN = (viaje.sys.country);
-      let SEM = (viaje.weather[0].main);
-
-
-      contenido.innerHTML = destino + " " + temMax + " " + temGEN + " " + SEM;
-      var celsiusPintar = convertirFarenACelsius(viaje.temMax); //estoy llamando a la funcion y recibiendo el resultado
-      contenido.innerHTML = celsiusPintar.toLocaleString();
-    })
+      let viaje = JSON.parse(`${data}`);
+      tratarDatosObtenidos(viaje);
+    });
 }
+
+
+
+function traer() {
+  // Estoy comprobando que haya un destino introducido, y si lo hay ...fetch
+  if (destinoId == "" || destinoId == null) {
+    alert('introduce un destino válido');
+  } else {
+    obtenerDatos(destinoId);
+  }
+}
+
+
+
+//Comprobacion de temperatura para mostrar maleta
+function comprobarTemperatura(temperaturaGrados) {
+  if (temperaturaGrados >= 10) {
+    return "calor";
+  } else {
+    return "frio"
+  }
+}
+
+
+
+function logicaFrioCalor() {
+  var temperaturaString = comprobarTemperatura(temperaturaDia1);
+  let url = `http://127.0.0.1:5500/appLook.html?temperatura=${temperaturaString}`;
+  let gender = localStorage.getItem('gender');
+  if (gender) {
+
+    url += `&gender=${gender}`;
+  }
+
+  //Botón lleva  a una nueva url de maleta destino con el parametro de clima
+  document.getElementById("doItMaleta").addEventListener("click", function () {
+    window.location.href = url;
+  });
+}
+
+
 traer();
 
 
 
 
 
-function convertirFarenACelsius(farenheit) {
-  var celsiusConvertir = (farenheit - 32) * 5 / 9;
-  var celsiusRedondeados = Math.round(celsiusConvertir * 100) / 100;
-  return celsiusRedondeados;
-}
-
-
-function convertirKelvinACelsius(kelvins) {
-  let celsiusConvertir = (kelvins - 273, 15);
-  var celsiusRedondeados = Math.round(celsiusConvertir * 100) / 100;
-  return celsiusRedondeados;
-
-}
-
-
-
-
-
-
-
-
-  //Array ciudades cuado pincho que me busque esa ciudad.
-/*
-traer los dos valores .latirtud.Array
-
-var latitud
-var longitud
-var ciudad (latitud, longirud) */
+//Sacar  logica de usuarios  para el gender y su function
+//El mensaje de no leemos el futuro
+//Añadir la lista a la pagina de appLook
+//Maquetar appTiempo.

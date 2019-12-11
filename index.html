@@ -9,8 +9,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicons/fv24.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!--AOS(Scroll animation)-->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -20,18 +19,16 @@
   <link rel="stylesheet" href="css/mediaqueries.css">
   <!-- Material IO -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <!--AOS(Scroll animation)-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <title>Travelook</title>
   <!-- JS -->
   <script defer src="js/formValidation.js"></script>
- 
- </head>
-
-<body> 
-	<!--AOS(Scroll animation)-->
+  <!--AOS(Scroll animation)-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init( {delay: 300});</script>
- 
+</head>
+
+<body>
   <div class="site">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg custom-toggler fixed-top" id="mainNavbar">
@@ -80,7 +77,7 @@
                 <a href="index.html"><img src="assets/img/logos/Logo_simple.svg" alt="logo de una maleta"
                     class="logo-travelook-main"></a>
               </div>
-              <div data-aos="zoom-in" class="col-12 logo-container  d-flex justify-content-center mb-5">
+              <div class="col-12 logo-container  d-flex justify-content-center mb-5">
                 <a href="index.html"><img src="assets/img/logos/white-01.png" alt="logo travelook"
                     class="logo-travelook"></a>
               </div>
@@ -119,7 +116,7 @@
     <!-- Home Section Fin -->
     <!-- HEADER FIN -->
     <!-- About Section -->
-    <section data-aos="zoom-in" id="about-section" class="bg-trav-grey-light">
+    <section data-aos="fade-up" id="about-section" class="bg-trav-grey-light">
       <div class="container">
         <div class="row">
           <div class="col text-center py-5">
@@ -133,14 +130,13 @@
               animi delectus non at in neque optio, repellat accusamus placeat a? Neque est asperiores sit distinctio
               soluta qui quidem dicta labore accusamus placeat officiis minus consequuntur facere, eaque quisquam autem
               deserunt. Sit dolor modi fuga perferendis.</p>
-
           </div>
         </div>
       </div>
     </section>
     <!-- About Section Fin -->
     <!-- Section Equipo -->
-    <section data-aos="zoom-in"id="equipo-section" class="text-center py-5">
+    <section data-aos="fade-up" id="equipo-section" class="text-center py-5">
       <div class="container">
         <div class=" pt-2 pb-4">
           <h2 class="txt-trav-secondary-dark uppercase">Conoce nuestro equipo</h2>
@@ -223,7 +219,7 @@
     </section>
     <!-- Section Equipo Fin -->
     <!-- Section Contacto -->
-    <section data-aos="zoom-in"id="contacto-section" class="bg-trav-grey-light text-center ">
+    <section data-aos="fade-up" id="contacto-section" class="bg-trav-grey-light text-center ">
       <div class="container center center py-4">
         <p class="txt-trav-primary-dark center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque
           accusantium, expedita cupiditate blanditiis veritatis ullam itaque, dicta veniam, sed totam aliquam labore.
@@ -237,7 +233,7 @@
     </section>
     <!-- Section Contacto Fin -->
     <!-- Brand Section -->
-    <section data-aos="zoom-in"id="brand-section" class="d-none d-md-block">
+    <section data-aos="fade-up" id="brand-section" class="d-none d-md-block">
       <div class="container">
         <div class="row">
           <div class="col text-center py-5">
@@ -487,7 +483,12 @@
         $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
       });
     });
+
+    AOS.init({
+      delay: 500
+    });
   </script>
+
 </body>
 
 </html>
