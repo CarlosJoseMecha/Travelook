@@ -5,17 +5,16 @@ function getParameterByName(name) {
   return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-var destinoId = getParameterByName('destino');
-var fechaId = getParameterByName('fecha');
-console.log(fechaId);
+let destinoId = getParameterByName('destino');
+let fechaId = getParameterByName('fecha');
 
 //let ciudadDestino = document.querySelector('#destinoViaje');
 // ${ciudadDestino}
 
 // "2019-12-10 18:00:00" ---fecha de la api
 let fechaActual = new Date(fechaId);
-let fechaViaje = new Date(2019, 11, 25 + 3); // Sat Dec 07 2019 09:34:05 GMT+0100  si no especifica hora sale 00 por defcto     +15 dias de la Api?
-console.log(fechaActual + fechaViaje);
+//let fechaViaje = new Date(2019, 11, 25 + 3); // Sat Dec 07 2019 09:34:05 GMT+0100  si no especifica hora sale 00 por defcto     +15 dias de la Api?
+//console.log(fechaActual + fechaViaje);
 
 
 
@@ -33,12 +32,28 @@ function getNombreMes(fecha) {
 
 function fechaToStringES(fecha) {
   let fechaObj = new Date(fecha);
-  return fechaObj.getDate() + " de " + getNombreMes(fechaObj) + " de " + fechaObj.getFullYear();
+  return `${fechaObj.getDate()}  de  ${getNombreMes(fechaObj)} de ${fechaObj.getFullYear()}`;
 }
+
+
+
+
+
+
+
+
+
+//1 obtnego parametro de la url y veo que no sea nulo --traer()
+//2 obtengo los datos de la api -- obternerDatos()
+//3 trato los datos que recibo y pinto en html los resultados -- trataTardatos()
+//4 paso la logica para saber si hace frio o calor --> comprobar temperatura (), logicaFrioCalor()
+
+
 
 let temperaturaDia1;
 
 function tratarDatosObtenidos(viaje) {
+
   let algunDatoHaCumplidoMiCondicion = false;
   let misDatos = '';
   //Convertimos al tipo Date la fecha recogida de la url
@@ -87,7 +102,7 @@ function obtenerDatos(destinoParam) {
   fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoParam},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
     .then(data => {
-      var viaje = JSON.parse(`${data}`);
+      let viaje = JSON.parse(`${data}`);
       tratarDatosObtenidos(viaje);
     });
 }
@@ -136,7 +151,9 @@ traer();
 
 
 
-//1 obtnego parametro de la url y veo que no sea nulo --traer()
-//2 obtengo los datos de la api -- obternerDatos()
-//3 trato los datos que recibo y pinto en html los resultados -- trataTardatos()
-//4 paso la logica para saber si hace frio o calor --> comprobar temperatura (), logicaFrioCalor()
+
+
+//Sacar  logica de usuarios  para el gender y su function
+//El mensaje de no leemos el futuro
+//Añadir la lista a la pagina de appLook
+//Maquetar appTiempo.
