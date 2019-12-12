@@ -26,6 +26,8 @@
   <script defer src="js/formValidation.js"></script>
   <!--AOS(Scroll animation)-->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -112,7 +114,6 @@
         </div>
       </div>
     </header>
-
     <!-- Home Section Fin -->
     <!-- HEADER FIN -->
     <!-- About Section -->
@@ -120,17 +121,17 @@
       <div class="container">
         <div class="row">
           <div class="col text-center py-5">
-
             <h2 class="txt-trav-medium-dark uppercase mb-4" id="bold">The way you look to travel</h2>
             <p class="txt-trav-secondary-dark center">
-            	¿Pasaré frío con esa chaqueta? Travelook.<br>
-				¿Debería llevar botas de agua? Travelook.<br>
-				¿18 grados por la tarde, manga larga o corta? Travelook.<br>
-			</p><p class="txt-trav-secondary-dark center">
-				Haz de tu viaje una experiencia, porque nunca sabes cuándo volverás a tu destino.<br>
-				Di adiós a los “por si acaso” y preocúpate solo de disfrutar.<br>
-			</p>
-            <p id="boldText">Planea.Chequea.Acierta.</p>            
+              ¿Pasaré frío con esa chaqueta? Travelook.<br>
+              ¿Debería llevar botas de agua? Travelook.<br>
+              ¿18 grados por la tarde, manga larga o corta? Travelook.<br>
+            </p>
+            <p class="txt-trav-secondary-dark center">
+              Haz de tu viaje una experiencia, porque nunca sabes cuándo volverás a tu destino.<br>
+              Di adiós a los “por si acaso” y preocúpate solo de disfrutar.<br>
+            </p>
+            <p id="boldText">Planea.Chequea.Acierta.</p>
           </div>
         </div>
       </div>
@@ -139,31 +140,21 @@
     <!-- Section Equipo -->
     <section data-aos="fade-up" id="equipo-section" class="text-center py-5">
       <div class="container">
-        <div class=" pt-2 pb-4">
+        <div class="pt-2 pb-4">
           <h2 class="txt-trav-secondary-dark uppercase">Conoce a nuestro equipo</h2>
         </div>
         <!-- cards equipo -->
         <!-- member 1 -->
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="my-2 offset-xl-0 col-xl-2 offset-lg-0 col-lg-2 offset-md-0 col-md-4 offset-3 col-6">
             <div class="card bg-trav-grey-light card-animation">
               <div class="p-3">
                 <img src="assets/img/team/mar.jpg" class="card-img-top img-fluid  card-team circle-picture" alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Mar Coloma<span class="txt-trav-small">Developer</span></p>
-              </div>
-            </div>
-          </div>
-          <!-- member2 -->
-          <div class="my-2 offset-xl-0 col-xl-2 offset-lg-0 col-lg-2 offset-md-0 col-md-4 offset-3 col-6">
-            <div class="card bg-trav-grey-light card-animation">
-              <div class="p-3">
-                <img src="assets/img/team/miriam.jpg" class="card-img-top img-fluid  card-team circle-picture"
-                  alt="...">
-              </div>
-              <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Fulanito<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Mar Coloma<span class="txt-trav-small">Developer <br>Diseñadora
+                    UI/UX</span>
+                </p>
               </div>
             </div>
           </div>
@@ -175,7 +166,8 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Ana Luz Escoto<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Ana Luz Escoto<span
+                    class="txt-trav-small">Developer<br>Diseñadora</span></p>
               </div>
             </div>
           </div>
@@ -187,7 +179,8 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Jennifer Sánchez-Romo<span class="txt-trav-small">Developer</span>
+                <p class="card-text txt-trav-white">Jennifer Sánchez-Romo<span
+                    class="txt-trav-small">Developer<br>Copywriter</span>
                 </p>
               </div>
             </div>
@@ -200,7 +193,9 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Carlos José Mecha<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Carlos José Mecha<span class="txt-trav-small">Developer <span>
+                      Diseñador UI/UX</span>
+                </p>
               </div>
             </div>
           </div>
@@ -211,7 +206,7 @@
                 <img src="assets/img/team/tamar.jpg" class="card-img-top img-fluid  card-team circle-picture" alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Tamar <span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Tamar <span class="txt-trav-small">Developer <br> </span></p>
               </div>
             </div>
           </div>
@@ -222,9 +217,9 @@
     <!-- Section Contacto -->
     <section data-aos="fade-up" id="contacto-section" class="bg-trav-grey-light text-center ">
       <div class="container center center py-4">
-        <p class="txt-trav-secondary-dark center">¿Quieres ser uno de nuestros colaboradores? 
-        Aquí puedes ver algunas de las empresas que ya confían en nosotros. Escríbenos y 
-    	conviértete en una de las marcas de nuestros viajeros.</p>
+        <p class="txt-trav-secondary-dark center">¿Quieres ser uno de nuestros colaboradores?
+          Aquí puedes ver algunas de las empresas que ya confían en nosotros. Escríbenos y
+          conviértete en una de las marcas de nuestros viajeros.</p>
         <a href="contacto.html" class="btn btn-trav-purple px-4 hover">Contáctanos</a>
       </div>
     </section>
@@ -286,19 +281,20 @@
       <div class="container-fluid ">
         <div class="row  align-items-center">
           <!-- col - 1 of 3 -->
-          <div class="col-md-4 d-none  d-md-block justify-content-center ">
+          <div class="d-none  d-lg-block col-lg-4  justify-content-center ">
             <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
               <li><a href="index.html" class="link-style">Inicio</a></li>
               <li><a href="#about-section" class="link-style">About</a></li>
               <li><a href="#equipo-section" class="link-style">Conócenos</a></li>
               <li><a href="contacto.html" class="link-style">Contacta</a></li>
-              <li><a href="#" class="link-style">Regístrate</a></li>
-              <li><a href="#" class="link-style">Iniciar Sesión</a></li>
+              <li><a href="#" class="link-style" data-toggle="modal" data-target="#registroModal">Regístrate</a></li>
+              <li><a href="#" class="link-style" data-toggle="modal" data-target="#iniciarSesionModal">Iniciar
+                  Sesión</a></li>
             </ul>
           </div>
           <!-- col - 1 of 3 end -->
           <!-- col - 2 of 3  -->
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="row text-center align-items-center">
               <div class="col-12">
                 <a href="index.html">
@@ -315,7 +311,7 @@
           </div>
           <!-- col - 2 of 3  end-->
           <!-- col - 3 of 3  -->
-          <div class="col-md-4 ">
+          <div class="col-lg-4 ">
             <div class="row">
               <div class="col-12">
                 <div class="row  justify-content-center">
@@ -361,7 +357,6 @@
       </div>
     </footer>
     <!-- Footer Fin -->
-
     <!-- Site fin -->
     <!-- Modal Registro -->
     <div class="modal fade bg-trav-flow" id="registroModal" tabindex="-1" role="dialog"
@@ -376,7 +371,7 @@
             <div class="row">
               <!-- form -->
               <div class="col-12">
-                <form method="GET" id="registerForm">
+                <form method="POST" id="registerForm">
                   <div class="form-group">
                     <input type="text" class="form-control form-input-travelook" name="Nombre" id="firstName"
                       autocomplete="off" placeholder="Nombre" onfocusout="validateFirstName()">
@@ -413,7 +408,8 @@
                   <span class="mt-2 txt-trav-medium">o</span>
                   <button type="submit" class="btn btn-block btn-facebook mt-3">Continuar con facebook</button>
                   <p class="d-inline-block mt-3 txt-trav-secondary">¿Ya estas registrado? <a href="#"
-                      class="d-inline-block link-form-style">Iniciar
+                      class="d-inline-block link-form-style" data-dismiss="modal" data-toggle="modal"
+                      data-target="#iniciarSesionModal">Iniciar
                       Sesión</a>
                   </p>
                 </form>
@@ -435,7 +431,7 @@
             <div class="row">
               <!-- form -->
               <div class="col-12">
-                <form method="" id="loginForm">
+                <form method="POST" id="loginForm">
                   <div class="form-group">
                     <input type="email" class="form-control form-input-travelook" name="Email" id="loginEmail"
                       autocomplete="off" placeholder="Email" onfocusout="validateLoginEmail()">
@@ -450,7 +446,8 @@
                   <button type="submit" class="btn btn-block btn-facebook mt-3" id="btnFacebook">Iniciar sesión con
                     facebook</button>
                   <p class="d-inline-block mt-3 txt-trav-secondary">¿Aún no estas registrado? <a href="#"
-                      class="d-inline-block link-form-style">Registrate</a>
+                      class="d-inline-block link-form-style" data-dismiss="modal" data-toggle="modal"
+                      data-target="#registroModal">Registrate</a>
                   </p>
                 </form>
               </div>
@@ -463,13 +460,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-      </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-      </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-      </script>
+    </script>
     <!-- Optional JavaScript -->
 
     <script>

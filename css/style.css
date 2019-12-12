@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-  !important
+   !important
 }
 
 /*******************NAVBAR*********************/
@@ -137,10 +137,13 @@ body {
 
 /* input destino */
 
-input[type="text"], textarea, .input-travelook, .form-input-travelook {
+input[type="text"],
+textarea,
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
-  color: #fff!important;
+  color: #fff !important;
   background-color: transparent !important;
 }
 
@@ -178,11 +181,12 @@ div.datedropper .picker-jumped-years>div {
   -webkit-align-content: center;
   align-content: center;
 }
-#bold{
+
+#bold {
   font-weight: 500;
 }
 
-#boldText{
+#boldText {
   font-weight: 500;
   font-size: 15px;
 }
@@ -211,7 +215,8 @@ div.datedropper .picker-jumped-years>div {
   background-color: #f3f3f3;
 }
 
-.txt-trav-small, span {
+.txt-trav-small,
+span {
   display: block;
 }
 
@@ -470,9 +475,11 @@ margin-top: 5%;  }
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -674,9 +681,11 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -828,7 +837,10 @@ header.underline:after {
   color: #fff !important;
 }
 
-input[type="text"], textarea, .input-travelook, .form-input-travelook {
+input[type="text"],
+textarea,
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -878,6 +890,7 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
 
 .icon {
   color: white;
+  font-size: 2em;
 }
 
 /* .............................................................. */
@@ -949,7 +962,10 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   text-decoration: none;
 }
 
-.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
+.link-style:hover,
+.link-style:active,
+.link-style:link,
+.link-style:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -961,7 +977,9 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   font-weight: 600 !important;
 }
 
-.link-form-style:hover, .link-form-style:active, .link-form-style:link {
+.link-form-style:hover,
+.link-form-style:active,
+.link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;
