@@ -27,7 +27,7 @@
   }
 
   html {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
@@ -52,7 +52,7 @@
   }
 
   html {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
@@ -76,13 +76,13 @@
   }
 
   html {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 
 /*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) {
   html {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
