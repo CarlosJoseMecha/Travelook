@@ -6,3 +6,13 @@ $(document).ready(function(){
 		$form.find('input,textarea,select').prop('disabled', isReadonly);
 	});
 });
+
+function saveUserData() {
+   var name = document.getElementById('firstName').value;
+   document.getElementById('userName').innerHTML=name;
+}
+
+function discard() {
+   var name = document.getElementById('userName').title;
+   console.log("users value is: " + name);
+}
