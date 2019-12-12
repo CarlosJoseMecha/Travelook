@@ -84,19 +84,13 @@
                 </div>
               </div>
               <div>
-                <button class="button btn-trav-purple" id="newTravel"><i class="material-icons">
-                    add
-                  </i></button>
+                <button class="button btn-trav-purple" id="newTravel">
+                  <i class="material-icons">add</i>
+                </button>
               </div>
-
             </div>
-
-
           </div>
         </div>
-
-
-
       </div>
   </div>
   </section>
@@ -106,19 +100,20 @@
     <div class="container-fluid ">
       <div class="row  align-items-center">
         <!-- col - 1 of 3 -->
-        <div class="col-md-4 d-none  d-md-block justify-content-center ">
+        <div class="d-none  d-lg-block col-lg-4  justify-content-center ">
           <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
             <li><a href="index.html" class="link-style">Inicio</a></li>
             <li><a href="#about-section" class="link-style">About</a></li>
-            <li><a href="#equipo-section" class="link-style">Conocenos</a></li>
+            <li><a href="#equipo-section" class="link-style">Conócenos</a></li>
             <li><a href="contacto.html" class="link-style">Contacta</a></li>
-            <li><a href="#" class="link-style">Registrar</a></li>
-            <li><a href="#" class="link-style">Iniciar Sesión</a></li>
+            <li><a href="#" class="link-style" data-toggle="modal" data-target="#registroModal">Regístrate</a></li>
+            <li><a href="#" class="link-style" data-toggle="modal" data-target="#iniciarSesionModal">Iniciar
+                Sesión</a></li>
           </ul>
         </div>
         <!-- col - 1 of 3 end -->
         <!-- col - 2 of 3  -->
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="row text-center align-items-center">
             <div class="col-12">
               <a href="index.html">
@@ -135,7 +130,7 @@
         </div>
         <!-- col - 2 of 3  end-->
         <!-- col - 3 of 3  -->
-        <div class="col-md-4 ">
+        <div class="col-lg-4 ">
           <div class="row">
             <div class="col-12">
               <div class="row  justify-content-center">
@@ -162,50 +157,27 @@
                     </li>
                   </ul>
                 </div>
-                </section>
-                <!-- Viajes section fin -->
-                <!-- Footer -->
-                <footer id="footer-section" class="bg-purple d-flex align-items-center">
-                  <div class="container-fluid ">
-                    <div class="row  align-items-center">
-                      <!-- col - 1 of 3 -->
-                      <div class="d-none  d-lg-block col-lg-4  justify-content-center  ">
-                        <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
-                          <li><a href="indexLogued.html" class="link-style">Inicio</a></li>
-                          <li><a href="#about-section" class="link-style">About</a></li>
-                          <li><a href="#equipo-section" class="link-style">Conocenos</a></li>
-                          <li><a href="contacto.html" class="link-style">Contacta</a></li>
-                          <li><a href="perfil.html" class="link-style">Perfil</a></li>
-                          <li><a href="index.html" class="link-style" id="btnCerrarSesionFooter">Cerrar Sesión</a></li>
-                        </ul>
-                      </div>
-                      <!-- col - 1 of 3 end -->
-                      <!-- col - 2 of 3  -->
-                      <div class="col-lg-4">
-                        <div class="row text-center align-items-center">
-                          <div class="col-12">
-                            <a href="indexLogued.html">
-                              <img src="assets/img/logos/white-01.png" alt="logo travelook" class="logo-footer">
-                            </a>
-                          </div>
-                          <div class="row ">
-                            <div class="col-12">
-                              <ul class="d-flex justify-content-center list-unstyled ">
-                                <li class="px-2 txt-trav-white">Privacidad</li>
-                                <li class="px-2 txt-trav-white">Política de Cookies</li>
-                                <li class="px-2 txt-trav-white">Términos</li>
-                                <li class="px-2 txt-trav-white">Aviso Legal</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div> <!-- col - 3 of 3 end-->
-                  </div>
               </div>
+              <div class="row ">
+                <div class="col-12">
+                  <ul class="d-flex justify-content-center list-unstyled ">
+                    <li class="px-2 txt-trav-white">Privacidad</li>
+                    <li class="px-2 txt-trav-white">Política de Cookies</li>
+                    <li class="px-2 txt-trav-white">Términos</li>
+                    <li class="px-2 txt-trav-white">Aviso Legal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- col - 3 of 3  end-->
+      </div>
+    </div>
   </footer>
-
-  <div class="modal fade bg-trav-flow" id="viajesModal" tabindex="-1" role="dialog"
+  <!-- Footer Fin -->
+  <!-- Modal Registro -->
+  <div class="modal fade bg-trav-flow" id="registroModal" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered " role="document">
@@ -215,73 +187,9 @@
 
         <div class="container text-center p-5 ">
           <div class="row">
+            <!-- form -->
             <div class="col-12">
-              <h1 class="display-4-tvl">Hello, Nueva York!</h1>
-              <img src="/assets/img/viajes/ny.jpg" class="img-fluid img-thumbnail" alt="">
-
-              <div class="input-group mt-2">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1"><i class="material-icons">
-                      calendar_today
-                    </i></span>
-                  <!-- col - 2 of 3  end-->
-                  <!-- col - 3 of 3  -->
-                  <div class="col-lg-4 ">
-                    <div class="row">
-                      <div class="col-12">
-                        <div class="row  justify-content-center">
-                          <div class="col-12">
-                            <ul class="list-unstyled d-flex justify-content-center">
-                              <li class="px-2">
-                                <a href="https://www.facebook.com/" target="_blank">
-                                  <i class="fab fa-facebook-square icon"></i>
-                                </a>
-                              </li>
-                              <li class="px-2">
-                                <a href="https://instagram.com" target="_blank">
-                                  <i class="fab fa-instagram icon"></i></a>
-                              </li>
-                              <li class="px-2">
-                                <a href="https://twitter.com" target="_blank">
-                                  <i class="fab fa-twitter icon"></i>
-                                </a>
-                              </li>
-                              <li class="px-2">
-                                <a href="https://linkedin.com" target="_blank">
-                                  <i class="fab fa-linkedin-in icon"></i>
-                                </a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="row ">
-                          <div class="col-12">
-                            <ul class="d-flex justify-content-center list-unstyled ">
-                              <li class="px-2 txt-trav-white">Privacidad</li>
-                              <li class="px-2 txt-trav-white">Política de Cookies</li>
-                              <li class="px-2 txt-trav-white">Términos</li>
-                              <li class="px-2 txt-trav-white">Aviso Legal</li>
-                            </ul>
-                          </div>
-                        </div>
-                        <input type="text" class="form-control" disabled placeholder="12/11/2019" aria-label="Username"
-                          aria-describedby="basic-addon1">
-                      </div>
-                      <p class="lead">Falta muy poco para empezar tu viaje.<br> Revisa todos los detalles
-                      </p>
-                      <hr class="my-4">
-                      <p>Si hay algo que aun no tengas, echa un vistazo en nuestro apartado de sugerencia.
-                        ¡Tenemos muchas
-                        novedades para ti!
-                      </p>
-                      <p class="lead">
-                        <a class="btn btn-trav-purple" href="#" role="button">ver maleta</a>
-                      </p>
-                    </div>
-
-                    <!-- form -->
-                    <!--   <div class="col-12">
-              <form method="GET" id="registerForm">
+              <form method="POST" id="registerForm">
                 <div class="form-group">
                   <input type="text" class="form-control form-input-travelook" name="Nombre" id="firstName"
                     autocomplete="off" placeholder="Nombre" onfocusout="validateFirstName()">
@@ -318,41 +226,76 @@
                 <span class="mt-2 txt-trav-medium">o</span>
                 <button type="submit" class="btn btn-block btn-facebook mt-3">Continuar con facebook</button>
                 <p class="d-inline-block mt-3 txt-trav-secondary">¿Ya estas registrado? <a href="#"
-                    class="d-inline-block link-form-style">Iniciar
+                    class="d-inline-block link-form-style" data-dismiss="modal" data-toggle="modal"
+                    data-target="#iniciarSesionModal">Iniciar
                     Sesión</a>
                 </p>
               </form>
             </div>
-          </div> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Footer Fin -->
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal  registro fin -->
+  <!-- Modal Iniciar Sesion -->
+  <div class="modal fade bg-trav-flow" id="iniciarSesionModal" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered " role="document">
+      <div class="modal-content bg-trav-transparent">
+        <span aria-hidden="true" class="close" data-dismiss="modal"><i
+            class="material-icons close-icon">clear</i></span>
+        <div class="container text-center p-5">
+          <div class="row">
+            <!-- form -->
+            <div class="col-12">
+              <form method="POST" id="loginForm">
+                <div class="form-group">
+                  <input type="email" class="form-control form-input-travelook" name="Email" id="loginEmail"
+                    autocomplete="off" placeholder="Email" onfocusout="validateLoginEmail()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="loginPassword"
+                    placeholder="Contraseña" onfocusout="validateLoginPassword()">
+                  <span id="helper-text" class=""></span>
+                </div>
+                <button type="submit" class="btn btn-block btn-trav-pink mt-5" id="btnLogin">Iniciar Sesión</button>
+                <button type="submit" class="btn btn-block btn-facebook mt-3" id="btnFacebook">Iniciar sesión con
+                  facebook</button>
+                <p class="d-inline-block mt-3 txt-trav-secondary">¿Aún no estas registrado? <a href="#"
+                    class="d-inline-block link-form-style" data-dismiss="modal" data-toggle="modal"
+                    data-target="#registroModal">Registrate</a>
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal iniciar sesion fin -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <!-- Optional JavaScript -->
 
-
-          <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-          <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-          </script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-          </script>
-          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-          </script>
-          <!-- Optional JavaScript -->
-
-          <script>
-            // Navbar jQuery
-            $(function () {
-              $(document).scroll(function () {
-                var $nav = $("#mainNavbar");
-                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
-              });
-            });
-          </script>
+  <script>
+    // Navbar jQuery
+    $(function () {
+      $(document).scroll(function () {
+        var $nav = $("#mainNavbar");
+        $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+      });
+    });
+  </script>
 </body>
 
 </html>

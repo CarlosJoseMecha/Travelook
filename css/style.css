@@ -215,6 +215,10 @@ div.datedropper .picker-jumped-years>div {
   background-color: #f3f3f3;
 }
 
+.team-card {
+  width: 120%;
+}
+
 .txt-trav-small,
 span {
   display: block;
@@ -245,6 +249,7 @@ span {
 }
 
 /******************************perfil.html***************************************/
+
 
 /******************************contacto.html***************************************/
 
@@ -452,7 +457,7 @@ margin-top: 5%;  }
 /******************************viajes.html***************************************/
 
 #card-container {
-  display: inherit!important;
+  display: inherit !important;
 }
 
 #viajes-section .gradient-flow {
