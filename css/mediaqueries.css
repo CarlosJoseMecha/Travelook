@@ -25,6 +25,10 @@
     background-size: cover;
     overflow: hidden;
   }
+
+  html {
+    overflow: hidden;
+  }
 }
 
 
@@ -47,7 +51,9 @@
     box-shadow: none;
   }
 
-
+  html {
+    overflow: hidden;
+  }
 }
 
 
@@ -69,8 +75,14 @@
     box-shadow: none;
   }
 
-
+  html {
+    overflow: hidden;
+  }
 }
 
 /*Large devices (desktops, less than 1200px)*/
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+  html {
+    overflow: hidden;
+  }
+}

@@ -14,10 +14,10 @@ const formLogin = document.getElementById('loginForm');
 const green = '#4caf50';
 const red = '#f44336';
 
-//Prevencion de comportamiento default
-// form.addEventListener('submit', function (event) {
-//   event.preventDefault();
-// });
+// Prevencion de comportamiento default
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+});
 //Prevencion de comportamiento default
 loginForm.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -197,6 +197,8 @@ function matchWithRegEx(regEx, field, message) {
 };
 
 //! ********************* LOCAL STORAGE ************************
+
+const user = JSON.parse(localStorage.getItem('loguedUser')); //!ESTA VARIABLE CONTIENE EL USUARIO QUE SE HA LOGUEADO
 //*para iniciar por primera vez el localStorage, usar: init()
 function init() {
   location.reload();
@@ -204,6 +206,7 @@ function init() {
     email: "admin@dev.com",
     password: "Admin1234"
   }]));
+  setStatusFalse();
   console.log('Local storage iniciado!');
   console.log('Para acceder como administrador usar: Email: admin@dev.com Password: Admin1234');
 };
@@ -215,7 +218,7 @@ const btnSubmit = document.getElementById('btnSubmit');
 const localData = JSON.parse(localStorage.getItem('data')); //! Esta variable contiene todos los datos que tiene el local storage
 const data = localData;
 
-
+//*REGISTRO
 //pulsamos boton Aceptar y Registrar
 btnSubmit.addEventListener('click', function () {
   //guardamos en variables los valores de los input
@@ -232,20 +235,29 @@ btnSubmit.addEventListener('click', function () {
     password: passwordData,
     email: emailData
   }
+  if (nameData || lastNameData || genderData || passwordData || emailData === '' || null) {
+    alert('error');
+  }
   //pusheamos a data el nuevo objeto
   data.push(newData);
   //metemos los datos en el local storage
   localStorage.setItem('data', JSON.stringify(data));
+  setTimeout(function () {
+    window.location.href = "gracias.html";
+  }, 1000)
 
 });
-
 
 //? ********* COMPROBACION DE DATOS ************
 const loginEmail = document.getElementById('loginEmail');
 const loginPassword = document.getElementById('loginPassword');
 
 const btnLogin = document.getElementById('btnLogin');
+const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+const btnCerrarSesionFooter = document.getElementById('btnCerrarSesionFooter');
 
+
+//*LOGIN
 //recorremos todo localData y comprobamos los datos
 btnLogin.addEventListener('click', function () {
   let loginData = loginEmail.value;
@@ -254,9 +266,11 @@ btnLogin.addEventListener('click', function () {
   for (let i = 0; i < localData.length; i++) {
     if (loginData === localData[i].email && loginPasswordData === localData[i].password) {
       console.log('funciona');
+      setStatusTrue();
+      setLoguedUser();
       setTimeout(function () {
         window.location.href = "indexLogued.html";
-      }, 3000)
+      }, 500)
       return;
     } else {
       console.log('error');
@@ -264,3 +278,48 @@ btnLogin.addEventListener('click', function () {
     }
   }
 });
+
+//*loguedUser
+function setLoguedUser() {
+  let loginData = loginEmail.value;
+  let loginPasswordData = loginPassword.value;
+  for (let i = 0; i < localData.length; i++) {
+    if (loginData === localData[i].email && loginPasswordData === localData[i].password) {
+      localStorage.setItem('loguedUser', JSON.stringify(localData[i]));
+      return;
+    } else {
+      console.log('error');
+    }
+  }
+};
+
+
+//*CERRAR SESION
+//al pulsar cerrar sesion, el status de logueo pasa a ser falso
+btnCerrarSesion.addEventListener('click', function () {
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 500);
+  setStatusFalse();
+});
+btnCerrarSesionFooter.addEventListener('click', function () {
+  setTimeout(function () {
+    window.location.href = "index.html";
+  }, 500);
+  setStatusFalse();
+});
+
+
+
+//*funciones status logueo
+function setStatusTrue() {
+  localStorage.setItem('logued', JSON.stringify(logued = true));
+  localStorage.setItem('loguedUser', JSON.stringify([{}]));
+
+};
+
+function setStatusFalse() {
+  localStorage.setItem('logued', JSON.stringify(logued = false));
+  localStorage.setItem('loguedUser', JSON.stringify([]));
+
+};

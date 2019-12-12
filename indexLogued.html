@@ -23,6 +23,9 @@
   <title>Travelook</title>
   <!-- JS -->
   <script defer src="js/formValidation.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
+
 
 </head>
 
@@ -31,7 +34,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg custom-toggler fixed-top" id="mainNavbar">
       <div class="container-fluid">
-        <a href="index.html" class="navbar-brand d-none d-lg-block ">
+        <a href="indexLogued.html" class="navbar-brand d-none d-lg-block ">
           <img src="assets/img/logos/logo-white.png" alt="travelook-logo">
         </a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -40,7 +43,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ml-auto  text-uppercase">
             <li class="nav-item active">
-              <a href="index.html" class="nav-link link txt-trav-primary">Inicio</a>
+              <a href="indexLogued.html" class="nav-link link txt-trav-primary">Inicio</a>
             </li>
             <li class="nav-item">
               <a href="#about-section" class="nav-link txt-trav-primary">About</a>
@@ -58,7 +61,8 @@
               <a href="perfil.html" class="nav-link txt-trav-primary">Perfil</a>
             </li>
             <li class="nav-item">
-              <a href="index.html" class="nav-link txt-trav-primary btn-outline-white round-5">Cerrar Sesión</a>
+              <a href="#" class="nav-link txt-trav-primary btn-outline-white round-5" id="btnCerrarSesion">Cerrar
+                Sesión</a>
             </li>
           </ul>
         </div>
@@ -73,11 +77,11 @@
             <!-- icono -->
             <div class="row">
               <div class="col-12  logo-container  justify-content-center">
-                <a href="index.html"><img src="assets/img/logos/Logo_simple.svg" alt="logo de una maleta"
+                <a href="indexLogued.html"><img src="assets/img/logos/Logo_simple.svg" alt="logo de una maleta"
                     class="logo-travelook-main"></a>
               </div>
               <div class="col-12 logo-container  d-flex justify-content-center mb-5">
-                <a href="index.html"><img src="assets/img/logos/white-01.png" alt="logo travelook"
+                <a href="indexLogued.html"><img src="assets/img/logos/white-01.png" alt="logo travelook"
                     class="logo-travelook"></a>
               </div>
             </div>
@@ -139,26 +143,15 @@
         </div>
         <!-- cards equipo -->
         <!-- member 1 -->
-        <div class="row">
+        <div class="row justify-content-between">
           <div class="my-2 offset-xl-0 col-xl-2 offset-lg-0 col-lg-2 offset-md-0 col-md-4 offset-3 col-6">
             <div class="card bg-trav-grey-light card-animation">
               <div class="p-3">
                 <img src="assets/img/team/mar.jpg" class="card-img-top img-fluid  card-team circle-picture" alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Mar Coloma<span class="txt-trav-small">Developer</span></p>
-              </div>
-            </div>
-          </div>
-          <!-- member2 -->
-          <div class="my-2 offset-xl-0 col-xl-2 offset-lg-0 col-lg-2 offset-md-0 col-md-4 offset-3 col-6">
-            <div class="card bg-trav-grey-light card-animation">
-              <div class="p-3">
-                <img src="assets/img/team/miriam.jpg" class="card-img-top img-fluid  card-team circle-picture"
-                  alt="...">
-              </div>
-              <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Fulanito<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Mar Coloma<span class="txt-trav-small">Developer <br> Diseño
+                    UI/UX</span></p>
               </div>
             </div>
           </div>
@@ -170,7 +163,8 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Ana Luz Escoto<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Ana Luz Escoto<span class="txt-trav-small">Developer <br>
+                    Diseñadora</span></p>
               </div>
             </div>
           </div>
@@ -182,7 +176,8 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Jennifer Sánchez Romo<span class="txt-trav-small">Developer</span>
+                <p class="card-text txt-trav-white">Jennifer Sánchez Romo<span class="txt-trav-small">Developer <br>
+                    Copywriter</span>
                 </p>
               </div>
             </div>
@@ -195,7 +190,8 @@
                   alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Carlos José Mecha<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Carlos José Mecha<span class="txt-trav-small">Developer
+                    <br>Diseñador UI/UX</span></p>
               </div>
             </div>
           </div>
@@ -206,7 +202,7 @@
                 <img src="assets/img/team/tamar.jpg" class="card-img-top img-fluid  card-team circle-picture" alt="...">
               </div>
               <div class="card-body bg-purple mt-1 p-1">
-                <p class="card-text txt-trav-white">Tamar<span class="txt-trav-small">Developer</span></p>
+                <p class="card-text txt-trav-white">Tamar<span class="txt-trav-small">Developer <br> </span></p>
               </div>
             </div>
           </div>
@@ -287,22 +283,22 @@
       <div class="container-fluid ">
         <div class="row  align-items-center">
           <!-- col - 1 of 3 -->
-          <div class="col-md-4 d-none  d-md-block justify-content-center ">
+          <div class="d-none  d-lg-block col-lg-4  justify-content-center ">
             <ul class="list-unstyled border-left  pl-2 ml-5 font-weight-normal ">
-              <li><a href="index.html" class="link-style">Inicio</a></li>
+              <li><a href="indexLogued.html" class="link-style">Inicio</a></li>
               <li><a href="#about-section" class="link-style">About</a></li>
               <li><a href="#equipo-section" class="link-style">Conocenos</a></li>
               <li><a href="contacto.html" class="link-style">Contacta</a></li>
-              <li><a href="#" class="link-style">Registrar</a></li>
-              <li><a href="#" class="link-style">Iniciar Sesión</a></li>
+              <li><a href="perfil.html" class="link-style">Perfil</a></li>
+              <li><a href="index.html" class="link-style" id="btnCerrarSesionFooter">Cerrar Sesión</a></li>
             </ul>
           </div>
           <!-- col - 1 of 3 end -->
           <!-- col - 2 of 3  -->
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <div class="row text-center align-items-center">
               <div class="col-12">
-                <a href="index.html">
+                <a href="indexLogued.html">
                   <img src="assets/img/logos/white-01.png" alt="logo travelook" class="logo-footer">
                 </a>
               </div>
@@ -316,7 +312,7 @@
           </div>
           <!-- col - 2 of 3  end-->
           <!-- col - 3 of 3  -->
-          <div class="col-md-4 ">
+          <div class="col-lg-4 ">
             <div class="row">
               <div class="col-12">
                 <div class="row  justify-content-center">
