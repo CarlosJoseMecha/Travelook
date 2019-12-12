@@ -37,12 +37,6 @@ function fechaToStringES(fecha) {
 
 
 
-
-
-
-
-
-
 //1 obtnego parametro de la url y veo que no sea nulo --traer()
 //2 obtengo los datos de la api -- obternerDatos()
 //3 trato los datos que recibo y pinto en html los resultados -- trataTardatos()
@@ -87,7 +81,8 @@ function tratarDatosObtenidos(viaje) {
     }
   }
   if (!algunDatoHaCumplidoMiCondicion) {
-    alert('No se han obtenido datos para las fechas solicitadas. Por favor intentelo con otras fechas');
+    window.location.href = "/DatesError.html"
+
   } else {
     logicaFrioCalor();
   }

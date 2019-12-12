@@ -446,6 +446,10 @@ margin-top: 5%;  }
 
 /******************************viajes.html***************************************/
 
+#card-container {
+  display: inherit!important;
+}
+
 #viajes-section .gradient-flow {
   background: rgba(0, 153, 204, 0.3);
   position: absolute;
@@ -464,6 +468,13 @@ margin-top: 5%;  }
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 800% 800%;
   animation: gradientBG 15s ease infinite;
+}
+
+.display-4-tvl {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: white;
 }
 
 @keyframes gradientBG {
