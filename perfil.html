@@ -83,6 +83,27 @@
 		    width: 100%;
 		  }
 		}
+
+		input[type="text"], textarea, .input-travelook, .form-input-travelook {
+		    outline: none !important;
+		    box-shadow: none !important;
+		    color: black!important;
+		    background-color: transparent !important;
+		}
+	
+		input[type="date"]::-webkit-inner-spin-button { 
+		    -webkit-appearance: none;
+		    display: none !important;
+		}
+
+		input[type="date"] {
+		    display: inline-block !important;
+		}
+		
+
+		.form-control{
+			border: none !important;
+		}
 	</style>
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -129,15 +150,16 @@
 		<!-- Navigation Fin -->
 
 		<!-- Profile Content -->
-		<div class="container">
+		<div class="container ng-scope" ng-app="dataUser">
 			<div class="m-5">
-				<div class="card-deck">
+				<div class="card-deck ng-scope" ng-controller="dataUserController">
 
 					<div class="card col-lg-4 col-md-12 text-center pl-0 pr-0">
 					    <img src="assets/img/avatar/profilePhoto.jpg" class="card-img-top mb-3" alt="Persona con cara de tigre">
 						<div class="m-3">
 							<h5 id="userName" class="card-title">María</h5>
-							<h5 class="card-subtitle text-muted mb-4">mariaruiz@gmail.com</h5>
+							<h5 id="userAge" class="card-subtitle text-muted mb-4">25 años</h5>
+							<h5 id="userMail" class="card-subtitle text-muted mb-4">mariarudfsafiz@gmail.com</h5>
 							<p class="card-text "><small class="text-muted ">En la comunidad Travellook desde ....</small></p>
 						</div>
 					</div>
@@ -146,10 +168,10 @@
 					    <div class="card-body">
 					    	<h5 class="card-title">Datos de Cuenta</h5>
 
-					    	<form class="is-readonly">
+					    	<form class="ng-valid ng-dirty ng-valid-parse is-readonly">
 					    		<div class="row">
 								    <label for="firstName" class="col-lg-4 col-form-label">Nombre</label>
-								    <input class="col-lg-5 col-md-12" type="text" id="firstName" placeholder="Nombre" value="" disabled="">
+								    <input class="col-lg-5 col-md-12 ng-valid ng-dirty ng-valid-parse ng-touched" type="text" id="firstName" placeholder="Nombre" value="" ng-model="namEdit" autocomplete="off" disabled="">
 								      
 								    <button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons" style="padding-right: 10px;" data-placement="right" data-toggle="tooltip" title="" data-original-title="Editar">edit</i></button>
 			
@@ -158,19 +180,31 @@
 								</div>
 		  					</form>
 
-		  					<form class="is-readonly">
-		  						<div class="row">
-							    	<label for="email" class="col-lg-4 col-form-label">Correo Electrónico</label>
-							    	<input class="col-lg-5 col-md-12" type="mail" id="email" placeholder="Correo Electrónico" value="" disabled="">
-							      
-							    	<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons">edit</i></button>
+		  					<form class="ng-pristine ng-valid is-readonly">
+					    		<div class="row">
+								    <label for="birthday" class="col-lg-4 col-form-label">Cumpleaños</label>
+								    <input class="col-lg-5 col-md-12 form-control" type="date" id="birthday" name="birth" placeholder="Cumpleaños" value="1994-01-08" autocomplete="off" required="required" onclick="calculate_age(value)" disabled="">
+								    <!-- <input type="date" name="fecha" id="fecha" class="form-control input-travelook"> -->
+								      
+								    <button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons">edit</i></button>
 		
-									<button type="button" class="btn btn-default btn-save js-save"><i class="material-icons">save</i></button>
-									<button type="button" class="btn btn-default btn-delete js-delete"><i class="material-icons">delete</i></button>
+									<button type="button" class="btn btn-default btn-save js-save" onclick="calculate_age(value)"><i class="material-icons">save</i></button>
 								</div>
 		  					</form>
 
-		  					<form class="is-readonly">
+		  					<form class="ng-valid ng-dirty ng-valid-parse is-readonly">
+		  						<div class="row">
+							    	<label for="email" class="col-lg-4 col-form-label">Correo Electrónico</label>
+							    	<input class="col-lg-5 col-md-12 ng-valid ng-dirty ng-valid-parse ng-touched" type="mail" id="email" placeholder="Correo Electrónico" value="" autocomplete="off" ng-model="mail" disabled="">
+							      
+							    	<button type="button" class="btn btn-default btn-edit js-edit"><i class="material-icons">edit</i></button>
+		
+									<button type="button" class="btn btn-default btn-save js-save" onclick="saveMailData()"><i class="material-icons">save</i></button>
+									<button type="button" class="btn btn-default btn-delete js-delete" onclick="discardMail()"><i class="material-icons">delete</i></button>
+								</div>
+		  					</form>
+
+		  					<form class="ng-pristine ng-valid is-readonly">
 							    <div class="row">
 							    	<label for="gender" class="col-lg-4 col-form-label">Género</label>
 							    	<select class="col-lg-5 col-md-12" id="gender" disabled="">
@@ -186,7 +220,7 @@
 								</div>
 		  					</form>
 
-		  					<form class="is-readonly">
+		  					<form class="is-readonly ng-pristine ng-valid">
 		  						<div class="row">
 								    <label for="style" class="col-lg-4 col-form-label">Estilo</label>
 								    <select class="col-lg-5 col-md-12" id="style" disabled="">
@@ -206,7 +240,7 @@
 					    <div class="card-body">
 					    	<h5 class="card-title">Seguridad</h5>
 
-					    	<form class="is-readonly">
+					    	<form class="is-readonly ng-pristine ng-valid">
 					    		<div class="row">
 								    <label for="password" class="col-lg-4 col-form-label">Contraseña actual</label>
 								    <input class="col-lg-5 col-md-12" type="password" id="password" value="3trAv3ln3mA$Am" disabled="">
@@ -221,6 +255,7 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 		<!-- End Profile Content -->
 		
 		<!-- Footer -->
