@@ -129,10 +129,13 @@ function comprobarTemperatura(temperaturaGrados) {
 function logicaFrioCalor() {
   var temperaturaString = comprobarTemperatura(temperaturaDia1);
   let url = `http://127.0.0.1:5500/appLook.html?temperatura=${temperaturaString}`;
-  let gender = localStorage.getItem('gender');
-  if (gender) {
 
-    url += `&gender=${gender}`;
+  const user = JSON.parse(localStorage.getItem('loguedUser'));
+  let userGender = user.gender;
+
+  if (userGender) {
+
+    url += `&gender=${userGender}`;
   }
 
   //Botón lleva  a una nueva url de maleta destino con el parametro de clima
