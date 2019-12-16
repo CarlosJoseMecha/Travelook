@@ -29,6 +29,11 @@
   html {
     overflow-x: hidden;
   }
+
+  .team-card {
+    width: 100%;
+  }
+
 }
 
 
@@ -53,6 +58,10 @@
 
   html {
     overflow-x: hidden;
+  }
+
+  .team-card {
+    width: 100%;
   }
 }
 
@@ -84,5 +93,9 @@
 @media (max-width: 1199.98px) {
   html {
     overflow-x: hidden;
+  }
+
+  .team-card {
+    height: 100%;
   }
 }
