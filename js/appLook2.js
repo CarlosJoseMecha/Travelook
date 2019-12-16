@@ -21,7 +21,7 @@ console.log(nombre);
 
 let gender;
 //cogemos datos del local storage
-function obtenerLocalStorage() {
+/* function obtenerLocalStorage() {
     if (localStorage.getItem('gender')) {
         gender = localStorage.getItem('gender');
         console.log(gender);
@@ -30,6 +30,24 @@ function obtenerLocalStorage() {
     }
 }
 obtenerLocalStorage();
+ */
+
+const user = JSON.parse(localStorage.getItem('loguedUser'));
+let userGender = user.gender;
+
+function obtenerLocalStorage() {
+    if (localStorage.getItem('gender')) {
+        gender = userGender;
+
+
+        console.log(gender);
+    } else {
+        console.log("no hay nada almacenado");
+    }
+}
+obtenerLocalStorage();
+
+
 
 
 //cogemos clima de la url
