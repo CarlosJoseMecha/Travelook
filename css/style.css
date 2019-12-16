@@ -417,6 +417,16 @@ margin-top: 5%;  }
 
 /******************************app.html***************************************/
 
+#mostradorMaletas {
+  border: solid #bcbcbc;
+  border-radius: 30px;
+  width: 70%;
+}
+
+.jumbotron-alpha {
+  background-color: rgba(233, 236, 239, 0.3)!important;
+}
+
 /******************************appTiempo.html***************************************/
 
 #appTiempo-section {
@@ -484,6 +494,13 @@ margin-top: 5%;  }
   font-weight: 300;
   line-height: 1.2;
   color: white;
+}
+
+.display-4-tvl-dk {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
 }
 
 @keyframes gradientBG {
