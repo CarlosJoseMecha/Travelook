@@ -2,7 +2,7 @@
 //inputs
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
-const gender = document.getElementById('gender');
+const radioGenders = document.getElementsByName('gender');
 const password = document.getElementById('password');
 const confirmPassword = document.getElementById('confirmPassword');
 const email = document.getElementById('email');
@@ -221,10 +221,12 @@ const data = localData;
 //*REGISTRO
 //pulsamos boton Aceptar y Registrar
 btnSubmit.addEventListener('click', function () {
+  //comprobamos el genero 
+  checkGender(radioGenders);
   //guardamos en variables los valores de los input
   let nameData = firstName.value;
   let lastNameData = lastName.value;
-  let genderData = gender.value;
+  let genderData = genderValue;
   let passwordData = password.value;
   let emailData = email.value;
   //guardamos en una varibale el objeto nuevo que vamos a pushear al array data
@@ -235,9 +237,6 @@ btnSubmit.addEventListener('click', function () {
     password: passwordData,
     email: emailData
   }
-  if (nameData || lastNameData || genderData || passwordData || emailData === '' || null) {
-    alert('error');
-  }
   //pusheamos a data el nuevo objeto
   data.push(newData);
   //metemos los datos en el local storage
@@ -247,6 +246,14 @@ btnSubmit.addEventListener('click', function () {
   }, 1000)
 
 });
+//*comprobacion de genero 
+function checkGender(field) {
+  for (let i = 0; i < field.length; i++) {
+    if (field[i].checked) {
+      genderValue = field[i].value;
+    }
+  }
+};
 
 //? ********* COMPROBACION DE DATOS ************
 const loginEmail = document.getElementById('loginEmail');

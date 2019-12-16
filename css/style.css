@@ -401,6 +401,13 @@ margin-top: 5%;  }
   outline: 0;
 }
 
+/************************ radio gender styling ***************/
+
+.radioGender {
+  color: #fff;
+
+}
+
 /******************************DateError****************************************/
 
 #section-DateError {
