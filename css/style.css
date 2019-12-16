@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-   !important
+  !important
 }
 
 /*******************NAVBAR*********************/
@@ -71,6 +71,10 @@ body {
 
 #footer-section {
   min-height: 250px;
+}
+
+#footer-section li a {
+  color: #fff;
 }
 
 /*******************CONTAINER*********************/
@@ -137,10 +141,7 @@ body {
 
 /* input destino */
 
-input[type="text"],
-textarea,
-.input-travelook,
-.form-input-travelook {
+input[type="text"], textarea, .input-travelook, .form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
   color: #fff !important;
@@ -219,8 +220,7 @@ div.datedropper .picker-jumped-years>div {
   width: 120%;
 }
 
-.txt-trav-small,
-span {
+.txt-trav-small, span {
   display: block;
 }
 
@@ -249,7 +249,6 @@ span {
 }
 
 /******************************perfil.html***************************************/
-
 
 /******************************contacto.html***************************************/
 
@@ -498,11 +497,9 @@ margin-top: 5%;  }
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -704,11 +701,9 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
-
   50% {
     background-position: 100% 50%;
   }
-
   100% {
     background-position: 0% 50%;
   }
@@ -860,10 +855,7 @@ header.underline:after {
   color: #fff !important;
 }
 
-input[type="text"],
-textarea,
-.input-travelook,
-.form-input-travelook {
+input[type="text"], textarea, .input-travelook, .form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -985,10 +977,7 @@ textarea,
   text-decoration: none;
 }
 
-.link-style:hover,
-.link-style:active,
-.link-style:link,
-.link-style:visited {
+.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -1000,9 +989,7 @@ textarea,
   font-weight: 600 !important;
 }
 
-.link-form-style:hover,
-.link-form-style:active,
-.link-form-style:link {
+.link-form-style:hover, .link-form-style:active, .link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;
@@ -1048,3 +1035,22 @@ textarea,
 }
 
 /*==============================================================*/
+
+/* COOKIES Y PRIVACIDAD */
+
+.private-section {
+  background: url(../assets/img/backgrounds/computer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 10vh;
+}
+
+.private-section .overlay {
+  background: rgba(0, 153, 204, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 70vh;
+}
