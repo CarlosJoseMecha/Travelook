@@ -4,6 +4,10 @@
 
 <head>
     <!-- Required meta tags -->
+    <link rel="icon" type="image/png" href="assets/img/favicons/fv64.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/fv48.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/fv32.png">
+    <link rel="icon" type="image/png" href="assets/img/favicons/fv24.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -15,6 +19,10 @@
     <title>Travelook</title>
     <!-- font awesome -->
     <script src="https://kit.fontawesome.com/dd9a6778fc.js" crossorigin="anonymous"></script>
+    <!-- Material IO -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--AOS(Scroll animation)-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -54,22 +62,114 @@
         </nav>
         <!-- Navigation Fin -->
         <!-- Empezar a codificar aqui -->
-        <div class="container-fluid" style="height: auto; background-color: cadetblue;">
-            <div class="row">
-                <div class="col-6 offset-3 pt-5">
-                    <!-- formulario datos -->
+        <div class="container-fluid bg-travelook">
+            <div class=" row  pt-5">
+                <!-- lista maleta -->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-12 mt-3">
+                    <div class="accordion" id="accordionExample">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <i class="material-icons">
+                                            playlist_add
+                                        </i>Ropa
+                                    </button>
+                                </h2>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Baño
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        Documentación
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                    richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor
+                                    brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt
+                                    aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+                                    Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                                    ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
+                                    farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them
+                                    accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
 
-
-
-                <div class="col-6 offset-3 pt-5">
-
+                <div class="col-xl-8 col-lg-4 col-md-8 col-12  mt-3">
                     <!-- mostrador maletas -->
-                    <div>
-                        <img id="mostradorMaletas" src="#" alt="">
+                    <div class="jumbotron">
+                        <div class="d-flex justify-content-center py-3">
+                            <p class="display-4-tvl-dk">¡Aquí tienes tu maleta!</p>
+                        </div>
+                        <div class="jumbotron-alpha">
+                            <div class="d-flex justify-content-center py-3">
+                                <img id="mostradorMaletas" src="#" alt="">
+                            </div>
+                            <p class="lead">Actualmente nuestra web contempla que hace calor a partir de 10 Cº, no
+                                obstante
+                                si te consideras frioler@ puedes añadir algo de abrigo a tu maleta</p>
+                            <hr>
+                            <p>Las condiciones climatológicas pueden cambiar una vez que hagas tu maleta por primera
+                                vez.
+                                Desde Travelook te recomendamos que estés pendiente de las actulizaciones y
+                                notificaciones
+                                que te hagamos llegar</p>
+                            <div class="d-flex justify-content-center">
+                                <button class="btn-roll btn btn-trav-purple btn-lg px-5 mx-3" id="btn-roll">
+                                    Ver
+                                    más looks</button>
+                            </div>
+                        </div>
                     </div>
-                    <button class="btn-roll btn btn-trav-purple mt-5 px-5 mx-3" id="btn-roll">Ver más looks</button>
                 </div>
             </div>
         </div>
