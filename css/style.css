@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 14px;
-  !important
+   !important
 }
 
 /*******************NAVBAR*********************/
@@ -141,7 +141,10 @@ body {
 
 /* input destino */
 
-input[type="text"], textarea, .input-travelook, .form-input-travelook {
+input[type="text"],
+textarea,
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
   color: #fff !important;
@@ -220,7 +223,8 @@ div.datedropper .picker-jumped-years>div {
   width: 120%;
 }
 
-.txt-trav-small, span {
+.txt-trav-small,
+span {
   display: block;
 }
 
@@ -431,12 +435,51 @@ margin-top: 5%;  }
 }
 
 .jumbotron-alpha {
-  background-color: rgba(233, 236, 239, 0.3)!important;
+  background-color: rgba(233, 236, 239, 0.3) !important;
 }
 
 /******************************appTiempo.html***************************************/
 
 #appTiempo-section {
+  height: 100vh;
+  width: 100%;
+}
+
+.box-image {
+  background: url(../assets/img/backgrounds/clouds.jpg);
+  height: 80vh;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10vh;
+}
+
+.box {
+  height: 80vh;
+  width: 100%;
+  /* background: url(../assets/img/backgrounds/clouds.jpg); */
+  /* opacity: 0.50; */
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 15vh;
+
+}
+
+.icono-tiempo {
+  width: 5em;
+  height: 5em;
+}
+
+
+
+.container-tiempo {
+  margin: auto;
+  padding: 1em 0 1em 0;
+  height: 18vh;
+  width: 18vw;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* #appTiempo-section {
   background: url(../assets/img/backgrounds/clouds.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -470,6 +513,7 @@ margin-top: 5%;  }
   padding-top: 10%;
 }
 
+*/
 /******************************viajes.html***************************************/
 
 #card-container {
@@ -514,9 +558,11 @@ margin-top: 5%;  }
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -718,9 +764,11 @@ header.underline:after {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -872,7 +920,10 @@ header.underline:after {
   color: #fff !important;
 }
 
-input[type="text"], textarea, .input-travelook, .form-input-travelook {
+input[type="text"],
+textarea,
+.input-travelook,
+.form-input-travelook {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -994,7 +1045,10 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   text-decoration: none;
 }
 
-.link-style:hover, .link-style:active, .link-style:link, .link-style:visited {
+.link-style:hover,
+.link-style:active,
+.link-style:link,
+.link-style:visited {
   text-decoration: none;
   color: #fff;
 }
@@ -1006,7 +1060,9 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   font-weight: 600 !important;
 }
 
-.link-form-style:hover, .link-form-style:active, .link-form-style:link {
+.link-form-style:hover,
+.link-form-style:active,
+.link-form-style:link {
   text-decoration: none;
   color: #17a2d0 !important;
   text-decoration: underline !important;

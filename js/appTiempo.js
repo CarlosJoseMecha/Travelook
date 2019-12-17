@@ -42,8 +42,6 @@ function fechaToStringES(fecha) {
 //3 trato los datos que recibo y pinto en html los resultados -- trataTardatos()
 //4 paso la logica para saber si hace frio o calor --> comprobar temperatura (), logicaFrioCalor()
 
-
-
 let temperaturaDia1;
 
 function tratarDatosObtenidos(viaje) {
@@ -62,15 +60,45 @@ function tratarDatosObtenidos(viaje) {
     let diaAcomprobarSinHora = diaAcomprobar.setHours(0, 0, 0, 0);
     //Comparamos si las fechas con coincidentes
     if (diaAcomprobarSinHora === fechaAComprobarEnObjeto) {
-      let temperaturas = item.main.temp;
+      let temperaturas = Math.floor(item.main.temp); //! : HE AÑADIDO EL MATH.FLOOR PARA QUE SALGAN SIN DECIMALES
       let fechas = item.dt_txt;
       let descripcion = item.weather[0].description;
       let icono = `http://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`;
 
-      contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaToStringES(fechaId)}<br> y esté será tu pronóstico del tiempo :<hr>`;
+      // contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaToStringES(fechaId)}<br> y esté será tu pronóstico del tiempo :<hr>`;
+      //!cambios de carlos------------------------------------------------------------
+      destino.innerHTML = `${ destinoId.toUpperCase()}`; //!TO UPPER CASE
+      //!-----------------------------------------------------------------------------
 
-      misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
-      contenido2.innerHTML = misDatos;
+
+      misDatos +=
+        `
+      <div class="col-6 mb-5">
+      <div class="row justify-content-center">
+        <div class="col">
+          <div class="container-tiempo round-10 bg-">
+            <div class="row">
+              <div class="col text-center txt-trav-small ">
+                <p>${fechaToStringES(fechas)}</p>
+              </div>
+            </div>
+            <!-- -->
+            <div class="row">
+              <div class="col d-flex justify-content-center flex">
+                <p class="txt-trav-big" style="font-size:5em;">${temperaturas}º</p>
+                <img src='${icono}' class="icono-tiempo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+      `
+
+      // misDatos += fechaToStringES(fechas) + '<br>' + temperaturas + ' Cº' + '<br>' + descripcion + '<br><img src=' + icono + '>' + '<hr>';
+      //pinta el contenido 
+      contenido.innerHTML = misDatos;
       //Como ya tengo un elemento del día que buscaba, añado un día a la fecha a comprobar un día
       diaAcomprobar.setDate(diaAcomprobar.getDate() + 1);
 
@@ -102,7 +130,7 @@ function obtenerDatos(destinoParam) {
     });
 }
 
-
+//TODO :ACORDARSE DE DESCOMENTAR ESTO 
 
 function traer() {
   // Estoy comprobando que haya un destino introducido, y si lo hay ...fetch
