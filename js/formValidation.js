@@ -197,11 +197,11 @@ function matchWithRegEx(regEx, field, message) {
 };
 
 //! ********************* LOCAL STORAGE ************************
+window.onload = checkIfLocalData();
+//!ESTA VARIABLE CONTIENE EL USUARIO QUE SE HA LOGUEADO
+const user = JSON.parse(localStorage.getItem('loguedUser'));
 
-const user = JSON.parse(localStorage.getItem('loguedUser')); //!ESTA VARIABLE CONTIENE EL USUARIO QUE SE HA LOGUEADO
-//*para iniciar por primera vez el localStorage, usar: init()
 function init() {
-  location.reload();
   localStorage.setItem('data', JSON.stringify([{
     email: "admin@dev.com",
     password: "Admin1234"
@@ -209,6 +209,14 @@ function init() {
   setStatusFalse();
   console.log('Local storage iniciado!');
   console.log('Para acceder como administrador usar: Email: admin@dev.com Password: Admin1234');
+  location.reload();
+};
+//esta funcioin comprueba que haya local storage, si no lo hay lo crea para que pueda funcionar el resto del codigo 
+function checkIfLocalData() {
+  if (localStorage.getItem('data') === null) {
+    init()
+    return
+  }
 };
 //? ********** RECOGIDA DE DATOS *************
 
@@ -217,6 +225,7 @@ const btnSubmit = document.getElementById('btnSubmit');
 //recogida de datos y variable para visualizar los datos del local storage
 const localData = JSON.parse(localStorage.getItem('data')); //! Esta variable contiene todos los datos que tiene el local storage
 const data = localData;
+
 
 //*REGISTRO
 //pulsamos boton Aceptar y Registrar
