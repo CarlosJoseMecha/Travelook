@@ -40,7 +40,7 @@ $("button").click(function () {
                         <h5 class="card-title txt-trav-secondary-dark">NUEVO VIAJE</h5>\
                         <p class="card-text txt-trav-dark">Prepara todos los detalles</p>\
                         <a href="#" class="btn btn-block btn-trav-purple" data-toggle="modal"\
-                        data-target="#viajesModal">Planear Viaje</a>\
+                        data-target="#nuevoViajeModal">Planear Viaje</a>\
                     </div>\
                         </div>\
         </div> ');
