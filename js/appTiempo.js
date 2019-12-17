@@ -156,7 +156,7 @@ function comprobarTemperatura(temperaturaGrados) {
 
 function logicaFrioCalor() {
   var temperaturaString = comprobarTemperatura(temperaturaDia1);
-  let url = `http://127.0.0.1:5500/appLook.html?temperatura=${temperaturaString}`;
+  let url = `appLook.html?temperatura=${temperaturaString}`;
 
   const user = JSON.parse(localStorage.getItem('loguedUser'));
   let userGender = user.gender;
