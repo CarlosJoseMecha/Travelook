@@ -16,7 +16,10 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
   <!-- Material IO -->
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <!-- js -->
   <script defer type="text/javascript" src="js/viajes.js"></script>
 
@@ -83,10 +86,10 @@
                   </div>
                 </div>
               </div>
-              <div>
-                <button class="button btn-trav-purple" id="newTravel">
-                  <i class="material-icons">add</i>
-                </button>
+              <!-- botón de añadir nuevo viaje -->
+              <div class="d-flex ">
+                <button
+                  class=" p-2 mdc-icon-button mdc-fab material-icons mdc-ripple-upgraded--unbounded mdc-ripple-upgraded">add</button>
               </div>
             </div>
           </div>
@@ -178,8 +181,8 @@
     </div>
   </footer>
   <!-- Footer Fin -->
-  <!-- Modal Registro -->
-  <div class="modal fade bg-trav-flow" id="registroModal" tabindex="-1" role="dialog"
+  <!-- Modal Ver Viaje -->
+  <div class="modal fade bg-trav-flow" id="viajesModal" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered " role="document">
@@ -191,7 +194,38 @@
           <div class="row">
             <!-- form -->
             <div class="col-12">
-              <form method="POST" id="registerForm">
+              <div class="card text-center">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active uppercase" href="#">Destino</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link uppercase" href="appTiempo.html">Tiempo</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link uppercase " href="#">Tarjetas de embarque</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title txt-trav-medium-dark">
+                    ¿Tienes todo preparado?</h5>
+                  <img class="img-fluid rounded" src="/assets/img/viajes/ny.jpg" alt="">
+                  <a href="#" class="btn btn-trav-purple">Ver maleta</a>
+                </div>
+                <div class="card-footer text-muted">
+                  Faltan 2 días
+                </div>
+              </div>
+
+
+
+
+
+
+
+              <!--  <form method="POST" id="registerForm">
                 <div class="form-group">
                   <input type="text" class="form-control form-input-travelook" name="Nombre" id="firstName"
                     autocomplete="off" placeholder="Nombre" onfocusout="validateFirstName()">
@@ -232,7 +266,7 @@
                     data-target="#iniciarSesionModal">Iniciar
                     Sesión</a>
                 </p>
-              </form>
+              </form> -->
             </div>
           </div>
         </div>
@@ -241,7 +275,7 @@
   </div>
   <!-- Modal  registro fin -->
   <!-- Modal Iniciar Sesion -->
-  <div class="modal fade bg-trav-flow" id="iniciarSesionModal" tabindex="-1" role="dialog"
+  <div class="modal fade bg-trav-flow" id="nuevoViajeModal" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered " role="document">
       <div class="modal-content bg-trav-transparent">
@@ -249,26 +283,39 @@
             class="material-icons close-icon">clear</i></span>
         <div class="container text-center p-5">
           <div class="row">
+            <div class="offset-2 col-8 mb-2">
+              <img class="img-fluid rounded" src="/assets/img/viajes/picture.png" alt="">
+            </div>
+          </div>
+
+          <div class=" row">
             <!-- form -->
             <div class="col-12">
               <form method="POST" id="loginForm">
                 <div class="form-group">
-                  <input type="email" class="form-control form-input-travelook" name="Email" id="loginEmail"
-                    placeholder="Email" onfocusout="validateLoginEmail()">
+                  <input type="email" class="form-control form-input-travelook" name="destino" id="nuevoDestino"
+                    placeholder="Destino">
                   <span id="helper-text" class=""></span>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-input-travelook" name="Contraseña" id="loginPassword"
-                    placeholder="Contraseña" onfocusout="validateLoginPassword()">
+                  <input type="date" class="form-control form-input-travelook" name="date" id="nuevaFecha"
+                    placeholder="">
                   <span id="helper-text" class=""></span>
                 </div>
-                <button type="submit" class="btn btn-block btn-trav-pink mt-5" id="btnLogin">Iniciar Sesión</button>
-                <button type="submit" class="btn btn-block btn-facebook mt-3" id="btnFacebook">Iniciar sesión con
-                  facebook</button>
-                <p class="d-inline-block mt-3 txt-trav-secondary">¿Aún no estas registrado? <a href="#"
-                    class="d-inline-block link-form-style" data-dismiss="modal" data-toggle="modal"
-                    data-target="#registroModal">Registrate</a>
-                </p>
+                <div class="form-group">
+                  <input type="number" class="form-control form-input-travelook" name="pasajeros" id="nuevosPasajeros"
+                    placeholder="Numero pasajeros">
+                  <span id="helper-text"></span>
+                </div>
+
+
+                <div class="form-group">
+                  <input name="uploadedfile" class="btn-trav-pink form-control form-input-travelook" value="selecciona"
+                    type="file" />
+
+                </div>
+                <button type="button" class="btn btn-block btn-trav-purple mt-5" id="btnLogin">Guardar</button>
+
               </form>
             </div>
           </div>

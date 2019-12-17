@@ -404,7 +404,6 @@ margin-top: 5%;  }
 
 .radioGender {
   color: #fff;
-
 }
 
 /******************************DateError****************************************/
@@ -422,7 +421,7 @@ margin-top: 5%;  }
 
 /******************************modalLogin***************************************/
 
-/******************************app.html***************************************/
+/******************************appLook.html***************************************/
 
 #mostradorMaletas {
   border: solid #bcbcbc;
@@ -433,6 +432,12 @@ margin-top: 5%;  }
 .jumbotron-alpha {
   background-color: rgba(233, 236, 239, 0.3)!important;
 }
+
+/* #section-look {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+} */
 
 /******************************appTiempo.html***************************************/
 
@@ -471,6 +476,10 @@ margin-top: 5%;  }
 }
 
 /******************************viajes.html***************************************/
+
+button.mdc-icon-button.mdc-fab.material-icons.mdc-ripple-upgraded--unbounded.mdc-ripple-upgraded {
+  margin-top: 30%;
+}
 
 #card-container {
   display: inherit !important;
@@ -1070,4 +1079,41 @@ input[type="text"], textarea, .input-travelook, .form-input-travelook {
   left: 0;
   width: 100%;
   min-height: 70vh;
+}
+
+/* material io */
+
+@import "./mixins";
+@include mdc-icon-button-core-styles;
+@import "@material/animation/functions";
+@keyframes fade-in {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.my-element {
+  animation: mdc-animation-enter(/* $name: */
+  fade-in, /* $duration: */
+  350ms);
+}
+
+@import "@material/button/mdc-button";
+.foo-button {
+  @include mdc-button-ink-color(#333);
+  @include mdc-states(teal);
+}
+
+.mdc-fab {
+  background-color: #ff4081;
+  background-color: var(--mdc-theme-secondary, #ff4081);
+}
+
+.mdc-icon-button {
+  color: #a25eb9!important;
 }
