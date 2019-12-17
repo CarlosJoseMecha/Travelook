@@ -67,7 +67,7 @@ function tratarDatosObtenidos(viaje) {
 
       // contenido.innerHTML = `Tu viaje a ${destinoId} comienza el ${fechaToStringES(fechaId)}<br> y esté será tu pronóstico del tiempo :<hr>`;
       //!cambios de carlos------------------------------------------------------------
-      destino.innerHTML = `${ destinoId.toUpperCase()}`; //!TO UPPER CASE
+      destino.innerHTML = `${destinoId.toUpperCase()}`; //!TO UPPER CASE
       //!-----------------------------------------------------------------------------
 
 
@@ -122,7 +122,7 @@ function tratarDatosObtenidos(viaje) {
 
 function obtenerDatos(destinoParam) {
 
-  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoParam},ES&units=metric&lang=es&APPID=dcad6bd0f350bf23372a42cce21f47da`)
+  fetch(`https://cors-anywhere.herokuapp.com/https://api.openweathermap.org/data/2.5/forecast?q=${destinoParam},ES&units=metric&lang=es&APPID=859c4827684d92da0a280284904c8780`)
     .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
     .then(data => {
       let viaje = JSON.parse(`${data}`);
