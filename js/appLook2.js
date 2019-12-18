@@ -19,7 +19,7 @@ console.log(nombre);
 
 
 
-let gender;
+/* let gender; */
 //cogemos datos del local storage
 /* function obtenerLocalStorage() {
     if (localStorage.getItem('gender')) {
@@ -33,9 +33,9 @@ obtenerLocalStorage();
  */
 
 const user = JSON.parse(localStorage.getItem('loguedUser'));
-let userGender = user.gender;
+let gender = user.gender;
 
-function obtenerLocalStorage() {
+/* function obtenerLocalStorage() {
     if (localStorage.getItem('gender')) {
         gender = userGender;
 
@@ -45,7 +45,7 @@ function obtenerLocalStorage() {
         console.log("no hay nada almacenado");
     }
 }
-obtenerLocalStorage();
+obtenerLocalStorage(); */
 
 
 
@@ -153,7 +153,7 @@ xhttp.onreadystatechange = function () {//cuando el servidor este listo
 -Archivo Text, ph, xml, json, etc... 
 -true/ false: metodo de envio / es true = asincrono/*/
 
-xhttp.open("GET", `/json/${gender}/${temperaturaURL}/prendas.json`, true);
+xhttp.open("GET", `json/${gender}/${temperaturaURL}/prendas.json`, true);
 xhttp.send();
 
 
