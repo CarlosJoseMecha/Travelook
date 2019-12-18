@@ -91,7 +91,7 @@ let temperatura = url.searchParams.get('temperatura');
 
 //Funcion que cambia el json
 /* function cambiarJSON(temperatura, sexo) {
-    document.querySelector('#mostradorMaletas').src = `{../json/${tipoLook}/${clima2}/img/1.jpg`;;
+    document.querySelector('#mostradorMaletas').src = `{..json/${tipoLook}/${clima2}/img/1.jpg`;;
 
 
 } */
@@ -111,7 +111,7 @@ var mujerCalor = [];
 var mujerFrio = [];
 
 
-///json/hombre/calor/img/1.jpg"
+json/hombre / calor / img / 1.jpg"
 
 
 var response;
@@ -164,7 +164,7 @@ xhttp.send();
 //Funcion para traer cualquier JSON
 /* function traer() {
 
-    fetch(`/json/${genero}/${temperatura2}/prendas.json`)
+    fetch(`json/${genero}/${temperatura2}/prendas.json`)
         .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
         .then(data => {
             var maleta = JSON.parse(`${data}`);

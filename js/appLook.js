@@ -31,7 +31,7 @@ console.log(temperatura);
 
 //Funcion que cambia el json
 /* function cambiarJSON(temperatura, sexo) {
-    document.querySelector('#mostradorMaletas').src = `{../json/${tipoLook}/${clima2}/img/1.jpg`;;
+    document.querySelector('#mostradorMaletas').src = `{..json/${tipoLook}/${clima2}/img/1.jpg`;;
 
 
 } */
@@ -89,12 +89,12 @@ xhttp.onreadystatechange = function () {//cuando el servidor este listo
 -Archivo Text, ph, xml, json, etc... 
 -true/ false: metodo de envio / es true = asincrono/*/
 
-xhttp.open("GET", "/json/hombre/calor/prendas.json", true);
+xhttp.open("GET", "json/hombre/calor/prendas.json", true);
 xhttp.send();
 
 
 
-///json/hombre/calor/img/1.jpg"
+json/hombre/calor/img/1.jpg"
 let genero = "mujer";
 let temperatura2 = "frio";
 
@@ -102,7 +102,7 @@ let temperatura2 = "frio";
 //Funcion para traer cualquier JSON
 function traer() {
 
-    fetch(`/json/${genero}/${temperatura2}/prendas.json`)
+    fetch(`json/${genero}/${temperatura2}/prendas.json`)
         .then(data => data.text()) //Hacemos una promesa de que lo haga y con data text, lo convertimos a txt
         .then(data => {
             var maleta = JSON.parse(`${data}`);
