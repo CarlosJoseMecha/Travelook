@@ -111,7 +111,7 @@ var mujerCalor = [];
 var mujerFrio = [];
 
 
-json/hombre / calor / img / 1.jpg"
+
 
 
 var response;
